@@ -13,6 +13,7 @@ Egyetlen HTML-fájl, telepítés és háttérrendszer nélkül, telefonon és la
 - Részletes ranglista minden lövéssel és találati aránnyal, PDF- és JPG-exporttal
 - Oklevelek (top 3 kategóriánként), nyomtatás, JPG-export
 - Több verseny kezelése, JSON export/import eszközök között
+- Egyesületi archívum: a repóban közzétett eredmények egy koppintással importálhatók bármely eszközön
 - Nyelvek: magyar, angol, román, cseh
 - Asztali (Windows .exe) változat: lásd `desktop/`
 

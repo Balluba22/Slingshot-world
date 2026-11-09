@@ -2,6 +2,9 @@
 
 Formátum: minden kiadásnál egy szakasz, dátummal. Új bejegyzés mindig legfelülre kerül.
 
+## v1.2 – 2026-11-09
+- **Egyesületi archívum** a Versenyek képernyőn: az app betölti a repó `eredmenyek/index.json` jegyzékét, és a közzétett versenyeket egy koppintással importálja. Már importált versenynél „Megnyitás” gomb, nincs duplikálás. Internet nélkül a szakasz nem jelenik meg, minden más változatlan. Négy nyelven.
+
 ## Repó – 2026-11-09
 - README, változásnapló, `.gitignore`; `eredmenyek/` a Tomzoon kupa exportjával és négy kiértékelő oldallal; `desktop/` a Windows-build forrásaival (az exe a gyökér `index.html`-ből épül).
 
