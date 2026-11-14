@@ -3,7 +3,8 @@
 Formátum: minden kiadásnál egy szakasz, dátummal. Új bejegyzés mindig legfelülre kerül.
 
 ## v1.3 – 2026-11-14
-- **☁️ Archívumba gomb** a versenylistában: a verseny exportját egy Cloudflare Workernek küldi, ami a repóba teszi; egyesületi jelszóval védett, az eszköz megjegyzi. Beállítás: `cloud/README.md`. Amíg a `CLOUD_URL` üres, a gomb rejtve marad.
+- **☁️ Archívumba gomb** a versenylistában: a verseny exportját egy Cloudflare Workernek küldi, ami a repóba teszi; egyesületi jelszóval védett, az eszköz megjegyzi. Ha a versenynek nincs dátuma, előbb bekéri – a fájlnév mindig a verseny napjából készül. Újraküldés ugyanazt a fájlt frissíti. Beállítás: `cloud/README.md`. Amíg a `CLOUD_URL` üres, a gomb rejtve marad.
+- **Eltávolítás az archívumból** (× gomb az archív soron): egyesületi jelszóval és megerősítéssel törli a versenyt a repóból, minden eszközön eltűnik a listából; a már importált példányok megmaradnak.
 - **Dátum és helyszín** a versenyhez: az új verseny / átnevezés ablakban megadható, az exportba is bekerül (`date`, `venue`), a letöltött fájl neve a dátummal kezdődik. Importnál és az archívumból is beolvasódik.
 - Az `eredmenyek/index.json` jegyzéket mostantól GitHub Action építi a mappa JSON-jaiból (`scripts/build_index.py`) – új eredménynél elég a fájlt feltölteni.
 - **📈 Statisztika képernyő** (a kezdőoldalról és a ranglistáról): „Körönként” fül – minden játékos minden körének pontja és találatszáma, a kör legjobbja sárgával, a nők/gyerekek körgyőztese zölddel; „Helyezések alakulása” fül – kattintható bump chart az összesített helyezésről minden kör után, legfeljebb 5 kiemelt vonallal. Négy nyelven.

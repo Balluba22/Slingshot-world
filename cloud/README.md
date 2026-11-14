@@ -31,6 +31,8 @@ A token csak a Worker titkos beállításaiban él.
    és feltölteni az `index.html`-t. Amíg `CLOUD_URL` üres, a ☁️ gomb nem jelenik meg.
 
 ## Működés
+- A verseny dátuma kötelező: ha nincs, az app a küldés előtt bekéri. A fájlnév ebből készül, nem a feltöltés napjából.
+- Az archív soron lévő × gomb jelszóval és megerősítéssel törli a fájlt a repóból (`action: delete`).
 - A fájl neve `ÉÉÉÉ-HH-NN_Verseny_neve.json` (dátum az exportból). Ugyanannak a versenynek az
   újraküldése felülírja a fájlt (frissítés), nem duplikál.
 - A jelszót az app az eszközön megjegyzi; hibás jelszónál újra kérdez.
