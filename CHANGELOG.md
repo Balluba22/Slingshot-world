@@ -2,6 +2,10 @@
 
 Formátum: minden kiadásnál egy szakasz, dátummal. Új bejegyzés mindig legfelülre kerül.
 
+## v1.3c – 2026-11-14
+- **Másolat = új verseny**: a 📋 másolat már nem örökli az archív-hivatkozást, így a ☁️ feltöltése új fájlt készít, nem írja felül az eredetit.
+- **Felülírás-védelem**: ha a feltöltendő verseny neve eltér attól, ami az archívumban ugyanazon a fájlon szerepel, az app megkérdezi: „Frissítés »régi név«” vagy „Feltöltés újként”. Elavult hivatkozás (az archívumból közben törölt fájl) esetén automatikusan újként megy.
+
 ## v1.3 – 2026-11-14
 - **☁️ Archívumba gomb** a versenylistában: a verseny exportját egy Cloudflare Workernek küldi, ami a repóba teszi; egyesületi jelszóval védett, az eszköz megjegyzi. Ha a versenynek nincs dátuma, előbb bekéri – a fájlnév mindig a verseny napjából készül. Újraküldés ugyanazt a fájlt frissíti. Beállítás: `cloud/README.md`. Amíg a `CLOUD_URL` üres, a gomb rejtve marad.
 - **Eltávolítás az archívumból** (× gomb az archív soron): egyesületi jelszóval és megerősítéssel törli a versenyt a repóból, minden eszközön eltűnik a listából; a már importált példányok megmaradnak.
