@@ -11,9 +11,10 @@ Egyetlen HTML-fájl, telepítés és háttérrendszer nélkül, telefonon és la
 - Pontértékek kategóriánként külön is állíthatók, pontszorzók körönként (×1/×2/×3)
 - Ranglista összesítve és kategóriánként, holtverseny esetén szétlövés
 - Részletes ranglista minden lövéssel és találati aránnyal, PDF- és JPG-exporttal
+- Statisztika: körönkénti pontok a körgyőztesek kiemelésével, és a helyezések alakulását mutató kattintható bump chart
 - Oklevelek (top 3 kategóriánként), nyomtatás, JPG-export
-- Több verseny kezelése, JSON export/import eszközök között
-- Egyesületi archívum: a repóban közzétett eredmények egy koppintással importálhatók bármely eszközön
+- Több verseny kezelése dátummal és helyszínnel, JSON export/import eszközök között
+- Egyesületi archívum: a repóban közzétett eredmények egy koppintással importálhatók bármely eszközön, és a ☁️ gombbal bárki fel is töltheti a sajátját (egyesületi jelszóval)
 - Nyelvek: magyar, angol, román, cseh
 - Asztali (Windows .exe) változat: lásd `desktop/`
 
@@ -24,7 +25,9 @@ Verseny után mindig készíts JSON-exportot (🗂 Versenyek → Exportálás �
 
 ## Mappák
 - `index.html` – maga az alkalmazás (ezt publikálja a GitHub Pages); a `SlingshotWorld.html` ugyanez a fájl az eredeti nevén
-- `eredmenyek/` – a versenyek JSON-exportjai és kiértékelései
+- `eredmenyek/` – a versenyek JSON-exportjai és kiértékelései; az `index.json` jegyzéket GitHub Action tartja karban
+- `scripts/`, `.github/workflows/` – a jegyzéket építő szkript és az automatizálás
+- `cloud/` – a felhő-mentés Worker kódja és beállítási leírása
 - `desktop/` – a Windows .exe építéséhez szükséges fájlok
 
 ## Fejlesztés

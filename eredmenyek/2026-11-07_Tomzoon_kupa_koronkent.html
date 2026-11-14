@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tomzoon kupa körönként</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Figtree:wght@600;700;800&display=swap">
+<style>
+/* Layout: a single wide results sheet (the kind pinned to the clubhouse wall), first column sticky, round winners lit in "sun". */
+:root{--bg:#f6efe3;--panel:#fffaf1;--panel2:#f0e6d4;--fg:#241735;--fg2:#5a4a6b;--mute:#8d7f9c;--line:#e1d5c0;
+--sun:#ffd04d;--sunline:#c58f00;--sunfg:#241735;--wbg:#ffe3bf;--wline:#c7721a;--kbg:#e3d9ff;--kline:#6b47c9;--red:#d12f3f;--men:#1f6fd1;--women:#e08a1e;--kids:#6b47c9;
+--d:'Lilita One','Arial Black',Impact,sans-serif;--b:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1e1240;--panel:#2a1a4e;--panel2:#352360;--fg:#fdf0d5;--fg2:#d7c9e6;--mute:#a797bd;--line:#45336d;
+--sun:#8a6a00;--sunline:#ffc233;--sunfg:#fff3cc;--wbg:#6a3d0e;--wline:#ffb45c;--kbg:#3f2a7a;--kline:#b59cff;--red:#ff6b78;--men:#3b86e0;--women:#c27420;--kids:#9676e6;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1e1240;--panel:#2a1a4e;--panel2:#352360;--fg:#fdf0d5;--fg2:#d7c9e6;--mute:#a797bd;--line:#45336d;
+--sun:#8a6a00;--sunline:#ffc233;--sunfg:#fff3cc;--wbg:#6a3d0e;--wline:#ffb45c;--kbg:#3f2a7a;--kline:#b59cff;--red:#ff6b78;--men:#3b86e0;--women:#c27420;--kids:#9676e6;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.45 var(--b)}
+.wrap{max-width:1180px;margin:0 auto;padding-block:24px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:16px}
+h1,h2,p{margin:0}
+.eyebrow{font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:12px;color:var(--mute)}
+h1{font:400 clamp(34px,7vw,56px)/.95 var(--d);color:var(--sunline);text-wrap:balance}
+.lead{color:var(--fg2);max-width:70ch}
+.legend{display:flex;gap:14px 18px;flex-wrap:wrap;font-size:13px;font-weight:700;color:var(--fg2);align-items:center}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.legend .sw{display:inline-block;width:34px;height:20px;border-radius:6px;background:var(--sun);border:2px solid var(--sunline);margin-right:6px;vertical-align:-5px}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+table{border-collapse:separate;border-spacing:0;width:100%;min-width:900px}
+th,td{padding:7px 9px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+thead th{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--mute);background:var(--panel2);position:sticky;top:0;z-index:2}
+thead th small{display:block;font-size:10px;letter-spacing:0;text-transform:none;color:var(--mute);font-weight:600}
+th.who,td.who{text-align:left;position:sticky;left:0;background:var(--panel);z-index:1;font-weight:700;box-shadow:1px 0 0 var(--line)}
+thead th.who{background:var(--panel2);z-index:3}
+td.rk{color:var(--mute);width:34px}
+td.c{min-width:74px}
+td.c small{display:block;font-size:11px;color:var(--mute);font-weight:600;line-height:1}
+td.best{background:var(--sun);color:var(--sunfg);box-shadow:inset 0 0 0 2px var(--sunline);border-radius:8px;font-weight:800}
+td.best small{color:var(--sunfg);opacity:.8}
+td.bestW{background:var(--wbg);box-shadow:inset 0 0 0 2px var(--wline);border-radius:8px;font-weight:800}
+td.bestK{background:var(--kbg);box-shadow:inset 0 0 0 2px var(--kline);border-radius:8px;font-weight:800}
+td.bestW small,td.bestK small{color:inherit;opacity:.75}
+.legend .sww{background:var(--wbg);border-color:var(--wline)}.legend .swk{background:var(--kbg);border-color:var(--kline)}
+td.zero{color:var(--red)}
+td.na{color:var(--mute);opacity:.5}
+td.tot{font:400 19px/1 var(--d)}
+tr.grp td{background:var(--panel2);color:var(--fg2);font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:5px 9px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:7px}
+.sum{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.k{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:3px}
+.k span{font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--mute)}
+.k b{font:400 24px/1 var(--d)}
+.k em{font-style:normal;font-size:13px;color:var(--fg2)}
+.foot{font-size:13px;color:var(--mute)}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">SlingshotWorld · Magyar Csúzli Sportegyesület · 2026. november</div>
+  <h1>Tomzoon kupa – körönkénti eredmények</h1>
+  <p class="lead">Minden játékos minden köre: pont (szorzóval) és alatta a találatok száma az 5 lövésből. Sárgával a kör legjobb eredménye a teljes mezőnyben, naranccsal a nők, lilával a gyerekek körgyőztese; holtverseny esetén mindenki, aki elérte. Ha egy női vagy gyerek eredmény egyben a mezőny legjobbja, sárga marad.</p>
+  <div class="legend"><span><span class="sw"></span>a kör legjobbja (mezőny)</span><span><span class="sw sww"></span>nők legjobbja</span><span><span class="sw swk"></span>gyerekek legjobbja</span><span><i style="background:var(--men)"></i>férfiak</span><span><i style="background:var(--women)"></i>nők</span><span><i style="background:var(--kids)"></i>gyerekek</span><span>K1·K4·K7: 8·7·6·5·4 cm · K2·K5·K8: 5× 4 cm · K3·K6·K9: 5× 3 cm</span></div>
+  <div class="sum" id="sum"></div>
+  <div class="tw"><table id="t"><thead><tr><th>#</th><th class="who">Játékos</th>
+    <th>K1<small>×1 · max 30</small></th><th>K2<small>×1 · max 50</small></th><th>K3<small>×1 · max 75</small></th>
+    <th>K4<small>×2 · max 60</small></th><th>K5<small>×2 · max 100</small></th><th>K6<small>×2 · max 150</small></th>
+    <th>K7<small>×3 · max 90</small></th><th>K8<small>×3 · max 150</small></th><th>K9<small>×3 · max 225</small></th>
+    <th>Találat</th><th>Pont</th></tr></thead><tbody></tbody></table></div>
+  <p class="foot">Forrás: SlingshotWorld export, 2026-11-07_Tomzoon_kupa.json. Pontozás: 3 cm 15 · 4 cm 10 · 5 cm 8 · 6 cm 6 · 7 cm 4 · 8 cm 2 pont; K4–K6 dupla, K7–K9 tripla. A gyerekek három kört lőttek.</p>
+</div>
+<script>
+(function(){
+var ROWS=[["Csöngető Csaba","B",532,28,[[30,5],[30,3],[45,3],[60,5],[40,2],[60,2],[72,3],[60,2],[135,3]]],["Pok Attila","B",487,27,[[30,5],[30,3],[60,4],[28,2],[60,3],[60,2],[84,4],[90,3],[45,1]]],["Fehér István","B",459,27,[[30,5],[40,4],[45,3],[60,5],[20,1],[30,1],[84,4],[60,2],[90,2]]],["Molnár László","B",420,25,[[28,4],[40,4],[30,2],[60,5],[40,2],[60,2],[72,3],[90,3],[0,0]]],["Trungel Nagy Róbert","B",398,21,[[20,4],[10,1],[30,2],[24,3],[20,1],[120,4],[54,3],[30,1],[90,2]]],["Kovács Tamás","B",396,20,[[6,1],[30,3],[30,2],[28,2],[80,4],[90,3],[42,2],[90,3],[0,0]]],["Gulyás Alexandra","F",345,23,[[6,2],[40,4],[45,3],[44,4],[60,3],[30,1],[60,4],[60,2],[0,0]]],["Molnár Tamás","B",343,21,[[30,5],[30,3],[30,2],[56,4],[20,1],[60,2],[42,2],[30,1],[45,1]]],["Oscsa Attila","B",321,23,[[30,5],[10,1],[75,5],[40,4],[40,2],[90,3],[36,3],[0,0],[0,0]]],["Nyerges Norbert","B",317,18,[[14,2],[20,2],[30,2],[24,3],[40,2],[30,1],[84,4],[30,1],[45,1]]],["Gábos Barna","B",307,17,[[20,4],[10,1],[45,3],[0,0],[40,2],[60,2],[42,2],[90,3],[0,0]]],["Bálint Sándor","B",299,17,[[30,5],[20,2],[0,0],[36,2],[60,3],[30,1],[48,2],[30,1],[45,1]]],["Telek Imre","B",278,16,[[12,3],[20,2],[0,0],[12,1],[60,3],[60,2],[54,3],[60,2],[0,0]]],["Busa Sándor","B",276,17,[[28,4],[30,3],[0,0],[56,4],[60,3],[0,0],[12,1],[0,0],[90,2]]],["Viliam Kalincik","B",271,16,[[24,3],[30,3],[60,4],[32,2],[20,1],[30,1],[0,0],[30,1],[45,1]]],["Turányi Imre","B",269,18,[[20,4],[10,1],[30,2],[60,5],[20,1],[0,0],[54,3],[30,1],[45,1]]],["Bánfarkas Imre","B",258,16,[[28,4],[30,3],[15,1],[28,2],[40,2],[30,1],[42,2],[0,0],[45,1]]],["Dumitrien Daniel","B",243,13,[[12,3],[20,2],[0,0],[16,2],[0,0],[60,2],[0,0],[90,3],[45,1]]],["Nagy Marianna","F",239,14,[[14,2],[0,0],[15,1],[36,3],[60,3],[60,2],[54,3],[0,0],[0,0]]],["Dénes Zsolt","B",168,14,[[30,5],[30,3],[30,2],[28,2],[20,1],[30,1],[0,0],[0,0],[0,0]]],["Vinz Riviera","B",156,14,[[30,5],[30,3],[30,2],[28,2],[20,1],[0,0],[18,1],[0,0],[0,0]]],["Juhász Rajmund","B",142,9,[[12,3],[10,1],[15,1],[12,1],[0,0],[0,0],[18,1],[30,1],[45,1]]],["Telekné Erika","F",137,6,[[14,2],[0,0],[0,0],[0,0],[0,0],[0,0],[18,1],[60,2],[45,1]]],["Trungel Nagy Kolos","B",128,9,[[14,2],[0,0],[15,1],[16,2],[20,1],[0,0],[18,2],[0,0],[45,1]]],["Kun Álmos","B",120,11,[[12,3],[0,0],[60,4],[12,2],[0,0],[0,0],[6,1],[30,1],[0,0]]],["Király Márk","B",114,8,[[12,3],[10,1],[15,1],[12,1],[20,1],[0,0],[0,0],[0,0],[45,1]]],["Telek Vanessza","C",47,4,[[2,1],[0,0],[45,3]]],["Geszti Dominik","C",47,4,[[2,1],[0,0],[45,3]]],["Pok Emma","C",37,5,[[12,3],[10,1],[15,1]]],["Kun József","B",29,4,[[2,1],[0,0],[15,1],[12,2],[0,0],[0,0],[0,0],[0,0],[0,0]]],["Juhász Richárd","C",12,2,[[2,1],[10,1],[0,0]]]],BEST=[30, 40, 75, 60, 80, 120, 84, 90, 135],C={B:'var(--men)',F:'var(--women)',C:'var(--kids)'},CN={B:'Férfiak',F:'Nők',C:'Gyerekek'};
+var BW=[],BK=[];for(var k=0;k<9;k++){BW[k]=Math.max.apply(null,ROWS.filter(function(r){return r[1]==='F'&&r[4][k]}).map(function(r){return r[4][k][0]}));BK[k]=Math.max.apply(null,ROWS.filter(function(r){return r[1]==='C'&&r[4][k]}).map(function(r){return r[4][k][0]}))}
+var tb=document.querySelector('#t tbody'),h='',rank=0;
+ROWS.forEach(function(r){rank++;var shots=r[1]==='C'?15:45,cells='';
+  for(var k=0;k<9;k++){var c=r[4][k];
+    if(!c){cells+='<td class="c na">–</td>';continue}
+    var cls='c'+(c[0]===BEST[k]?' best':(r[1]==='F'&&c[0]===BW[k]&&c[0]>0?' bestW':r[1]==='C'&&c[0]===BK[k]&&c[0]>0?' bestK':''))+(c[0]===0?' zero':'');
+    cells+='<td class="'+cls+'">'+c[0]+'<small>'+c[1]+'/5</small></td>'}
+  h+='<tr><td class="rk">'+rank+'</td><td class="who"><span class="dot" style="background:'+C[r[1]]+'"></span>'+r[0]+'</td>'+cells+'<td>'+r[3]+'/'+shots+'</td><td class="tot">'+r[2]+'</td></tr>';
+});
+tb.innerHTML=h;
+var s='';BEST.forEach(function(b,k){var who=ROWS.filter(function(r){return r[4][k]&&r[4][k][0]===b});
+  function best(list,cat){var f=ROWS.filter(function(r){return r[1]===cat&&r[4][k]&&r[4][k][0]===list[k]&&list[k]>0});return f.length?f.map(function(r){return r[0]+' '+r[4][k][0]+' ('+r[4][k][1]+'/5)'}).join(', '):'–'}
+  s+='<div class="k"><span>K'+(k+1)+' legjobb</span><b>'+b+' pont</b><em>'+(who.length>3?who.length+' játékos ('+who[0][4][k][1]+'/5)':who.map(function(r){return r[0]+' ('+r[4][k][1]+'/5)'}).join(', '))+'</em><em style="color:var(--women)">Nők: '+best(BW,'F')+'</em>'+(k<3?'<em style="color:var(--kids)">Gyerekek: '+best(BK,'C')+'</em>':'')+'</div>'});
+document.getElementById('sum').innerHTML=s;
+})();
+</script>
+</body>
+</html>

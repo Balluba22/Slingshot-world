@@ -1,0 +1,6 @@
+.DS_Store
+desktop/dist/
+desktop/build/
+desktop/*.spec
+desktop/*.exe
+desktop/*.ico
