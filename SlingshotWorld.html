@@ -1398,10 +1398,11 @@ function pdbGet(id){for(var i=0;i<PDB.list.length;i++)if(PDB.list[i].id===id)ret
 function nname(s){return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim().toLowerCase()}
 function pdbByName(n){var k=nname(n);if(!k)return null;for(var i=0;i<PDB.list.length;i++)if(nname(PDB.list[i].name)===k)return PDB.list[i];return null}
 function pdbParseId(s){var m=/^\s*(?:id|#)?\s*[-_ ]?\s*(\d{1,6})\s*$/i.exec(String(s||''));return m?+m[1]:null}
+function pdbFreeId(){var used={};PDB.list.forEach(function(x){used[x.id]=1});var n=1;while(used[n])n++;PDB.next=Math.max(PDB.next,n+1);return n}
 function pdbAdd(name,cat,flag){
   name=String(name||'').trim().slice(0,30);if(!name)return null;
   var ex=pdbByName(name);if(ex)return {e:ex,isNew:false};
-  var e={id:PDB.next++,name:name,cat:CATS[cat]?cat:'B',flag:(flag&&FLAGPNG[flag])?flag:''};PDB.list.push(e);pdbWrite();return {e:e,isNew:true};
+  var e={id:pdbFreeId(),name:name,cat:CATS[cat]?cat:'B',flag:(flag&&FLAGPNG[flag])?flag:''};PDB.list.push(e);PDB.list.sort(function(a,b){return a.id-b.id});pdbWrite();return {e:e,isNew:true};
 }
 function pdbLoadRemote(){
   if(!window.fetch||location.protocol==='file:')return;
