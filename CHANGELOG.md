@@ -2,6 +2,13 @@
 
 Formátum: minden kiadásnál egy szakasz, dátummal. Új bejegyzés mindig legfelülre kerül.
 
+## v1.5 – 2026-11-17
+- **🏅 WSA-rangsor kategóriánként**: az összesített táblázat mellett külön táblázat jelenik meg a nőknek, férfiaknak és gyerekeknek, ugyanúgy, mint a normál ranglistán (a játékos adatbázisbeli kategóriája szerint, saját helyezésekkel és érmekkel).
+- **Zászló a játékosoknál**: a játékos létrehozásakor (adatbázis-képernyő, „Adatbázisból” ablak, vagy a 💾 mentés a verseny játékossorán) listából választható az ország zászlaja, valamint a kategória. A zászló megjelenik a névnél a WSA-rangsorban, az adatbázis-listában, a kiválasztó ablakban és a verseny játékossorán. Az ország neve az aktuális nyelven jelenik meg; HU, RO, CZ, SK a lista elején. 85 ország, a zászlók a fájlba ágyazott képek (Windows alatt is helyesen látszanak, internet nélkül is).
+- **✏️ Szerkesztés** az adatbázisban: név, kategória és zászló módosítható (a törléshez továbbra is egyesületi jelszó kell).
+- A `jatekosok.json` export/import mostantól a zászlót is tartalmazza (`flag`, kétbetűs országkód); a régi fájlok zászló nélkül is betölthetők.
+- A fájl mérete a beágyazott zászlók miatt ~110 kB-tal nőtt.
+
 ## v1.4 – 2026-11-16
 - **👥 Játékos-adatbázis** (állandó, azonosítóval): minden játékos kap egy egyedi azonosítót (`id-1`, `id-2`, …). Új verseny / „Játékos hozzáadása” mellett ott az **👥 Adatbázisból** gomb: beírod, hogy `id-1` (vagy `1`, vagy a név egy részét) és Enter, a játékos bekerül a versenybe. Új játékos az adatbázis-képernyőn, vagy a verseny játékossorán a 💾 gombbal menthető. A játékosok a versenyektől függetlenül megmaradnak.
 - **Törlés csak egyesületi jelszóval**: az adatbázisból törölni ugyanazzal a jelszóval lehet, amit az archívumból törléshez is használunk (a jelszót a Worker ellenőrzi). Ha a Worker nem tudja megerősíteni a jelszót, vagy nincs kapcsolat, nem töröl semmit.

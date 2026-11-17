@@ -12,7 +12,7 @@ Egyetlen HTML-fájl, telepítés és háttérrendszer nélkül, telefonon és la
 - Ranglista összesítve és kategóriánként, holtverseny esetén szétlövés
 - Részletes ranglista minden lövéssel és találati aránnyal, PDF- és JPG-exporttal
 - Játékos-adatbázis állandó azonosítókkal (`id-1`, `id-2`, …): versenyhez azonosító beírásával adható hozzá, törlés csak egyesületi jelszóval
-- WSA-rangsor: a WSA-val jelölt körök sikerességi arányából, versenyenkénti átlaggal, választható dátumtartományra (éves rangsor)
+- WSA-rangsor: a WSA-val jelölt körök sikerességi arányából, versenyenkénti átlaggal, választható dátumtartományra (éves rangsor); összesítve és kategóriánként, a játékosok zászlajával
 - Statisztika: körönkénti pontok a körgyőztesek kiemelésével, és a helyezések alakulását mutató kattintható bump chart
 - Oklevelek (top 3 kategóriánként), nyomtatás, JPG-export
 - Több verseny kezelése dátummal és helyszínnel, JSON export/import eszközök között
