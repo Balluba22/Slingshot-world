@@ -105,7 +105,24 @@ td.tot{font-family:var(--d);font-size:20px;color:var(--sun)}
 .trow.cur{border-color:var(--sun)}.tn{font-family:var(--d);font-size:20px;overflow-wrap:anywhere}.tm{font-size:13px;opacity:.9}
 .badge{font-family:var(--b);font-size:11px;font-weight:800;background:var(--sun);color:var(--ink);border-radius:8px;padding:1px 7px;vertical-align:2px}
 .mini.del{background:var(--red);color:var(--paper)}
+.stc{min-width:62px}.stc b{font-weight:800}.stc small{display:block;font-size:11px;opacity:.75;line-height:1}
+td.stc.best{background:var(--sun);color:var(--ink);border-radius:8px;box-shadow:inset 0 0 0 2px #b8860b}td.stc.best small{opacity:.8}
+td.stc.bestc{background:rgba(46,196,182,.28);border-radius:8px;box-shadow:inset 0 0 0 2px var(--teal)}
+td.stc.zero b{color:#ff9a8f}td.stc.na{opacity:.45;font-size:12px}
+.stleg{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;font-weight:700}.stleg i{display:inline-block;width:26px;height:16px;border-radius:5px;margin-right:6px;vertical-align:-3px}.stleg i.best{background:var(--sun);box-shadow:inset 0 0 0 2px #b8860b}.stleg i.bestc{background:rgba(46,196,182,.28);box-shadow:inset 0 0 0 2px var(--teal)}
+.sthint{font-size:14px;font-weight:700;opacity:.9}
+.stbw{overflow-x:auto;border:3px solid var(--ink);border-radius:14px;background:rgba(27,16,51,.78);padding:6px}
+.stbump{display:block;width:100%;height:auto;min-width:620px;font-family:var(--b)}.sthit{cursor:pointer}
+.stlist{display:flex;flex-wrap:wrap;gap:6px}
+.stn{display:inline-flex;align-items:center;gap:6px;border:3px solid var(--ink);border-radius:12px;padding:4px 10px;font-weight:800;font-size:13px;background:rgba(253,240,213,.2);color:var(--paper);cursor:pointer}
+.stn[aria-pressed="true"]{background:rgba(253,240,213,.35)}.stn i{display:block;width:12px;height:12px;border-radius:50%;border:2px solid var(--ink)}.stn small{opacity:.8;font-weight:600}
+.arch{margin-top:18px;display:flex;flex-direction:column;gap:10px}
+.arch h2{font-family:var(--d);font-weight:400;font-size:22px;text-shadow:2px 2px 0 var(--ink)}
+.arch small{opacity:.85;font-weight:700}
+.trow.arc{border-style:dashed;background:rgba(27,16,51,.55)}
+.badge.arc{background:var(--teal)}
 .tn-input{width:100%;font-weight:800;font-size:18px;color:var(--ink);background:#fff;border:3px solid var(--ink);border-radius:10px;padding:9px 12px}
+.tn-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;text-align:left}.tn-row label{display:flex;flex-direction:column;gap:3px;font-weight:800;font-size:12px;min-width:0}.tn-row .tn-input{font-size:15px;padding:7px 10px}@media (max-width:420px){.tn-row{grid-template-columns:1fr}}
 .tn-cp{display:flex;gap:8px;align-items:flex-start;text-align:left;font-weight:700;font-size:14px}
 .tn-ta{width:100%;min-height:150px;font:12px/1.3 ui-monospace,Consolas,monospace;color:var(--ink);background:#fff;border:3px solid var(--ink);border-radius:10px;padding:8px}
 .tn-err{color:var(--red);font-weight:800;min-height:1em;font-size:14px}
@@ -130,17 +147,25 @@ body.pb .bh{color:#000;text-shadow:none}body.pb .cdot{border-color:#000}body.pb 
 .dip{border-width:12px;height:185mm;width:100%;aspect-ratio:auto;page-break-after:always;break-after:page}.dips{gap:0}
 }
 .lang-sel{font-weight:800;font-size:14px;padding:5px 8px;border-radius:10px;border-width:2px}
+.wsa-chk{display:inline-flex;align-items:center;gap:4px;font-weight:800;font-size:13px;background:var(--paper);color:var(--ink);border:2px solid var(--ink);border-radius:9px;padding:3px 8px;cursor:pointer;box-shadow:0 2px 0 var(--ink)}.wsa-chk input{width:16px;height:16px;accent-color:var(--teal)}
+.wsa-ctl{align-items:flex-end;gap:10px}.wsa-ctl label{display:flex;flex-direction:column;gap:3px;font-weight:800;font-size:12px}.wsa-ctl .tn-input{font-size:15px;padding:6px 10px;width:auto}
+.pk-list{max-height:34vh;overflow:auto;display:flex;flex-direction:column;gap:6px;text-align:left;margin:8px 0}
+.pk-row{display:flex;gap:8px;align-items:center;justify-content:flex-start;font-weight:800;font-size:16px;background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:10px;padding:8px 10px;cursor:pointer;text-align:left;width:100%}
+.pk-row[disabled]{opacity:.55;cursor:default}.pk-row .badge{flex:none}.pk-row small{margin-left:auto;font-weight:700}
+.pk-st{min-height:1.3em;font-weight:800;font-size:14px;margin:4px 0}
+.wsat td.l,.wsat th.l{text-align:left}.wsat tr.wsar{cursor:pointer}.wsat tr.wsad td{text-align:left;white-space:normal;font-size:13px;opacity:.92;background:rgba(253,240,213,.06)}
+.wsat .big{font-family:var(--d);font-size:20px}
 </style></head><body>
 
 <section class="screen" id="s-setup">
-  <div class="hd"><h1 class="wm">SlingshotWorld</h1><div class="bar"><div class="lang-sel lp" role="group" data-i18n-aria="langLabel" aria-label="Language"></div><button class="btn sm alt mute-btn" type="button" data-i18n-aria="sound" aria-label="Sound">🔊</button><button data-i18n="leaderboard" class="btn sm alt" id="to-board" type="button">🏆 Leaderboard</button><button data-i18n="editScores" class="btn sm alt" id="e-open" type="button">✏️ Edit scores</button><button data-i18n="tBtn" class="btn sm alt" id="to-tour" type="button">🗂 Tournaments</button><button data-i18n="newT" class="btn sm red" id="new-t" type="button">New tournament</button></div></div>
+  <div class="hd"><h1 class="wm">SlingshotWorld</h1><div class="bar"><div class="lang-sel lp" role="group" data-i18n-aria="langLabel" aria-label="Language"></div><button class="btn sm alt mute-btn" type="button" data-i18n-aria="sound" aria-label="Sound">🔊</button><button data-i18n="leaderboard" class="btn sm alt" id="to-board" type="button">🏆 Leaderboard</button><button data-i18n="stB" class="btn sm alt" id="to-stat" type="button">📈 Statistics</button><button data-i18n="pdbBtn" class="btn sm alt" id="to-pdb" type="button">👥 Players</button><button data-i18n="wsaBtn" class="btn sm alt" id="to-wsa" type="button">🏅 WSA ranking</button><button data-i18n="editScores" class="btn sm alt" id="e-open" type="button">✏️ Edit scores</button><button data-i18n="tBtn" class="btn sm alt" id="to-tour" type="button">🗂 Tournaments</button><button data-i18n="newT" class="btn sm red" id="new-t" type="button">New tournament</button></div></div>
   <div class="bar" style="gap:10px"><span id="cur-t" style="font-weight:800;font-size:18px;overflow-wrap:anywhere"></span><button data-i18n="tRename" class="mini" id="t-ren" type="button">Rename</button></div>
   <div class="sign">
     <h2 data-i18n="s1">1. Players and session</h2>
     <div class="field">
       <small id="sel-info"></small>
       <div id="roster" style="display:flex;flex-direction:column;gap:8px"></div>
-      <button data-i18n="addP" class="btn sm alt" id="add-p" type="button" style="align-self:flex-start">+ Add player</button>
+      <div class="bar" style="align-self:flex-start"><button data-i18n="addP" class="btn sm alt" id="add-p" type="button">+ Add player</button><button data-i18n="addDb" class="btn sm" id="add-db" type="button">👥 From database</button></div>
     </div>
     <div class="start-row"><button data-i18n="start" class="btn" id="start" type="button">Start session</button></div>
     <h2 data-i18n="s2">2. Points per target size</h2>
@@ -163,6 +188,25 @@ body.pb .bh{color:#000;text-shadow:none}body.pb .cdot{border-color:#000}body.pb 
   <div class="top"><button data-i18n="back" class="btn sm alt" id="t-back" type="button">← Back</button><div class="bar"><div class="lang-sel lp" role="group" data-i18n-aria="langLabel" aria-label="Language"></div><button data-i18n="tNew" class="btn sm" id="t-new" type="button">+ New tournament</button><button data-i18n="tImport" class="btn sm alt" id="t-imp" type="button">Import</button></div></div>
   <h1 data-i18n="tTitle" class="wm" style="font-size:clamp(30px,7vw,50px)">Tournaments</h1>
   <div id="tlist" style="display:flex;flex-direction:column;gap:10px"></div>
+  <div class="arch" id="arch" hidden><h2 data-i18n="archTitle">Club archive</h2><small data-i18n="archHint">Results published by the club.</small><div id="alist" style="display:flex;flex-direction:column;gap:10px"></div></div>
+</section>
+
+<section class="screen" id="s-pdb" hidden>
+  <div class="top"><button data-i18n="back" class="btn sm alt" id="pdb-back" type="button">← Back</button><div class="bar"><div class="lang-sel lp" role="group" data-i18n-aria="langLabel" aria-label="Language"></div><button data-i18n="wsaBtn" class="btn sm alt" id="pdb-wsa" type="button">🏅 WSA ranking</button><button data-i18n="pdbExp" class="btn sm" id="pdb-exp" type="button">⬇ Export database</button><button data-i18n="pdbImp" class="btn sm" id="pdb-imp" type="button">⬆ Import database</button></div></div>
+  <h1 data-i18n="pdbTitle" class="wm" style="font-size:clamp(30px,7vw,50px)">Players database</h1>
+  <small data-i18n="pdbHint">Permanent players with a unique ID.</small>
+  <div class="bar"><input id="pdb-new" class="tn-input" type="text" maxlength="30" autocomplete="off" style="flex:1;min-width:190px"><button data-i18n="pdbCreate" class="btn sm" id="pdb-create" type="button">➕ Create player</button></div>
+  <input id="pdb-q" class="tn-input" type="text" autocomplete="off">
+  <div id="pdb-list" style="display:flex;flex-direction:column;gap:10px"></div>
+</section>
+
+<section class="screen" id="s-wsa" hidden>
+  <div class="top"><button data-i18n="back" class="btn sm alt" id="wsa-back" type="button">← Back</button><div class="bar"><div class="lang-sel lp" role="group" data-i18n-aria="langLabel" aria-label="Language"></div><button data-i18n="pdbBtn" class="btn sm alt" id="wsa-pdb" type="button">👥 Players</button></div></div>
+  <h1 data-i18n="wsaTitle" class="wm" style="font-size:clamp(30px,7vw,50px)">WSA ranking</h1>
+  <small data-i18n="wsaHint">Only rounds marked WSA count.</small>
+  <div class="bar wsa-ctl"><label><span data-i18n="wsaFrom">From</span><input id="wsa-from" class="tn-input" type="date"></label><label><span data-i18n="wsaTo">To</span><input id="wsa-to" class="tn-input" type="date"></label><button data-i18n="wsaThisYear" class="mini" id="wsa-ty" type="button">This year</button><button data-i18n="wsaLastYear" class="mini" id="wsa-ly" type="button">Last year</button><button data-i18n="ptAll" class="mini" id="wsa-all" type="button">All</button></div>
+  <small id="wsa-status" style="font-weight:700"></small>
+  <div id="wsa-body"></div>
 </section>
 
 <section class="screen" id="s-play" hidden>
@@ -172,9 +216,16 @@ body.pb .bh{color:#000;text-shadow:none}body.pb .cdot{border-color:#000}body.pb 
 </section>
 
 <section class="screen" id="s-board" hidden>
-  <div class="top noprint"><button data-i18n="back" class="btn sm alt" id="b-back" type="button">← Back</button><div class="bar"><div class="lang-sel lp" role="group" data-i18n-aria="langLabel" aria-label="Language"></div><button data-i18n="editScores" class="btn sm alt" id="b-edit" type="button">✏️ Edit scores</button><button data-i18n="printB" class="btn sm" id="b-print" type="button">🖨 Print leaderboard</button><button data-i18n="jpgB" class="btn sm" id="b-jpg" type="button">🖼 Export JPG</button><button data-i18n="detB" class="btn sm" id="b-det" type="button">📋 Detailed leaderboard</button><button data-i18n="dipB" class="btn sm" id="b-dip" type="button">🎓 Top 3 diplomas</button></div></div>
+  <div class="top noprint"><button data-i18n="back" class="btn sm alt" id="b-back" type="button">← Back</button><div class="bar"><div class="lang-sel lp" role="group" data-i18n-aria="langLabel" aria-label="Language"></div><button data-i18n="editScores" class="btn sm alt" id="b-edit" type="button">✏️ Edit scores</button><button data-i18n="printB" class="btn sm" id="b-print" type="button">🖨 Print leaderboard</button><button data-i18n="jpgB" class="btn sm" id="b-jpg" type="button">🖼 Export JPG</button><button data-i18n="detB" class="btn sm" id="b-det" type="button">📋 Detailed leaderboard</button><button data-i18n="stB" class="btn sm alt" id="b-stat" type="button">📈 Statistics</button><button data-i18n="dipB" class="btn sm" id="b-dip" type="button">🎓 Top 3 diplomas</button></div></div>
   <h1 data-i18n="lbTitle" class="wm" style="font-size:clamp(30px,7vw,50px)">Leaderboard</h1>
   <div id="board" style="display:flex;flex-direction:column;gap:10px"></div>
+</section>
+
+<section class="screen" id="s-stat" hidden>
+  <div class="top"><button data-i18n="back" class="btn sm alt" id="st-back" type="button">← Back</button><div class="bar"><div class="lang-sel lp" role="group" data-i18n-aria="langLabel" aria-label="Language"></div></div></div>
+  <h1 data-i18n="stTitle" class="wm" style="font-size:clamp(30px,7vw,50px)">Statistics</h1>
+  <div class="tabs"><button data-i18n="stRounds" class="tab" id="st-rounds" type="button" aria-selected="true">Rounds</button><button data-i18n="stBump" class="tab" id="st-bump" type="button" aria-selected="false">Ranking progression</button></div>
+  <div id="st-body" style="display:flex;flex-direction:column;gap:10px"></div>
 </section>
 
 <section class="screen" id="s-dip" hidden>
@@ -201,7 +252,7 @@ body.pb .bh{color:#000;text-shadow:none}body.pb .cdot{border-color:#000}body.pb 
 'use strict';
 var $=function(s,r){return (r||document).querySelector(s)};
 /* ---------- Languages ---------- */
-var I18N={"en": {"sound": "Sound", "langLabel": "Language", "leaderboard": "🏆 Leaderboard", "editScores": "✏️ Edit scores", "editTitle": "Edit scores", "newT": "New tournament", "s1": "1. Players and session", "addP": "+ Add player", "start": "Start session", "s2": "2. Points per target size", "ptsInfo": "Points a player earns for a hit on each size.", "s3": "3. Rounds and targets", "roundsPer": "Rounds:", "pickInfo": "Pick the player whose targets you want to edit. Rounds already started are locked (🔒).", "periods": "Periods:", "periodInfo": "Pick the score multiplier (×1, ×2 or ×3) on each round below; it applies to all players. Rounds lock after the first shot.", "pause": "Pause / other players", "back": "← Back", "printB": "🖨 Print leaderboard", "dipB": "🎓 Top 3 diplomas", "lbTitle": "Leaderboard", "backLb": "← Leaderboard", "printD": "🖨 Print diplomas", "editInfo": "Pick a player, then tap a target to correct it: tap an unshot target to mark it Hit, tap again for Miss. Tapping the last shot of a round a third time clears it. Targets must be filled in order.", "catF": "Women", "catB": "Men", "catC": "Kids", "sk_classic": "Classic", "sk_white": "White", "sk_black": "Black", "sk_blue": "Blue", "sk_green": "Green", "sk_orange": "Orange", "pre_asc": "Ascending 3→8", "pre_desc": "Descending 8→3", "pre_mix": "Mix", "pre_small": "Small only", "pre_large": "Large only", "player": "Player", "name": "Name", "playerName": "Player name", "delAria": "Delete {n}", "delQ": "Delete {n}?", "delTxt": "Their results will be deleted too.", "delBtn": "Delete", "cancel": "Cancel", "catAria": "Category {n}", "finished": "Finished", "playingNow": "✓ Playing now", "pick": "Pick", "allDone": "All rounds done · {t} pts", "prog": "Rounds done {a}/{b} · {t} pts · next: round {n}", "notPlayed": "Not played yet · next: round 1", "selInfo": "Next session: {names}. Each plays their next round. You can pick other players anytime (1, 2 or 3).", "and": "and", "selNone": "Pick 1, 2 or 3 players for the session.", "ptsAria": "Points for target {s} cm", "skinLbl": "Target skin:", "applyAll": "Apply to all", "copyFrom": "Copy from…", "copyAria": "Copy targets from another player", "round": "Round {n}", "mulAria": "Score multiplier, round {n}", "addAria": "Add target {s} cm", "copyAll": "Copy to all", "targetAria": "Target {n}, {k} cm", "summary": "{n}: {a} shots in total, maximum {b} points.", "locked": "🔒 locked – results exist (use “New tournament” to change)", "newTQ": "New tournament?", "newTTxt": "All results will be deleted. Players and targets stay.", "delRes": "Delete results", "everyoneT": "Everyone has finished", "everyoneTxt": "All rounds are done for the selected players. Pick other players.", "ok": "OK", "perS": "Per.", "rS": "R", "periodN": "Period {p}", "roundOf": "Round {n}/{m}", "roundTarget": "{l} · target {n}/{m}", "roundFinished": "{l} finished ✓", "roundDone": "Round done. You can undo the last shot if you made a mistake.", "pointsW": "points", "hit": "HIT", "miss": "MISS", "undo": "Undo last", "session": "Session: ", "colPlayer": "Player", "colTotal": "Total", "perfect": "Perfect round!", "roundEndLine": "{n}: +{pt} in {l} (total {t})", "breakP": "Break! Period finished", "breakR": "Break! Round finished", "nextRound": "Next round (same players)", "otherPl": "Pick other players", "lbBtn": "Leaderboard", "overall": "Overall leaderboard (all players)", "catBoard": "{c} category", "nobody": "Nobody has shot yet.", "thRank": "Rank", "thCat": "Category", "thRounds": "Rounds", "thHits": "Hits", "thPoints": "Points", "clearRound": "Clear round", "notPlayedShort": "not played", "eTotal": "{n}: {t} points", "ariaHit": "hit", "ariaMiss": "miss", "ariaNone": "not shot", "cert": "CERTIFICATE", "ord1": "1st", "ord2": "2nd", "ord3": "3rd", "dipPlace": "{o} place · {c} category", "awarded": "is awarded to", "forScoring": "for scoring <b>{n} points</b> at SlingshotWorld", "dipNote": "{n} diplomas (top 3 in each category; tied players share the place).", "dipNone": "There are no results for diplomas yet.", "tDefault": "Tournament", "tBtn": "🗂 Tournaments", "tTitle": "Tournaments", "tCurrent": "Tournament: {n}", "tRename": "Rename", "tNew": "+ New tournament", "tNameTitle": "Name the new tournament", "tNameAria": "Tournament name", "tCopy": "Copy players and targets from the current tournament (results start empty)", "tCreate": "Create", "tOpen": "Open", "tDup": "Duplicate", "tCopyW": "copy", "tExport": "Export", "tImport": "Import", "tDel": "Delete", "tDelQ": "Delete tournament “{n}”?", "tDelTxt": "All its players and results will be deleted permanently.", "tCurBadge": "Current", "tMeta": "{p} players · {s} shots · {d}", "tExpTitle": "Export tournament", "tExpHint": "Copy this text or download the file. You can import it later on any device.", "tCopyBtn": "Copy text", "tDownload": "Download file", "tImpTitle": "Import tournament", "tImpHint": "Choose an exported file or paste its text below.", "tImpErr": "This is not a valid tournament export.", "close": "Close", "tourDone": "Tournament finished!", "tourWin": "Winner: {n} – {p} points", "tourWins": "Winners: {n} – {p} points", "soTie": "Tie for place {p}: {n}", "soBtn": "⚔️ Shootout", "soRound": "Shootout #{n}", "soShort": "SO{n}", "soBreak": "Shootout round finished", "soNextTxt": "{n} more player(s) still need to shoot.", "soNextB": "Next players", "soResolved": "The tie is broken!", "soStill": "Still tied – shoot again!", "soAgain": "⚔️ Another round", "jpgB": "🖼 Export JPG", "ptAll": "All", "detB": "📋 Detailed leaderboard", "detTitle": "Detailed leaderboard", "detHit": "Hit", "detMiss": "Missed", "detNone": "Not shot", "detAcc": "Accuracy", "detLegend": "Number = target size in cm, S = special target", "detPage": "Page", "detPdf": "⬇ Export PDF (pages)", "detZip": "⬇ Export JPG pages (ZIP)", "detClose": "✕ Close", "detCont": "continued", "detOne": "⬇ JPG"}, "ro": {"sound": "Sunet", "langLabel": "Limbă", "leaderboard": "🏆 Clasament", "editScores": "✏️ Editează scorurile", "editTitle": "Editează scorurile", "newT": "Turneu nou", "s1": "1. Jucători și sesiune", "addP": "+ Adaugă jucător", "start": "Începe sesiunea", "s2": "2. Puncte pentru fiecare dimensiune a țintei", "ptsInfo": "Punctele primite de un jucător pentru o lovitură la fiecare dimensiune.", "s3": "3. Runde și ținte", "roundsPer": "Runde:", "pickInfo": "Alege jucătorul ale cărui ținte vrei să le editezi. Rundele deja începute sunt blocate (🔒).", "periods": "Perioade:", "periodInfo": "Alege multiplicatorul de scor (×1, ×2 sau ×3) la fiecare rundă de mai jos; se aplică tuturor playerilor. Rundele se blochează după prima tragere.", "pause": "Pauză / alți jucători", "back": "← Înapoi", "printB": "🖨 Tipărește clasamentul", "dipB": "🎓 Diplome top 3", "lbTitle": "Clasament", "backLb": "← Clasament", "printD": "🖨 Tipărește diplomele", "editInfo": "Alege un jucător, apoi atinge o țintă pentru a o corecta: atinge o țintă netrasă pentru a o marca Lovită, atinge din nou pentru Ratată. A treia atingere pe ultima lovitură dintr-o rundă o șterge. Țintele trebuie completate în ordine.", "catF": "Femei", "catB": "Bărbați", "catC": "Copii", "sk_classic": "Clasic", "sk_white": "Alb", "sk_black": "Negru", "sk_blue": "Albastru", "sk_green": "Verde", "sk_orange": "Portocaliu", "pre_asc": "Crescător 3→8", "pre_desc": "Descrescător 8→3", "pre_mix": "Mix", "pre_small": "Doar mici", "pre_large": "Doar mari", "player": "Jucător", "name": "Nume", "playerName": "Numele jucătorului", "delAria": "Șterge {n}", "delQ": "Ștergi {n}?", "delTxt": "Rezultatele sale vor fi șterse, de asemenea.", "delBtn": "Șterge", "cancel": "Anulează", "catAria": "Categoria {n}", "finished": "Terminat", "playingNow": "✓ Joacă acum", "pick": "Alege", "allDone": "Toate rundele terminate · {t} pct", "prog": "Runde terminate {a}/{b} · {t} pct · urmează: runda {n}", "notPlayed": "Încă nu a jucat · urmează: runda 1", "selInfo": "Sesiunea următoare: {names}. Fiecare joacă runda următoare. Poți alege alți jucători oricând (1, 2 sau 3).", "and": "și", "selNone": "Alege 1, 2 sau 3 jucători pentru sesiune.", "ptsAria": "Puncte pentru ținta de {s} cm", "skinLbl": "Aspect țintă:", "applyAll": "Aplică tuturor", "copyFrom": "Copiază de la…", "copyAria": "Copiază țintele de la alt jucător", "round": "Runda {n}", "mulAria": "Multiplicator de scor, runda {n}", "addAria": "Adaugă ținta de {s} cm", "copyAll": "Copiază la toate", "targetAria": "Ținta {n}, {k} cm", "summary": "{n}: {a} lovituri în total, maximum {b} puncte.", "locked": "🔒 blocat – există rezultate (folosește „Turneu nou” pentru a modifica)", "newTQ": "Turneu nou?", "newTTxt": "Toate rezultatele vor fi șterse. Jucătorii și țintele rămân.", "delRes": "Șterge rezultatele", "everyoneT": "Toți au terminat", "everyoneTxt": "Toate rundele sunt terminate pentru jucătorii selectați. Alege alți jucători.", "ok": "OK", "perS": "Per.", "rS": "R", "periodN": "Perioada {p}", "roundOf": "Runda {n}/{m}", "roundTarget": "{l} · ținta {n}/{m}", "roundFinished": "{l} terminată ✓", "roundDone": "Runda s-a terminat. Poți anula ultima lovitură dacă ai greșit.", "pointsW": "puncte", "hit": "LOVIT", "miss": "RATAT", "undo": "Anulează ultima", "session": "Sesiune: ", "colPlayer": "Jucător", "colTotal": "Total", "perfect": "Rundă perfectă!", "roundEndLine": "{n}: +{pt} în {l} (total {t})", "breakP": "Pauză! Perioada s-a terminat", "breakR": "Pauză! Runda s-a terminat", "nextRound": "Runda următoare (aceiași jucători)", "otherPl": "Alege alți jucători", "lbBtn": "Clasament", "overall": "Clasament general (toți jucătorii)", "catBoard": "Categoria {c}", "nobody": "Nimeni nu a tras încă.", "thRank": "Loc", "thCat": "Categorie", "thRounds": "Runde", "thHits": "Lovituri", "thPoints": "Puncte", "clearRound": "Șterge runda", "notPlayedShort": "nejucată", "eTotal": "{n}: {t} puncte", "ariaHit": "lovită", "ariaMiss": "ratată", "ariaNone": "netrasă", "cert": "CERTIFICAT", "ord1": "1", "ord2": "2", "ord3": "3", "dipPlace": "Locul {o} · categoria {c}", "awarded": "se acordă", "forScoring": "pentru <b>{n} puncte</b> obținute la SlingshotWorld", "dipNote": "{n} diplome (primii 3 din fiecare categorie; jucătorii la egalitate împart locul).", "dipNone": "Nu există încă rezultate pentru diplome.", "tDefault": "Turneu", "tBtn": "🗂 Turnee", "tTitle": "Turnee", "tCurrent": "Turneu: {n}", "tRename": "Redenumește", "tNew": "+ Turneu nou", "tNameTitle": "Denumește turneul nou", "tNameAria": "Numele turneului", "tCopy": "Copiază playerii și țintele din turneul curent (rezultatele pornesc de la zero)", "tCreate": "Creează", "tOpen": "Deschide", "tDup": "Duplică", "tCopyW": "copie", "tExport": "Exportă", "tImport": "Importă", "tDel": "Șterge", "tDelQ": "Ștergi turneul „{n}”?", "tDelTxt": "Toți playerii și rezultatele lui se șterg definitiv.", "tCurBadge": "Curent", "tMeta": "{p} playeri · {s} trageri · {d}", "tExpTitle": "Exportă turneul", "tExpHint": "Copiază acest text sau descarcă fișierul. Îl poți importa mai târziu pe orice dispozitiv.", "tCopyBtn": "Copiază textul", "tDownload": "Descarcă fișierul", "tImpTitle": "Importă turneu", "tImpHint": "Alege un fișier exportat sau lipește textul lui mai jos.", "tImpErr": "Acesta nu este un export valid de turneu.", "close": "Închide", "tourDone": "Turneu încheiat!", "tourWin": "Câștigător: {n} – {p} puncte", "tourWins": "Câștigători: {n} – {p} puncte", "soTie": "Egalitate pe locul {p}: {n}", "soBtn": "⚔️ Shootout", "soRound": "Shootout #{n}", "soShort": "SO{n}", "soBreak": "Runda de shootout s-a terminat", "soNextTxt": "Mai trebuie să tragă {n} jucător(i).", "soNextB": "Următorii jucători", "soResolved": "Egalitatea a fost departajată!", "soStill": "Încă egalitate – mai trageți o rundă!", "soAgain": "⚔️ Încă o rundă", "jpgB": "🖼 Exportă JPG", "ptAll": "Toate", "detB": "📋 Clasament detaliat", "detTitle": "Clasament detaliat", "detHit": "Nimerit", "detMiss": "Ratat", "detNone": "Netras", "detAcc": "Precizie", "detLegend": "Număr = dimensiunea țintei în cm, S = țintă specială", "detPage": "Pagina", "detPdf": "⬇ Export PDF (pe pagini)", "detZip": "⬇ Export JPG pe pagini (ZIP)", "detClose": "✕ Închide", "detCont": "continuare", "detOne": "⬇ JPG"}, "hu": {"sound": "Hang", "langLabel": "Nyelv", "leaderboard": "🏆 Ranglista", "editScores": "✏️ Pontok szerkesztése", "editTitle": "Pontok szerkesztése", "newT": "Új verseny", "s1": "1. Játékosok és menet", "addP": "+ Játékos hozzáadása", "start": "Menet indítása", "s2": "2. Pontok célméretenként", "ptsInfo": "A játékos által egy találatért kapott pontok az egyes méreteknél.", "s3": "3. Körök és célpontok", "roundsPer": "Körök:", "pickInfo": "Válaszd ki azt a játékost, akinek a célpontjait szerkeszteni szeretnéd. A már elkezdett körök zárolva vannak (🔒).", "periods": "Szakaszok:", "periodInfo": "Válaszd ki a pontszorzót (×1, ×2 vagy ×3) az alábbi köröknél; minden játékosra érvényes. A körök az első lövés után zárolódnak.", "pause": "Szünet / más játékosok", "back": "← Vissza", "printB": "🖨 Ranglista nyomtatása", "dipB": "🎓 Top 3 oklevél", "lbTitle": "Ranglista", "backLb": "← Ranglista", "printD": "🖨 Oklevelek nyomtatása", "editInfo": "Válassz játékost, majd koppints egy célpontra a javításhoz: a le nem lőtt célpontra koppintva Találat lesz, még egyszer koppintva Mellé. A kör utolsó lövésére harmadszor koppintva törlődik. A célpontokat sorrendben kell kitölteni.", "catF": "Nők", "catB": "Férfiak", "catC": "Gyerekek", "sk_classic": "Klasszikus", "sk_white": "Fehér", "sk_black": "Fekete", "sk_blue": "Kék", "sk_green": "Zöld", "sk_orange": "Narancs", "pre_asc": "Növekvő 3→8", "pre_desc": "Csökkenő 8→3", "pre_mix": "Vegyes", "pre_small": "Csak kicsi", "pre_large": "Csak nagy", "player": "Játékos", "name": "Név", "playerName": "Játékos neve", "delAria": "{n} törlése", "delQ": "Törlöd: {n}?", "delTxt": "Az eredményei is törlődnek.", "delBtn": "Törlés", "cancel": "Mégse", "catAria": "{n} kategóriája", "finished": "Kész", "playingNow": "✓ Most játszik", "pick": "Kiválaszt", "allDone": "Minden kör kész · {t} pont", "prog": "Kész körök {a}/{b} · {t} pont · következő: {n}. kör", "notPlayed": "Még nem játszott · következő: 1. kör", "selInfo": "Következő menet: {names}. Mindenki a következő körét játssza. Bármikor választhatsz másokat (1, 2 vagy 3 játékos).", "and": "és", "selNone": "Válassz 1, 2 vagy 3 játékost a menethez.", "ptsAria": "Pont a(z) {s} cm-es célpontért", "skinLbl": "Célpont színe:", "applyAll": "Mindenkinek", "copyFrom": "Másolás innen…", "copyAria": "Célpontok másolása másik játékostól", "round": "{n}. kör", "mulAria": "Pontszorzó, {n}. kör", "addAria": "{s} cm-es célpont hozzáadása", "copyAll": "Másolás mindenhova", "targetAria": "{n}. célpont, {k} cm", "summary": "{n}: összesen {a} lövés, maximum {b} pont.", "locked": "🔒 zárolva – vannak eredmények (módosításhoz használd az „Új verseny” gombot)", "newTQ": "Új verseny?", "newTTxt": "Minden eredmény törlődik. A játékosok és a célpontok megmaradnak.", "delRes": "Eredmények törlése", "everyoneT": "Mindenki végzett", "everyoneTxt": "A kiválasztott játékosoknak minden köre kész. Válassz másokat.", "ok": "OK", "perS": "Sz.", "rS": "K", "periodN": "{p}. szakasz", "roundOf": "{n}/{m}. kör", "roundTarget": "{l} · {n}/{m}. célpont", "roundFinished": "{l} kész ✓", "roundDone": "A kör véget ért. Ha elrontottad, visszavonhatod az utolsó lövést.", "pointsW": "pont", "hit": "TALÁLAT", "miss": "MELLÉ", "undo": "Utolsó visszavonása", "session": "Menet: ", "colPlayer": "Játékos", "colTotal": "Összesen", "perfect": "Tökéletes kör!", "roundEndLine": "{n}: +{pt} ({l}), összesen {t}", "breakP": "Szünet! A szakasz véget ért", "breakR": "Szünet! A kör véget ért", "nextRound": "Következő kör (ugyanazok a játékosok)", "otherPl": "Más játékosok", "lbBtn": "Ranglista", "overall": "Összesített ranglista (minden játékos)", "catBoard": "{c} kategória", "nobody": "Még senki sem lőtt.", "thRank": "Hely", "thCat": "Kategória", "thRounds": "Körök", "thHits": "Találat", "thPoints": "Pont", "clearRound": "Kör törlése", "notPlayedShort": "nem játszott", "eTotal": "{n}: {t} pont", "ariaHit": "találat", "ariaMiss": "mellé", "ariaNone": "nem lőtt", "cert": "OKLEVÉL", "ord1": "1.", "ord2": "2.", "ord3": "3.", "dipPlace": "{o} helyezés · {c} kategória", "awarded": "Az elismerést kapja:", "forScoring": "a SlingshotWorldön elért <b>{n} pontért</b>", "dipNote": "{n} oklevél (kategóriánként az első 3; holtverseny esetén a helyezés közös).", "dipNone": "Még nincs eredmény az oklevelekhez.", "tDefault": "Verseny", "tBtn": "🗂 Versenyek", "tTitle": "Versenyek", "tCurrent": "Verseny: {n}", "tRename": "Átnevezés", "tNew": "+ Új verseny", "tNameTitle": "Nevezd el az új versenyt", "tNameAria": "A verseny neve", "tCopy": "Játékosok és célok másolása az aktuális versenyből (az eredmények üresen indulnak)", "tCreate": "Létrehozás", "tOpen": "Megnyitás", "tDup": "Duplikálás", "tCopyW": "másolat", "tExport": "Exportálás", "tImport": "Importálás", "tDel": "Törlés", "tDelQ": "Törlöd a(z) „{n}” versenyt?", "tDelTxt": "Minden játékosa és eredménye véglegesen törlődik.", "tCurBadge": "Aktuális", "tMeta": "{p} játékos · {s} lövés · {d}", "tExpTitle": "Verseny exportálása", "tExpHint": "Másold ki ezt a szöveget vagy töltsd le a fájlt. Később bármelyik eszközön importálhatod.", "tCopyBtn": "Szöveg másolása", "tDownload": "Fájl letöltése", "tImpTitle": "Verseny importálása", "tImpHint": "Válassz egy exportált fájlt, vagy illeszd be a szövegét alább.", "tImpErr": "Ez nem érvényes verseny-export.", "close": "Bezárás", "tourDone": "A verseny véget ért!", "tourWin": "Győztes: {n} – {p} pont", "tourWins": "Győztesek: {n} – {p} pont", "soTie": "Holtverseny a(z) {p}. helyen: {n}", "soBtn": "⚔️ Szétlövés", "soRound": "Szétlövés #{n}", "soShort": "SZ{n}", "soBreak": "A szétlövés köre véget ért", "soNextTxt": "Még {n} játékosnak kell lőnie.", "soNextB": "Következő játékosok", "soResolved": "A holtverseny eldőlt!", "soStill": "Még mindig döntetlen – lőjetek újra!", "soAgain": "⚔️ Még egy kör", "jpgB": "🖼 Exportálás JPG-be", "ptAll": "Mind", "detB": "📋 Részletes ranglista", "detTitle": "Részletes ranglista", "detHit": "Találat", "detMiss": "Mellé", "detNone": "Nem lőtt", "detAcc": "Pontosság", "detLegend": "Szám = a cél mérete cm-ben, S = speciális cél", "detPage": "Oldal", "detPdf": "⬇ PDF export (oldalanként)", "detZip": "⬇ JPG oldalak exportja (ZIP)", "detClose": "✕ Bezárás", "detCont": "folytatás", "detOne": "⬇ JPG"}, "cs": {"sound": "Zvuk", "langLabel": "Jazyk", "leaderboard": "🏆 Žebříček", "editScores": "✏️ Upravit skóre", "editTitle": "Upravit skóre", "newT": "Nový turnaj", "s1": "1. Hráči a relace", "addP": "+ Přidat hráče", "start": "Spustit relaci", "s2": "2. Body podle velikosti terče", "ptsInfo": "Body, které hráč získá za zásah u každé velikosti.", "s3": "3. Kola a terče", "roundsPer": "Kola:", "pickInfo": "Vyber hráče, jehož terče chceš upravit. Již zahájená kola jsou zamčená (🔒).", "periods": "Periody:", "periodInfo": "Vyberte násobitel skóre (×1, ×2 nebo ×3) u každého kola níže; platí pro všechny hráče. Kola se po prvním výstřelu uzamknou.", "pause": "Pauza / jiní hráči", "back": "← Zpět", "printB": "🖨 Vytisknout žebříček", "dipB": "🎓 Diplomy pro top 3", "lbTitle": "Žebříček", "backLb": "← Žebříček", "printD": "🖨 Vytisknout diplomy", "editInfo": "Vyber hráče a klepnutím na terč ho oprav: klepnutím na nevystřelený terč ho označíš jako Zásah, dalším klepnutím jako Minutí. Třetí klepnutí na poslední výstřel kola jej vymaže. Terče je třeba vyplňovat popořadě.", "catF": "Ženy", "catB": "Muži", "catC": "Děti", "sk_classic": "Klasický", "sk_white": "Bílý", "sk_black": "Černý", "sk_blue": "Modrý", "sk_green": "Zelený", "sk_orange": "Oranžový", "pre_asc": "Vzestupně 3→8", "pre_desc": "Sestupně 8→3", "pre_mix": "Mix", "pre_small": "Jen malé", "pre_large": "Jen velké", "player": "Hráč", "name": "Jméno", "playerName": "Jméno hráče", "delAria": "Smazat {n}", "delQ": "Smazat {n}?", "delTxt": "Smažou se také výsledky tohoto hráče.", "delBtn": "Smazat", "cancel": "Zrušit", "catAria": "Kategorie {n}", "finished": "Hotovo", "playingNow": "✓ Hraje nyní", "pick": "Vybrat", "allDone": "Všechna kola hotova · {t} b.", "prog": "Hotová kola {a}/{b} · {t} b. · další: kolo {n}", "notPlayed": "Zatím bez výstřelu · další: kolo 1", "selInfo": "Příští relace: {names}. Každý hraje své další kolo. Další hráče můžeš vybrat kdykoli (1, 2 nebo 3).", "and": "a", "selNone": "Vyber pro relaci 1, 2 nebo 3 hráče.", "ptsAria": "Body za terč {s} cm", "skinLbl": "Vzhled terče:", "applyAll": "Použít u všech", "copyFrom": "Kopírovat od…", "copyAria": "Kopírovat terče od jiného hráče", "round": "Kolo {n}", "mulAria": "Násobič skóre, kolo {n}", "addAria": "Přidat terč {s} cm", "copyAll": "Kopírovat do všech", "targetAria": "Terč {n}, {k} cm", "summary": "{n}: celkem {a} výstřelů, maximum {b} bodů.", "locked": "🔒 zamčeno – existují výsledky (pro změnu použij „Nový turnaj“)", "newTQ": "Nový turnaj?", "newTTxt": "Všechny výsledky budou smazány. Hráči a terče zůstanou.", "delRes": "Smazat výsledky", "everyoneT": "Všichni jsou hotovi", "everyoneTxt": "Všechna kola vybraných hráčů jsou dokončena. Vyber jiné hráče.", "ok": "OK", "perS": "Per.", "rS": "K", "periodN": "Perioda {p}", "roundOf": "Kolo {n}/{m}", "roundTarget": "{l} · terč {n}/{m}", "roundFinished": "{l} hotovo ✓", "roundDone": "Kolo je dokončeno. Pokud ses spletl(a), můžeš poslední výstřel vrátit.", "pointsW": "bodů", "hit": "ZÁSAH", "miss": "MINUTÍ", "undo": "Vrátit poslední", "session": "Relace: ", "colPlayer": "Hráč", "colTotal": "Celkem", "perfect": "Dokonalé kolo!", "roundEndLine": "{n}: +{pt} ({l}), celkem {t}", "breakP": "Přestávka! Perioda skončila", "breakR": "Přestávka! Kolo skončilo", "nextRound": "Další kolo (stejní hráči)", "otherPl": "Vybrat jiné hráče", "lbBtn": "Žebříček", "overall": "Celkový žebříček (všichni hráči)", "catBoard": "Kategorie {c}", "nobody": "Zatím nikdo nestřílel.", "thRank": "Pořadí", "thCat": "Kategorie", "thRounds": "Kola", "thHits": "Zásahy", "thPoints": "Body", "clearRound": "Smazat kolo", "notPlayedShort": "nehráno", "eTotal": "{n}: {t} bodů", "ariaHit": "zásah", "ariaMiss": "minutí", "ariaNone": "nevystřeleno", "cert": "CERTIFIKÁT", "ord1": "1.", "ord2": "2.", "ord3": "3.", "dipPlace": "{o} místo · kategorie {c}", "awarded": "uděluje se", "forScoring": "za <b>{n} bodů</b> získaných na SlingshotWorld", "dipNote": "{n} diplomů (první 3 v každé kategorii; hráči se stejným skóre sdílejí místo).", "dipNone": "Pro diplomy zatím nejsou žádné výsledky.", "tDefault": "Turnaj", "tBtn": "🗂 Turnaje", "tTitle": "Turnaje", "tCurrent": "Turnaj: {n}", "tRename": "Přejmenovat", "tNew": "+ Nový turnaj", "tNameTitle": "Pojmenujte nový turnaj", "tNameAria": "Název turnaje", "tCopy": "Zkopírovat hráče a terče z aktuálního turnaje (výsledky začnou od nuly)", "tCreate": "Vytvořit", "tOpen": "Otevřít", "tDup": "Duplikovat", "tCopyW": "kopie", "tExport": "Exportovat", "tImport": "Importovat", "tDel": "Smazat", "tDelQ": "Smazat turnaj „{n}“?", "tDelTxt": "Všichni jeho hráči a výsledky budou trvale smazány.", "tCurBadge": "Aktuální", "tMeta": "{p} hráčů · {s} výstřelů · {d}", "tExpTitle": "Export turnaje", "tExpHint": "Zkopírujte tento text nebo stáhněte soubor. Později ho můžete importovat na libovolném zařízení.", "tCopyBtn": "Kopírovat text", "tDownload": "Stáhnout soubor", "tImpTitle": "Import turnaje", "tImpHint": "Vyberte exportovaný soubor nebo vložte jeho text níže.", "tImpErr": "Toto není platný export turnaje.", "close": "Zavřít", "tourDone": "Turnaj skončil!", "tourWin": "Vítěz: {n} – {p} bodů", "tourWins": "Vítězové: {n} – {p} bodů", "soTie": "Remíza na {p}. místě: {n}", "soBtn": "⚔️ Rozstřel", "soRound": "Rozstřel #{n}", "soShort": "RO{n}", "soBreak": "Kolo rozstřelu skončilo", "soNextTxt": "Ještě musí střílet {n} hráčů.", "soNextB": "Další hráči", "soResolved": "Remíza je rozhodnuta!", "soStill": "Stále remíza – střílejte znovu!", "soAgain": "⚔️ Další kolo", "jpgB": "🖼 Export do JPG", "ptAll": "Všechny", "detB": "📋 Podrobné pořadí", "detTitle": "Podrobné pořadí", "detHit": "Zásah", "detMiss": "Minuto", "detNone": "Nestřeleno", "detAcc": "Přesnost", "detLegend": "Číslo = velikost terče v cm, S = speciální terč", "detPage": "Strana", "detPdf": "⬇ Export PDF (po stranách)", "detZip": "⬇ Export JPG stran (ZIP)", "detClose": "✕ Zavřít", "detCont": "pokračování", "detOne": "⬇ JPG"}};
+var I18N={"en": {"sound": "Sound", "langLabel": "Language", "leaderboard": "🏆 Leaderboard", "editScores": "✏️ Edit scores", "editTitle": "Edit scores", "newT": "New tournament", "s1": "1. Players and session", "addP": "+ Add player", "start": "Start session", "s2": "2. Points per target size", "ptsInfo": "Points a player earns for a hit on each size.", "s3": "3. Rounds and targets", "roundsPer": "Rounds:", "pickInfo": "Pick the player whose targets you want to edit. Rounds already started are locked (🔒).", "periods": "Periods:", "periodInfo": "Pick the score multiplier (×1, ×2 or ×3) on each round below; it applies to all players. Rounds lock after the first shot.", "pause": "Pause / other players", "back": "← Back", "printB": "🖨 Print leaderboard", "dipB": "🎓 Top 3 diplomas", "lbTitle": "Leaderboard", "backLb": "← Leaderboard", "printD": "🖨 Print diplomas", "editInfo": "Pick a player, then tap a target to correct it: tap an unshot target to mark it Hit, tap again for Miss. Tapping the last shot of a round a third time clears it. Targets must be filled in order.", "catF": "Women", "catB": "Men", "catC": "Kids", "sk_classic": "Classic", "sk_white": "White", "sk_black": "Black", "sk_blue": "Blue", "sk_green": "Green", "sk_orange": "Orange", "pre_asc": "Ascending 3→8", "pre_desc": "Descending 8→3", "pre_mix": "Mix", "pre_small": "Small only", "pre_large": "Large only", "player": "Player", "name": "Name", "playerName": "Player name", "delAria": "Delete {n}", "delQ": "Delete {n}?", "delTxt": "Their results will be deleted too.", "delBtn": "Delete", "cancel": "Cancel", "catAria": "Category {n}", "finished": "Finished", "playingNow": "✓ Playing now", "pick": "Pick", "allDone": "All rounds done · {t} pts", "prog": "Rounds done {a}/{b} · {t} pts · next: round {n}", "notPlayed": "Not played yet · next: round 1", "selInfo": "Next session: {names}. Each plays their next round. You can pick other players anytime (1, 2 or 3).", "and": "and", "selNone": "Pick 1, 2 or 3 players for the session.", "ptsAria": "Points for target {s} cm", "skinLbl": "Target skin:", "applyAll": "Apply to all", "copyFrom": "Copy from…", "copyAria": "Copy targets from another player", "round": "Round {n}", "mulAria": "Score multiplier, round {n}", "addAria": "Add target {s} cm", "copyAll": "Copy to all", "targetAria": "Target {n}, {k} cm", "summary": "{n}: {a} shots in total, maximum {b} points.", "locked": "🔒 locked – results exist (use “New tournament” to change)", "newTQ": "New tournament?", "newTTxt": "All results will be deleted. Players and targets stay.", "delRes": "Delete results", "everyoneT": "Everyone has finished", "everyoneTxt": "All rounds are done for the selected players. Pick other players.", "ok": "OK", "perS": "Per.", "rS": "R", "periodN": "Period {p}", "roundOf": "Round {n}/{m}", "roundTarget": "{l} · target {n}/{m}", "roundFinished": "{l} finished ✓", "roundDone": "Round done. You can undo the last shot if you made a mistake.", "pointsW": "points", "hit": "HIT", "miss": "MISS", "undo": "Undo last", "session": "Session: ", "colPlayer": "Player", "colTotal": "Total", "perfect": "Perfect round!", "roundEndLine": "{n}: +{pt} in {l} (total {t})", "breakP": "Break! Period finished", "breakR": "Break! Round finished", "nextRound": "Next round (same players)", "otherPl": "Pick other players", "lbBtn": "Leaderboard", "overall": "Overall leaderboard (all players)", "catBoard": "{c} category", "nobody": "Nobody has shot yet.", "thRank": "Rank", "thCat": "Category", "thRounds": "Rounds", "thHits": "Hits", "thPoints": "Points", "clearRound": "Clear round", "notPlayedShort": "not played", "eTotal": "{n}: {t} points", "ariaHit": "hit", "ariaMiss": "miss", "ariaNone": "not shot", "cert": "CERTIFICATE", "ord1": "1st", "ord2": "2nd", "ord3": "3rd", "dipPlace": "{o} place · {c} category", "awarded": "is awarded to", "forScoring": "for scoring <b>{n} points</b> at SlingshotWorld", "dipNote": "{n} diplomas (top 3 in each category; tied players share the place).", "dipNone": "There are no results for diplomas yet.", "tDefault": "Tournament", "tBtn": "🗂 Tournaments", "tTitle": "Tournaments", "tCurrent": "Tournament: {n}", "tRename": "Rename", "tNew": "+ New tournament", "tNameTitle": "Name the new tournament", "tNameAria": "Tournament name", "tCopy": "Copy players and targets from the current tournament (results start empty)", "tCreate": "Create", "tOpen": "Open", "tDup": "Duplicate", "tCopyW": "copy", "tExport": "Export", "tImport": "Import", "tDel": "Delete", "tDelQ": "Delete tournament “{n}”?", "tDelTxt": "All its players and results will be deleted permanently.", "tCurBadge": "Current", "tMeta": "{p} players · {s} shots · {d}", "tExpTitle": "Export tournament", "tExpHint": "Copy this text or download the file. You can import it later on any device.", "tCopyBtn": "Copy text", "tDownload": "Download file", "tImpTitle": "Import tournament", "tImpHint": "Choose an exported file or paste its text below.", "tImpErr": "This is not a valid tournament export.", "close": "Close", "tourDone": "Tournament finished!", "tourWin": "Winner: {n} – {p} points", "tourWins": "Winners: {n} – {p} points", "soTie": "Tie for place {p}: {n}", "soBtn": "⚔️ Shootout", "soRound": "Shootout #{n}", "soShort": "SO{n}", "soBreak": "Shootout round finished", "soNextTxt": "{n} more player(s) still need to shoot.", "soNextB": "Next players", "soResolved": "The tie is broken!", "soStill": "Still tied – shoot again!", "soAgain": "⚔️ Another round", "jpgB": "🖼 Export JPG", "cloudNameDiff": "In the archive this file is called “{a}”, on this device it is “{b}”. Update the archived one, or upload as a new tournament?", "cloudUpdateOld": "Update “{a}”", "cloudAsNew": "Upload as new", "cloudNeedDate": "Set the tournament date first", "archDel": "Remove from archive", "archDelTxt": "“{n}” will be removed from the club archive on every device. Tournaments already imported on devices stay there. Enter the club password to confirm.", "archDelBtn": "Remove", "archDelDone": "Removed from the archive. The list updates in about a minute.", "cloudB": "☁️ To archive", "cloudTitle": "Send to club archive", "cloudHint": "The tournament will appear in the Club archive on every device within a minute. Enter the club password (asked only once on this device).", "cloudPw": "Club password", "cloudSend": "Send", "cloudSending": "Sending…", "cloudWrongPw": "Wrong password.", "cloudFail": "Upload failed. Try again later.", "cloudOffline": "No connection. Check the internet and try again.", "cloudDone": "Archived!", "cloudUpdated": "Archive updated!", "cloudDoneTxt": "The tournament is in the club archive. Others can import it from the Tournaments screen in about a minute.", "tDate": "Date", "tVenue": "Venue", "tVenuePh": "e.g. Tomzoon range", "stB": "📈 Statistics", "stTitle": "Statistics", "stRounds": "Round by round", "stBump": "Ranking progression", "stBest": "best of the round", "stBestC": "best of the round in Women / Kids", "stBumpHint": "Overall rank after each round. Tap a name (or a line) to highlight it – up to 5 at once.", "stBumpAria": "Ranking progression by round", "archTitle": "Club archive", "archHint": "Results published by the club. Tap Import to open one on this device.", "archImported": "On this device", "archNone": "No published results yet.", "archOffline": "The archive needs an internet connection.", "archBadge": "Archive", "archMeta": "{p} players · {d}", "ptAll": "All", "detB": "📋 Detailed leaderboard", "detTitle": "Detailed leaderboard", "detHit": "Hit", "detMiss": "Missed", "detNone": "Not shot", "detAcc": "Accuracy", "detLegend": "Number = target size in cm, S = special target", "detPage": "Page", "detPdf": "⬇ Export PDF (pages)", "detZip": "⬇ Export JPG pages (ZIP)", "detClose": "✕ Close", "detCont": "continued", "detOne": "⬇ JPG", "pdbBtn": "👥 Players", "wsaBtn": "🏅 WSA ranking", "addDb": "👥 From database", "pdbTitle": "Players database", "pdbHint": "Permanent players with a unique ID. Add them to any tournament by typing the ID (e.g. id-1). Deleting needs the club password.", "pdbNewPh": "New player name", "pdbCreate": "➕ Create player", "pdbSearch": "Search by ID or name", "pdbEmpty": "No players yet.", "pdbPickTitle": "Add from database", "pdbPickHint": "Type an ID (id-1) and press Enter, or tap a player.", "pdbInTour": "✓ in tournament", "pdbAdded": "{n} added to the tournament.", "pdbAlready": "{n} is already in this tournament.", "pdbNotFound": "No player with ID {id}.", "pdbFull": "The tournament is full ({n} players).", "pdbMkAdd": "➕ Create & add", "pdbSave": "💾 Save to database", "pdbSaved": "{n} saved as {id}.", "pdbLinked": "{n} already existed ({id}); linked.", "pdbRenameFirst": "Give the player a real name before saving to the database.", "pdbTaken": "This database player is already in the tournament under another entry.", "pdbDup": "A player with this name already exists.", "pdbDelTitle": "Delete player", "pdbDelTxt": "Delete {n} ({id}) permanently from the database? Tournaments keep their data. Enter the club password.", "pdbDelBtn": "Delete", "pdbDeleted": "Player deleted from the database.", "pdbNoCloud": "Deleting needs the club password check, but the cloud service is not configured.", "pdbPwUnknown": "The cloud service could not confirm the password for this action. Nothing was deleted.", "pdbExp": "⬇ Export database", "pdbImp": "⬆ Import database", "pdbExpHint": "Save this file as jatekosok.json in the repository root: every device then loads the same players automatically.", "pdbImpHint": "Choose or paste a players file. Players are merged by ID; conflicting IDs are skipped.", "pdbImpDone": "{a} added, {u} updated, {c} conflicts skipped.", "pdbImpErr": "This is not a valid players file.", "wsaTitle": "WSA ranking", "wsaHint": "Only rounds marked WSA count. For each tournament: success rate = hits ÷ shots. A player's ranking value is the average of his tournament rates (sum of the rates ÷ number of tournaments).", "wsaFrom": "From", "wsaTo": "To", "wsaThisYear": "This year", "wsaLastYear": "Last year", "wsaCT": "Tournaments", "wsaCR": "Success rate", "wsaCH": "Hits/Shots", "wsaNone": "No WSA results in this period. Tick the WSA box on rounds in section 3 of a tournament.", "wsaLoading": "Loading club archive…", "wsaOffline": "Offline: only tournaments on this device are counted.", "wsaSrc": "{n} tournaments counted", "wsaIgnored": "{n} entries not found in the players database were ignored.", "wsaChk": "Count this round in the WSA ranking"}, "ro": {"sound": "Sunet", "langLabel": "Limbă", "leaderboard": "🏆 Clasament", "editScores": "✏️ Editează scorurile", "editTitle": "Editează scorurile", "newT": "Turneu nou", "s1": "1. Jucători și sesiune", "addP": "+ Adaugă jucător", "start": "Începe sesiunea", "s2": "2. Puncte pentru fiecare dimensiune a țintei", "ptsInfo": "Punctele primite de un jucător pentru o lovitură la fiecare dimensiune.", "s3": "3. Runde și ținte", "roundsPer": "Runde:", "pickInfo": "Alege jucătorul ale cărui ținte vrei să le editezi. Rundele deja începute sunt blocate (🔒).", "periods": "Perioade:", "periodInfo": "Alege multiplicatorul de scor (×1, ×2 sau ×3) la fiecare rundă de mai jos; se aplică tuturor playerilor. Rundele se blochează după prima tragere.", "pause": "Pauză / alți jucători", "back": "← Înapoi", "printB": "🖨 Tipărește clasamentul", "dipB": "🎓 Diplome top 3", "lbTitle": "Clasament", "backLb": "← Clasament", "printD": "🖨 Tipărește diplomele", "editInfo": "Alege un jucător, apoi atinge o țintă pentru a o corecta: atinge o țintă netrasă pentru a o marca Lovită, atinge din nou pentru Ratată. A treia atingere pe ultima lovitură dintr-o rundă o șterge. Țintele trebuie completate în ordine.", "catF": "Femei", "catB": "Bărbați", "catC": "Copii", "sk_classic": "Clasic", "sk_white": "Alb", "sk_black": "Negru", "sk_blue": "Albastru", "sk_green": "Verde", "sk_orange": "Portocaliu", "pre_asc": "Crescător 3→8", "pre_desc": "Descrescător 8→3", "pre_mix": "Mix", "pre_small": "Doar mici", "pre_large": "Doar mari", "player": "Jucător", "name": "Nume", "playerName": "Numele jucătorului", "delAria": "Șterge {n}", "delQ": "Ștergi {n}?", "delTxt": "Rezultatele sale vor fi șterse, de asemenea.", "delBtn": "Șterge", "cancel": "Anulează", "catAria": "Categoria {n}", "finished": "Terminat", "playingNow": "✓ Joacă acum", "pick": "Alege", "allDone": "Toate rundele terminate · {t} pct", "prog": "Runde terminate {a}/{b} · {t} pct · urmează: runda {n}", "notPlayed": "Încă nu a jucat · urmează: runda 1", "selInfo": "Sesiunea următoare: {names}. Fiecare joacă runda următoare. Poți alege alți jucători oricând (1, 2 sau 3).", "and": "și", "selNone": "Alege 1, 2 sau 3 jucători pentru sesiune.", "ptsAria": "Puncte pentru ținta de {s} cm", "skinLbl": "Aspect țintă:", "applyAll": "Aplică tuturor", "copyFrom": "Copiază de la…", "copyAria": "Copiază țintele de la alt jucător", "round": "Runda {n}", "mulAria": "Multiplicator de scor, runda {n}", "addAria": "Adaugă ținta de {s} cm", "copyAll": "Copiază la toate", "targetAria": "Ținta {n}, {k} cm", "summary": "{n}: {a} lovituri în total, maximum {b} puncte.", "locked": "🔒 blocat – există rezultate (folosește „Turneu nou” pentru a modifica)", "newTQ": "Turneu nou?", "newTTxt": "Toate rezultatele vor fi șterse. Jucătorii și țintele rămân.", "delRes": "Șterge rezultatele", "everyoneT": "Toți au terminat", "everyoneTxt": "Toate rundele sunt terminate pentru jucătorii selectați. Alege alți jucători.", "ok": "OK", "perS": "Per.", "rS": "R", "periodN": "Perioada {p}", "roundOf": "Runda {n}/{m}", "roundTarget": "{l} · ținta {n}/{m}", "roundFinished": "{l} terminată ✓", "roundDone": "Runda s-a terminat. Poți anula ultima lovitură dacă ai greșit.", "pointsW": "puncte", "hit": "LOVIT", "miss": "RATAT", "undo": "Anulează ultima", "session": "Sesiune: ", "colPlayer": "Jucător", "colTotal": "Total", "perfect": "Rundă perfectă!", "roundEndLine": "{n}: +{pt} în {l} (total {t})", "breakP": "Pauză! Perioada s-a terminat", "breakR": "Pauză! Runda s-a terminat", "nextRound": "Runda următoare (aceiași jucători)", "otherPl": "Alege alți jucători", "lbBtn": "Clasament", "overall": "Clasament general (toți jucătorii)", "catBoard": "Categoria {c}", "nobody": "Nimeni nu a tras încă.", "thRank": "Loc", "thCat": "Categorie", "thRounds": "Runde", "thHits": "Lovituri", "thPoints": "Puncte", "clearRound": "Șterge runda", "notPlayedShort": "nejucată", "eTotal": "{n}: {t} puncte", "ariaHit": "lovită", "ariaMiss": "ratată", "ariaNone": "netrasă", "cert": "CERTIFICAT", "ord1": "1", "ord2": "2", "ord3": "3", "dipPlace": "Locul {o} · categoria {c}", "awarded": "se acordă", "forScoring": "pentru <b>{n} puncte</b> obținute la SlingshotWorld", "dipNote": "{n} diplome (primii 3 din fiecare categorie; jucătorii la egalitate împart locul).", "dipNone": "Nu există încă rezultate pentru diplome.", "tDefault": "Turneu", "tBtn": "🗂 Turnee", "tTitle": "Turnee", "tCurrent": "Turneu: {n}", "tRename": "Redenumește", "tNew": "+ Turneu nou", "tNameTitle": "Denumește turneul nou", "tNameAria": "Numele turneului", "tCopy": "Copiază playerii și țintele din turneul curent (rezultatele pornesc de la zero)", "tCreate": "Creează", "tOpen": "Deschide", "tDup": "Duplică", "tCopyW": "copie", "tExport": "Exportă", "tImport": "Importă", "tDel": "Șterge", "tDelQ": "Ștergi turneul „{n}”?", "tDelTxt": "Toți playerii și rezultatele lui se șterg definitiv.", "tCurBadge": "Curent", "tMeta": "{p} playeri · {s} trageri · {d}", "tExpTitle": "Exportă turneul", "tExpHint": "Copiază acest text sau descarcă fișierul. Îl poți importa mai târziu pe orice dispozitiv.", "tCopyBtn": "Copiază textul", "tDownload": "Descarcă fișierul", "tImpTitle": "Importă turneu", "tImpHint": "Alege un fișier exportat sau lipește textul lui mai jos.", "tImpErr": "Acesta nu este un export valid de turneu.", "close": "Închide", "tourDone": "Turneu încheiat!", "tourWin": "Câștigător: {n} – {p} puncte", "tourWins": "Câștigători: {n} – {p} puncte", "soTie": "Egalitate pe locul {p}: {n}", "soBtn": "⚔️ Shootout", "soRound": "Shootout #{n}", "soShort": "SO{n}", "soBreak": "Runda de shootout s-a terminat", "soNextTxt": "Mai trebuie să tragă {n} jucător(i).", "soNextB": "Următorii jucători", "soResolved": "Egalitatea a fost departajată!", "soStill": "Încă egalitate – mai trageți o rundă!", "soAgain": "⚔️ Încă o rundă", "jpgB": "🖼 Exportă JPG", "cloudNameDiff": "În arhivă acest fișier se numește „{a}”, pe acest dispozitiv „{b}”. Actualizezi cel din arhivă sau încarci ca turneu nou?", "cloudUpdateOld": "Actualizează", "cloudAsNew": "Încarcă ca nou", "cloudNeedDate": "Setează mai întâi data turneului", "archDel": "Elimină din arhivă", "archDelTxt": "„{n}” va fi eliminat din arhiva clubului pe toate dispozitivele. Turneele deja importate rămân pe dispozitive. Introdu parola clubului pentru confirmare.", "archDelBtn": "Elimină", "archDelDone": "Eliminat din arhivă. Lista se actualizează într-un minut.", "cloudB": "☁️ În arhivă", "cloudTitle": "Trimite în arhiva clubului", "cloudHint": "Turneul va apărea în Arhiva clubului pe toate dispozitivele într-un minut. Introdu parola clubului (se cere o singură dată pe acest dispozitiv).", "cloudPw": "Parola clubului", "cloudSend": "Trimite", "cloudSending": "Se trimite…", "cloudWrongPw": "Parolă greșită.", "cloudFail": "Încărcarea a eșuat. Încearcă mai târziu.", "cloudOffline": "Fără conexiune. Verifică internetul și încearcă din nou.", "cloudDone": "Arhivat!", "cloudUpdated": "Arhiva actualizată!", "cloudDoneTxt": "Turneul este în arhiva clubului. Ceilalți îl pot importa din ecranul Turnee în aproximativ un minut.", "tDate": "Data", "tVenue": "Locul", "tVenuePh": "ex. poligonul Tomzoon", "stB": "📈 Statistici", "stTitle": "Statistici", "stRounds": "Pe runde", "stBump": "Evoluția clasamentului", "stBest": "cel mai bun din rundă", "stBestC": "cel mai bun din rundă la Femei / Copii", "stBumpHint": "Locul în clasamentul general după fiecare rundă. Atinge un nume (sau o linie) pentru a-l evidenția – cel mult 5 odată.", "stBumpAria": "Evoluția clasamentului pe runde", "archTitle": "Arhiva clubului", "archHint": "Rezultate publicate de club. Apasă Importă pentru a-l deschide pe acest dispozitiv.", "archImported": "Pe acest dispozitiv", "archNone": "Nu există încă rezultate publicate.", "archOffline": "Arhiva are nevoie de conexiune la internet.", "archBadge": "Arhivă", "archMeta": "{p} jucători · {d}", "ptAll": "Toate", "detB": "📋 Clasament detaliat", "detTitle": "Clasament detaliat", "detHit": "Nimerit", "detMiss": "Ratat", "detNone": "Netras", "detAcc": "Precizie", "detLegend": "Număr = dimensiunea țintei în cm, S = țintă specială", "detPage": "Pagina", "detPdf": "⬇ Export PDF (pe pagini)", "detZip": "⬇ Export JPG pe pagini (ZIP)", "detClose": "✕ Închide", "detCont": "continuare", "detOne": "⬇ JPG", "pdbBtn": "👥 Jucători", "wsaBtn": "🏅 Clasament WSA", "addDb": "👥 Din baza de date", "pdbTitle": "Baza de date a jucătorilor", "pdbHint": "Jucători permanenți cu ID unic. Îi adaugi la orice turneu scriind ID-ul (ex. id-1). Ștergerea cere parola clubului.", "pdbNewPh": "Numele noului jucător", "pdbCreate": "➕ Creează jucător", "pdbSearch": "Caută după ID sau nume", "pdbEmpty": "Nu există încă jucători.", "pdbPickTitle": "Adaugă din baza de date", "pdbPickHint": "Scrie un ID (id-1) și apasă Enter, sau atinge un jucător.", "pdbInTour": "✓ în turneu", "pdbAdded": "{n} a fost adăugat în turneu.", "pdbAlready": "{n} este deja în acest turneu.", "pdbNotFound": "Nu există jucător cu ID {id}.", "pdbFull": "Turneul este plin ({n} jucători).", "pdbMkAdd": "➕ Creează și adaugă", "pdbSave": "💾 Salvează în baza de date", "pdbSaved": "{n} a fost salvat ca {id}.", "pdbLinked": "{n} exista deja ({id}); legat.", "pdbRenameFirst": "Dă jucătorului un nume real înainte de a-l salva în baza de date.", "pdbTaken": "Acest jucător din baza de date este deja în turneu cu altă intrare.", "pdbDup": "Există deja un jucător cu acest nume.", "pdbDelTitle": "Șterge jucătorul", "pdbDelTxt": "Ștergi definitiv {n} ({id}) din baza de date? Turneele își păstrează datele. Introdu parola clubului.", "pdbDelBtn": "Șterge", "pdbDeleted": "Jucătorul a fost șters din baza de date.", "pdbNoCloud": "Ștergerea cere verificarea parolei clubului, dar serviciul cloud nu este configurat.", "pdbPwUnknown": "Serviciul cloud nu a putut confirma parola pentru această acțiune. Nu s-a șters nimic.", "pdbExp": "⬇ Exportă baza de date", "pdbImp": "⬆ Importă baza de date", "pdbExpHint": "Salvează acest fișier ca jatekosok.json în rădăcina depozitului: toate dispozitivele vor încărca automat aceiași jucători.", "pdbImpHint": "Alege sau lipește un fișier cu jucători. Jucătorii se îmbină după ID; ID-urile în conflict sunt omise.", "pdbImpDone": "{a} adăugați, {u} actualizați, {c} conflicte omise.", "pdbImpErr": "Acesta nu este un fișier valid cu jucători.", "wsaTitle": "Clasament WSA", "wsaHint": "Contează doar rundele marcate WSA. Pentru fiecare turneu: rata de succes = lovituri ÷ trageri. Valoarea de clasare a unui jucător este media ratelor din turnee (suma ratelor ÷ numărul de turnee).", "wsaFrom": "De la", "wsaTo": "Până la", "wsaThisYear": "Anul acesta", "wsaLastYear": "Anul trecut", "wsaCT": "Turnee", "wsaCR": "Rată de succes", "wsaCH": "Lovituri/Trageri", "wsaNone": "Nu există rezultate WSA în această perioadă. Bifează WSA la runde, în secțiunea 3 a unui turneu.", "wsaLoading": "Se încarcă arhiva clubului…", "wsaOffline": "Offline: se numără doar turneele de pe acest dispozitiv.", "wsaSrc": "{n} turnee luate în calcul", "wsaIgnored": "{n} intrări negăsite în baza de date a jucătorilor au fost ignorate.", "wsaChk": "Numără această rundă în clasamentul WSA"}, "hu": {"sound": "Hang", "langLabel": "Nyelv", "leaderboard": "🏆 Ranglista", "editScores": "✏️ Pontok szerkesztése", "editTitle": "Pontok szerkesztése", "newT": "Új verseny", "s1": "1. Játékosok és menet", "addP": "+ Játékos hozzáadása", "start": "Menet indítása", "s2": "2. Pontok célméretenként", "ptsInfo": "A játékos által egy találatért kapott pontok az egyes méreteknél.", "s3": "3. Körök és célpontok", "roundsPer": "Körök:", "pickInfo": "Válaszd ki azt a játékost, akinek a célpontjait szerkeszteni szeretnéd. A már elkezdett körök zárolva vannak (🔒).", "periods": "Szakaszok:", "periodInfo": "Válaszd ki a pontszorzót (×1, ×2 vagy ×3) az alábbi köröknél; minden játékosra érvényes. A körök az első lövés után zárolódnak.", "pause": "Szünet / más játékosok", "back": "← Vissza", "printB": "🖨 Ranglista nyomtatása", "dipB": "🎓 Top 3 oklevél", "lbTitle": "Ranglista", "backLb": "← Ranglista", "printD": "🖨 Oklevelek nyomtatása", "editInfo": "Válassz játékost, majd koppints egy célpontra a javításhoz: a le nem lőtt célpontra koppintva Találat lesz, még egyszer koppintva Mellé. A kör utolsó lövésére harmadszor koppintva törlődik. A célpontokat sorrendben kell kitölteni.", "catF": "Nők", "catB": "Férfiak", "catC": "Gyerekek", "sk_classic": "Klasszikus", "sk_white": "Fehér", "sk_black": "Fekete", "sk_blue": "Kék", "sk_green": "Zöld", "sk_orange": "Narancs", "pre_asc": "Növekvő 3→8", "pre_desc": "Csökkenő 8→3", "pre_mix": "Vegyes", "pre_small": "Csak kicsi", "pre_large": "Csak nagy", "player": "Játékos", "name": "Név", "playerName": "Játékos neve", "delAria": "{n} törlése", "delQ": "Törlöd: {n}?", "delTxt": "Az eredményei is törlődnek.", "delBtn": "Törlés", "cancel": "Mégse", "catAria": "{n} kategóriája", "finished": "Kész", "playingNow": "✓ Most játszik", "pick": "Kiválaszt", "allDone": "Minden kör kész · {t} pont", "prog": "Kész körök {a}/{b} · {t} pont · következő: {n}. kör", "notPlayed": "Még nem játszott · következő: 1. kör", "selInfo": "Következő menet: {names}. Mindenki a következő körét játssza. Bármikor választhatsz másokat (1, 2 vagy 3 játékos).", "and": "és", "selNone": "Válassz 1, 2 vagy 3 játékost a menethez.", "ptsAria": "Pont a(z) {s} cm-es célpontért", "skinLbl": "Célpont színe:", "applyAll": "Mindenkinek", "copyFrom": "Másolás innen…", "copyAria": "Célpontok másolása másik játékostól", "round": "{n}. kör", "mulAria": "Pontszorzó, {n}. kör", "addAria": "{s} cm-es célpont hozzáadása", "copyAll": "Másolás mindenhova", "targetAria": "{n}. célpont, {k} cm", "summary": "{n}: összesen {a} lövés, maximum {b} pont.", "locked": "🔒 zárolva – vannak eredmények (módosításhoz használd az „Új verseny” gombot)", "newTQ": "Új verseny?", "newTTxt": "Minden eredmény törlődik. A játékosok és a célpontok megmaradnak.", "delRes": "Eredmények törlése", "everyoneT": "Mindenki végzett", "everyoneTxt": "A kiválasztott játékosoknak minden köre kész. Válassz másokat.", "ok": "OK", "perS": "Sz.", "rS": "K", "periodN": "{p}. szakasz", "roundOf": "{n}/{m}. kör", "roundTarget": "{l} · {n}/{m}. célpont", "roundFinished": "{l} kész ✓", "roundDone": "A kör véget ért. Ha elrontottad, visszavonhatod az utolsó lövést.", "pointsW": "pont", "hit": "TALÁLAT", "miss": "MELLÉ", "undo": "Utolsó visszavonása", "session": "Menet: ", "colPlayer": "Játékos", "colTotal": "Összesen", "perfect": "Tökéletes kör!", "roundEndLine": "{n}: +{pt} ({l}), összesen {t}", "breakP": "Szünet! A szakasz véget ért", "breakR": "Szünet! A kör véget ért", "nextRound": "Következő kör (ugyanazok a játékosok)", "otherPl": "Más játékosok", "lbBtn": "Ranglista", "overall": "Összesített ranglista (minden játékos)", "catBoard": "{c} kategória", "nobody": "Még senki sem lőtt.", "thRank": "Hely", "thCat": "Kategória", "thRounds": "Körök", "thHits": "Találat", "thPoints": "Pont", "clearRound": "Kör törlése", "notPlayedShort": "nem játszott", "eTotal": "{n}: {t} pont", "ariaHit": "találat", "ariaMiss": "mellé", "ariaNone": "nem lőtt", "cert": "OKLEVÉL", "ord1": "1.", "ord2": "2.", "ord3": "3.", "dipPlace": "{o} helyezés · {c} kategória", "awarded": "Az elismerést kapja:", "forScoring": "a SlingshotWorldön elért <b>{n} pontért</b>", "dipNote": "{n} oklevél (kategóriánként az első 3; holtverseny esetén a helyezés közös).", "dipNone": "Még nincs eredmény az oklevelekhez.", "tDefault": "Verseny", "tBtn": "🗂 Versenyek", "tTitle": "Versenyek", "tCurrent": "Verseny: {n}", "tRename": "Átnevezés", "tNew": "+ Új verseny", "tNameTitle": "Nevezd el az új versenyt", "tNameAria": "A verseny neve", "tCopy": "Játékosok és célok másolása az aktuális versenyből (az eredmények üresen indulnak)", "tCreate": "Létrehozás", "tOpen": "Megnyitás", "tDup": "Duplikálás", "tCopyW": "másolat", "tExport": "Exportálás", "tImport": "Importálás", "tDel": "Törlés", "tDelQ": "Törlöd a(z) „{n}” versenyt?", "tDelTxt": "Minden játékosa és eredménye véglegesen törlődik.", "tCurBadge": "Aktuális", "tMeta": "{p} játékos · {s} lövés · {d}", "tExpTitle": "Verseny exportálása", "tExpHint": "Másold ki ezt a szöveget vagy töltsd le a fájlt. Később bármelyik eszközön importálhatod.", "tCopyBtn": "Szöveg másolása", "tDownload": "Fájl letöltése", "tImpTitle": "Verseny importálása", "tImpHint": "Válassz egy exportált fájlt, vagy illeszd be a szövegét alább.", "tImpErr": "Ez nem érvényes verseny-export.", "close": "Bezárás", "tourDone": "A verseny véget ért!", "tourWin": "Győztes: {n} – {p} pont", "tourWins": "Győztesek: {n} – {p} pont", "soTie": "Holtverseny a(z) {p}. helyen: {n}", "soBtn": "⚔️ Szétlövés", "soRound": "Szétlövés #{n}", "soShort": "SZ{n}", "soBreak": "A szétlövés köre véget ért", "soNextTxt": "Még {n} játékosnak kell lőnie.", "soNextB": "Következő játékosok", "soResolved": "A holtverseny eldőlt!", "soStill": "Még mindig döntetlen – lőjetek újra!", "soAgain": "⚔️ Még egy kör", "jpgB": "🖼 Exportálás JPG-be", "cloudNameDiff": "Az archívumban ez a fájl „{a}” néven van, ezen az eszközön „{b}”. Az archívumban lévőt frissíted, vagy új versenyként töltöd fel?", "cloudUpdateOld": "Frissítés", "cloudAsNew": "Feltöltés újként", "cloudNeedDate": "Előbb add meg a verseny dátumát", "archDel": "Eltávolítás az archívumból", "archDelTxt": "„{n}” minden eszközön eltűnik az egyesületi archívumból. Az eszközökre már importált versenyek megmaradnak. A megerősítéshez add meg az egyesületi jelszót.", "archDelBtn": "Eltávolítás", "archDelDone": "Eltávolítva az archívumból. A lista kb. egy perc múlva frissül.", "cloudB": "☁️ Archívumba", "cloudTitle": "Küldés az egyesületi archívumba", "cloudHint": "A verseny egy percen belül megjelenik az Egyesületi archívumban minden eszközön. Add meg az egyesületi jelszót (ezen az eszközön csak egyszer kéri).", "cloudPw": "Egyesületi jelszó", "cloudSend": "Küldés", "cloudSending": "Küldés…", "cloudWrongPw": "Hibás jelszó.", "cloudFail": "A feltöltés nem sikerült. Próbáld újra később.", "cloudOffline": "Nincs kapcsolat. Ellenőrizd az internetet, és próbáld újra.", "cloudDone": "Archiválva!", "cloudUpdated": "Archívum frissítve!", "cloudDoneTxt": "A verseny bekerült az egyesületi archívumba. A többiek kb. egy perc múlva importálhatják a Versenyek képernyőről.", "tDate": "Dátum", "tVenue": "Helyszín", "tVenuePh": "pl. Tomzoon lőtér", "stB": "📈 Statisztika", "stTitle": "Statisztika", "stRounds": "Körönként", "stBump": "Helyezések alakulása", "stBest": "a kör legjobbja", "stBestC": "a kör legjobbja a nőknél / gyerekeknél", "stBumpHint": "Összesített helyezés minden kör után. Koppints egy névre (vagy vonalra) a kiemeléshez – egyszerre legfeljebb 5.", "stBumpAria": "Helyezések alakulása körönként", "archTitle": "Egyesületi archívum", "archHint": "Az egyesület által közzétett eredmények. Az Importálás gombbal megnyílik ezen az eszközön.", "archImported": "Már ezen az eszközön", "archNone": "Még nincs közzétett eredmény.", "archOffline": "Az archívumhoz internetkapcsolat kell.", "archBadge": "Archív", "archMeta": "{p} játékos · {d}", "ptAll": "Mind", "detB": "📋 Részletes ranglista", "detTitle": "Részletes ranglista", "detHit": "Találat", "detMiss": "Mellé", "detNone": "Nem lőtt", "detAcc": "Pontosság", "detLegend": "Szám = a cél mérete cm-ben, S = speciális cél", "detPage": "Oldal", "detPdf": "⬇ PDF export (oldalanként)", "detZip": "⬇ JPG oldalak exportja (ZIP)", "detClose": "✕ Bezárás", "detCont": "folytatás", "detOne": "⬇ JPG", "pdbBtn": "👥 Játékosok", "wsaBtn": "🏅 WSA-rangsor", "addDb": "👥 Adatbázisból", "pdbTitle": "Játékos-adatbázis", "pdbHint": "Állandó játékosok egyedi azonosítóval. Bármely versenyhez hozzáadhatók az azonosító beírásával (pl. id-1). A törléshez az egyesületi jelszó kell.", "pdbNewPh": "Új játékos neve", "pdbCreate": "➕ Létrehozás", "pdbSearch": "Keresés azonosító vagy név szerint", "pdbEmpty": "Még nincs játékos.", "pdbPickTitle": "Hozzáadás az adatbázisból", "pdbPickHint": "Írd be az azonosítót (id-1) és nyomj Entert, vagy koppints egy játékosra.", "pdbInTour": "✓ a versenyben", "pdbAdded": "{n} hozzáadva a versenyhez.", "pdbAlready": "{n} már a versenyben van.", "pdbNotFound": "Nincs {id} azonosítójú játékos.", "pdbFull": "A verseny megtelt ({n} játékos).", "pdbMkAdd": "➕ Létrehozás és hozzáadás", "pdbSave": "💾 Mentés az adatbázisba", "pdbSaved": "{n} mentve: {id}.", "pdbLinked": "{n} már létezett ({id}); összekapcsolva.", "pdbRenameFirst": "Adj a játékosnak valódi nevet, mielőtt az adatbázisba mented.", "pdbTaken": "Ez az adatbázis-játékos már szerepel a versenyben egy másik sorral.", "pdbDup": "Már van ilyen nevű játékos.", "pdbDelTitle": "Játékos törlése", "pdbDelTxt": "Véglegesen törlöd {n} ({id}) játékost az adatbázisból? A versenyek adatai megmaradnak. Add meg az egyesületi jelszót.", "pdbDelBtn": "Törlés", "pdbDeleted": "A játékos törölve az adatbázisból.", "pdbNoCloud": "A törléshez az egyesületi jelszó ellenőrzése kell, de a felhő-szolgáltatás nincs beállítva.", "pdbPwUnknown": "A felhő-szolgáltatás nem tudta megerősíteni a jelszót ehhez a művelethez. Nem történt törlés.", "pdbExp": "⬇ Adatbázis exportja", "pdbImp": "⬆ Adatbázis importja", "pdbExpHint": "Mentsd ezt a fájlt jatekosok.json néven a repó gyökerébe: így minden eszköz automatikusan ugyanazokat a játékosokat tölti be.", "pdbImpHint": "Válassz vagy illessz be egy játékos-fájlt. A játékosok azonosító szerint egyesülnek; az ütköző azonosítók kimaradnak.", "pdbImpDone": "{a} hozzáadva, {u} frissítve, {c} ütközés kihagyva.", "pdbImpErr": "Ez nem érvényes játékos-fájl.", "wsaTitle": "WSA-rangsor", "wsaHint": "Csak a WSA-val megjelölt körök számítanak. Versenyenként: sikerességi arány = találatok ÷ lövések. A játékos rangsor-értéke a versenyenkénti arányok átlaga (az arányok összege ÷ a versenyek száma).", "wsaFrom": "Ettől", "wsaTo": "Eddig", "wsaThisYear": "Idén", "wsaLastYear": "Tavaly", "wsaCT": "Versenyek", "wsaCR": "Sikerességi arány", "wsaCH": "Találat/Lövés", "wsaNone": "Ebben az időszakban nincs WSA-eredmény. A verseny 3. szakaszában jelöld be a WSA négyzetet a köröknél.", "wsaLoading": "Egyesületi archívum betöltése…", "wsaOffline": "Offline: csak az ezen az eszközön lévő versenyek számítanak.", "wsaSrc": "{n} verseny beszámítva", "wsaIgnored": "{n} adatbázisban nem található bejegyzés kimaradt.", "wsaChk": "Ez a kör számít a WSA-rangsorba"}, "cs": {"sound": "Zvuk", "langLabel": "Jazyk", "leaderboard": "🏆 Žebříček", "editScores": "✏️ Upravit skóre", "editTitle": "Upravit skóre", "newT": "Nový turnaj", "s1": "1. Hráči a relace", "addP": "+ Přidat hráče", "start": "Spustit relaci", "s2": "2. Body podle velikosti terče", "ptsInfo": "Body, které hráč získá za zásah u každé velikosti.", "s3": "3. Kola a terče", "roundsPer": "Kola:", "pickInfo": "Vyber hráče, jehož terče chceš upravit. Již zahájená kola jsou zamčená (🔒).", "periods": "Periody:", "periodInfo": "Vyberte násobitel skóre (×1, ×2 nebo ×3) u každého kola níže; platí pro všechny hráče. Kola se po prvním výstřelu uzamknou.", "pause": "Pauza / jiní hráči", "back": "← Zpět", "printB": "🖨 Vytisknout žebříček", "dipB": "🎓 Diplomy pro top 3", "lbTitle": "Žebříček", "backLb": "← Žebříček", "printD": "🖨 Vytisknout diplomy", "editInfo": "Vyber hráče a klepnutím na terč ho oprav: klepnutím na nevystřelený terč ho označíš jako Zásah, dalším klepnutím jako Minutí. Třetí klepnutí na poslední výstřel kola jej vymaže. Terče je třeba vyplňovat popořadě.", "catF": "Ženy", "catB": "Muži", "catC": "Děti", "sk_classic": "Klasický", "sk_white": "Bílý", "sk_black": "Černý", "sk_blue": "Modrý", "sk_green": "Zelený", "sk_orange": "Oranžový", "pre_asc": "Vzestupně 3→8", "pre_desc": "Sestupně 8→3", "pre_mix": "Mix", "pre_small": "Jen malé", "pre_large": "Jen velké", "player": "Hráč", "name": "Jméno", "playerName": "Jméno hráče", "delAria": "Smazat {n}", "delQ": "Smazat {n}?", "delTxt": "Smažou se také výsledky tohoto hráče.", "delBtn": "Smazat", "cancel": "Zrušit", "catAria": "Kategorie {n}", "finished": "Hotovo", "playingNow": "✓ Hraje nyní", "pick": "Vybrat", "allDone": "Všechna kola hotova · {t} b.", "prog": "Hotová kola {a}/{b} · {t} b. · další: kolo {n}", "notPlayed": "Zatím bez výstřelu · další: kolo 1", "selInfo": "Příští relace: {names}. Každý hraje své další kolo. Další hráče můžeš vybrat kdykoli (1, 2 nebo 3).", "and": "a", "selNone": "Vyber pro relaci 1, 2 nebo 3 hráče.", "ptsAria": "Body za terč {s} cm", "skinLbl": "Vzhled terče:", "applyAll": "Použít u všech", "copyFrom": "Kopírovat od…", "copyAria": "Kopírovat terče od jiného hráče", "round": "Kolo {n}", "mulAria": "Násobič skóre, kolo {n}", "addAria": "Přidat terč {s} cm", "copyAll": "Kopírovat do všech", "targetAria": "Terč {n}, {k} cm", "summary": "{n}: celkem {a} výstřelů, maximum {b} bodů.", "locked": "🔒 zamčeno – existují výsledky (pro změnu použij „Nový turnaj“)", "newTQ": "Nový turnaj?", "newTTxt": "Všechny výsledky budou smazány. Hráči a terče zůstanou.", "delRes": "Smazat výsledky", "everyoneT": "Všichni jsou hotovi", "everyoneTxt": "Všechna kola vybraných hráčů jsou dokončena. Vyber jiné hráče.", "ok": "OK", "perS": "Per.", "rS": "K", "periodN": "Perioda {p}", "roundOf": "Kolo {n}/{m}", "roundTarget": "{l} · terč {n}/{m}", "roundFinished": "{l} hotovo ✓", "roundDone": "Kolo je dokončeno. Pokud ses spletl(a), můžeš poslední výstřel vrátit.", "pointsW": "bodů", "hit": "ZÁSAH", "miss": "MINUTÍ", "undo": "Vrátit poslední", "session": "Relace: ", "colPlayer": "Hráč", "colTotal": "Celkem", "perfect": "Dokonalé kolo!", "roundEndLine": "{n}: +{pt} ({l}), celkem {t}", "breakP": "Přestávka! Perioda skončila", "breakR": "Přestávka! Kolo skončilo", "nextRound": "Další kolo (stejní hráči)", "otherPl": "Vybrat jiné hráče", "lbBtn": "Žebříček", "overall": "Celkový žebříček (všichni hráči)", "catBoard": "Kategorie {c}", "nobody": "Zatím nikdo nestřílel.", "thRank": "Pořadí", "thCat": "Kategorie", "thRounds": "Kola", "thHits": "Zásahy", "thPoints": "Body", "clearRound": "Smazat kolo", "notPlayedShort": "nehráno", "eTotal": "{n}: {t} bodů", "ariaHit": "zásah", "ariaMiss": "minutí", "ariaNone": "nevystřeleno", "cert": "CERTIFIKÁT", "ord1": "1.", "ord2": "2.", "ord3": "3.", "dipPlace": "{o} místo · kategorie {c}", "awarded": "uděluje se", "forScoring": "za <b>{n} bodů</b> získaných na SlingshotWorld", "dipNote": "{n} diplomů (první 3 v každé kategorii; hráči se stejným skóre sdílejí místo).", "dipNone": "Pro diplomy zatím nejsou žádné výsledky.", "tDefault": "Turnaj", "tBtn": "🗂 Turnaje", "tTitle": "Turnaje", "tCurrent": "Turnaj: {n}", "tRename": "Přejmenovat", "tNew": "+ Nový turnaj", "tNameTitle": "Pojmenujte nový turnaj", "tNameAria": "Název turnaje", "tCopy": "Zkopírovat hráče a terče z aktuálního turnaje (výsledky začnou od nuly)", "tCreate": "Vytvořit", "tOpen": "Otevřít", "tDup": "Duplikovat", "tCopyW": "kopie", "tExport": "Exportovat", "tImport": "Importovat", "tDel": "Smazat", "tDelQ": "Smazat turnaj „{n}“?", "tDelTxt": "Všichni jeho hráči a výsledky budou trvale smazány.", "tCurBadge": "Aktuální", "tMeta": "{p} hráčů · {s} výstřelů · {d}", "tExpTitle": "Export turnaje", "tExpHint": "Zkopírujte tento text nebo stáhněte soubor. Později ho můžete importovat na libovolném zařízení.", "tCopyBtn": "Kopírovat text", "tDownload": "Stáhnout soubor", "tImpTitle": "Import turnaje", "tImpHint": "Vyberte exportovaný soubor nebo vložte jeho text níže.", "tImpErr": "Toto není platný export turnaje.", "close": "Zavřít", "tourDone": "Turnaj skončil!", "tourWin": "Vítěz: {n} – {p} bodů", "tourWins": "Vítězové: {n} – {p} bodů", "soTie": "Remíza na {p}. místě: {n}", "soBtn": "⚔️ Rozstřel", "soRound": "Rozstřel #{n}", "soShort": "RO{n}", "soBreak": "Kolo rozstřelu skončilo", "soNextTxt": "Ještě musí střílet {n} hráčů.", "soNextB": "Další hráči", "soResolved": "Remíza je rozhodnuta!", "soStill": "Stále remíza – střílejte znovu!", "soAgain": "⚔️ Další kolo", "jpgB": "🖼 Export do JPG", "cloudNameDiff": "V archivu se tento soubor jmenuje „{a}“, na tomto zařízení „{b}“. Aktualizovat archivovaný, nebo nahrát jako nový turnaj?", "cloudUpdateOld": "Aktualizovat", "cloudAsNew": "Nahrát jako nový", "cloudNeedDate": "Nejprve nastavte datum turnaje", "archDel": "Odebrat z archivu", "archDelTxt": "„{n}“ zmizí z archivu klubu na všech zařízeních. Turnaje již importované do zařízení zůstanou. Pro potvrzení zadejte heslo klubu.", "archDelBtn": "Odebrat", "archDelDone": "Odebráno z archivu. Seznam se aktualizuje do minuty.", "cloudB": "☁️ Do archivu", "cloudTitle": "Odeslat do archivu klubu", "cloudHint": "Turnaj se do minuty objeví v Archivu klubu na všech zařízeních. Zadejte heslo klubu (na tomto zařízení jen jednou).", "cloudPw": "Heslo klubu", "cloudSend": "Odeslat", "cloudSending": "Odesílání…", "cloudWrongPw": "Špatné heslo.", "cloudFail": "Nahrání se nezdařilo. Zkuste to později.", "cloudOffline": "Bez připojení. Zkontrolujte internet a zkuste to znovu.", "cloudDone": "Archivováno!", "cloudUpdated": "Archiv aktualizován!", "cloudDoneTxt": "Turnaj je v archivu klubu. Ostatní si ho mohou za minutu importovat z obrazovky Turnaje.", "tDate": "Datum", "tVenue": "Místo", "tVenuePh": "např. střelnice Tomzoon", "stB": "📈 Statistiky", "stTitle": "Statistiky", "stRounds": "Po kolech", "stBump": "Vývoj pořadí", "stBest": "nejlepší v kole", "stBestC": "nejlepší v kole u žen / dětí", "stBumpHint": "Celkové pořadí po každém kole. Klepnutím na jméno (nebo čáru) je zvýrazníte – nejvýše 5 najednou.", "stBumpAria": "Vývoj pořadí po kolech", "archTitle": "Archiv klubu", "archHint": "Výsledky zveřejněné klubem. Klepnutím na Importovat je otevřete na tomto zařízení.", "archImported": "Na tomto zařízení", "archNone": "Zatím žádné zveřejněné výsledky.", "archOffline": "Archiv vyžaduje připojení k internetu.", "archBadge": "Archiv", "archMeta": "{p} hráčů · {d}", "ptAll": "Všechny", "detB": "📋 Podrobné pořadí", "detTitle": "Podrobné pořadí", "detHit": "Zásah", "detMiss": "Minuto", "detNone": "Nestřeleno", "detAcc": "Přesnost", "detLegend": "Číslo = velikost terče v cm, S = speciální terč", "detPage": "Strana", "detPdf": "⬇ Export PDF (po stranách)", "detZip": "⬇ Export JPG stran (ZIP)", "detClose": "✕ Zavřít", "detCont": "pokračování", "detOne": "⬇ JPG", "pdbBtn": "👥 Hráči", "wsaBtn": "🏅 Žebříček WSA", "addDb": "👥 Z databáze", "pdbTitle": "Databáze hráčů", "pdbHint": "Stálí hráči s jedinečným ID. Do turnaje je přidáte zadáním ID (např. id-1). Smazání vyžaduje heslo klubu.", "pdbNewPh": "Jméno nového hráče", "pdbCreate": "➕ Vytvořit hráče", "pdbSearch": "Hledat podle ID nebo jména", "pdbEmpty": "Zatím žádní hráči.", "pdbPickTitle": "Přidat z databáze", "pdbPickHint": "Zadejte ID (id-1) a stiskněte Enter, nebo klepněte na hráče.", "pdbInTour": "✓ v turnaji", "pdbAdded": "{n} přidán do turnaje.", "pdbAlready": "{n} již je v tomto turnaji.", "pdbNotFound": "Hráč s ID {id} neexistuje.", "pdbFull": "Turnaj je plný ({n} hráčů).", "pdbMkAdd": "➕ Vytvořit a přidat", "pdbSave": "💾 Uložit do databáze", "pdbSaved": "{n} uložen jako {id}.", "pdbLinked": "{n} již existoval ({id}); propojeno.", "pdbRenameFirst": "Před uložením do databáze dejte hráči skutečné jméno.", "pdbTaken": "Tento hráč z databáze už v turnaji je pod jiným záznamem.", "pdbDup": "Hráč s tímto jménem už existuje.", "pdbDelTitle": "Smazat hráče", "pdbDelTxt": "Smazat {n} ({id}) natrvalo z databáze? Turnaje si data ponechají. Zadejte heslo klubu.", "pdbDelBtn": "Smazat", "pdbDeleted": "Hráč byl smazán z databáze.", "pdbNoCloud": "Smazání vyžaduje ověření hesla klubu, ale cloudová služba není nastavena.", "pdbPwUnknown": "Cloudová služba nemohla potvrdit heslo pro tuto akci. Nic nebylo smazáno.", "pdbExp": "⬇ Export databáze", "pdbImp": "⬆ Import databáze", "pdbExpHint": "Uložte tento soubor jako jatekosok.json do kořene repozitáře: všechna zařízení pak automaticky načtou stejné hráče.", "pdbImpHint": "Vyberte nebo vložte soubor hráčů. Hráči se slučují podle ID; konfliktní ID se přeskočí.", "pdbImpDone": "{a} přidáno, {u} aktualizováno, {c} konfliktů přeskočeno.", "pdbImpErr": "Toto není platný soubor hráčů.", "wsaTitle": "Žebříček WSA", "wsaHint": "Počítají se jen kola označená WSA. Za každý turnaj: úspěšnost = zásahy ÷ střely. Hodnota v žebříčku je průměr úspěšností z turnajů (součet úspěšností ÷ počet turnajů).", "wsaFrom": "Od", "wsaTo": "Do", "wsaThisYear": "Letos", "wsaLastYear": "Loni", "wsaCT": "Turnaje", "wsaCR": "Úspěšnost", "wsaCH": "Zásahy/Střely", "wsaNone": "V tomto období nejsou žádné výsledky WSA. V sekci 3 turnaje zaškrtněte u kol políčko WSA.", "wsaLoading": "Načítání klubového archivu…", "wsaOffline": "Offline: počítají se jen turnaje v tomto zařízení.", "wsaSrc": "{n} turnajů započteno", "wsaIgnored": "{n} záznamů, které nejsou v databázi hráčů, bylo ignorováno.", "wsaChk": "Započítat toto kolo do žebříčku WSA"}};
 var LANGS={en:'English',ro:'Română',hu:'Magyar',cs:'Čeština'},LOC={en:'en-GB',ro:'ro-RO',hu:'hu-HU',cs:'cs-CZ'};
 var lang=(function(){try{var s=localStorage.getItem('slinggame.lang');if(LANGS[s])return s}catch(e){}var n=String(navigator.language||'en').slice(0,2).toLowerCase();return LANGS[n]?n:'en'})();
 function tt(k,v){var s=I18N[lang]&&I18N[lang][k];if(s===undefined)s=I18N.en[k];if(s===undefined)return k;if(v)s=s.replace(/\{(\w+)\}/g,function(m,a){return v[a]!==undefined?v[a]:m});return s}
@@ -302,14 +353,14 @@ var TDB=tdbRead();
   tdbWrite(TDB);
 })();
 function curMeta(){return TDB.list.filter(function(t){return t.id===TDB.cur})[0]}
-function defaults(){return {roster:[{id:1,name:tt('player')+' 1',cat:'B'},{id:2,name:tt('player')+' 2',cat:'F'},{id:3,name:tt('player')+' 3',cat:'C'}],sel:[1,2],pts:{3:15,4:10,5:8,6:6,7:4,8:2,101:10,102:10,103:10,104:10,105:10,106:10},rounds:3,rc:{F:3,B:3,C:3},periods:1,rmul:[1,1,1],skins:{},lineups:{},res:{},so:[],nid:4,edit:1}}
+function defaults(){return {roster:[{id:1,name:tt('player')+' 1',cat:'B'},{id:2,name:tt('player')+' 2',cat:'F'},{id:3,name:tt('player')+' 3',cat:'C'}],sel:[1,2],pts:{3:15,4:10,5:8,6:6,7:4,8:2,101:10,102:10,103:10,104:10,105:10,106:10},rounds:3,rc:{F:3,B:3,C:3},periods:1,rmul:[1,1,1],wsa:[false,false,false],skins:{},lineups:{},res:{},so:[],nid:4,edit:1}}
 var cfg=load();normalizeNames();
 function load(){
   var c=defaults();c.ptsC=mkPtsC(c.pts);
   try{
     var o=JSON.parse(tRaw(TDB.cur)||'null');
     if(o&&Array.isArray(o.roster)&&o.roster.length){
-      c.roster=o.roster.slice(0,MAXP).map(function(p){return {id:+p.id,name:String(p.name||'').slice(0,30),cat:CATS[p.cat]?p.cat:'B'}});
+      c.roster=o.roster.slice(0,MAXP).map(function(p){var q={id:+p.id,name:String(p.name||'').slice(0,30),cat:CATS[p.cat]?p.cat:'B'};if(Math.round(+p.pid)>0)q.pid=Math.round(+p.pid);return q});
       var ids=c.roster.map(function(p){return p.id});
       c.sel=(Array.isArray(o.sel)?o.sel:[]).filter(function(id){return ids.indexOf(id)>-1}).slice(0,3);
       SIZES.forEach(function(s){if(o.pts&&typeof o.pts[s]==='number')c.pts[s]=o.pts[s]});
@@ -322,6 +373,7 @@ function load(){
       if(o.rc&&typeof o.rc==='object')Object.keys(c.rc).forEach(function(k){if(typeof o.rc[k]==='number')c.rc[k]=Math.max(1,Math.min(MAXR,Math.round(o.rc[k])))});
       c.rounds=Math.max(c.rc.F,c.rc.B,c.rc.C);
       if(Array.isArray(o.rmul))c.rmul=o.rmul.map(function(m){return m===2||m===3?m:1});
+      if(Array.isArray(o.wsa))c.wsa=o.wsa.map(function(v){return v===true});
       if(o.skins&&typeof o.skins==='object'){Object.keys(o.skins).forEach(function(k){if(SK[o.skins[k]])c.skins[k]=o.skins[k]})}
       if(o.lineups&&typeof o.lineups==='object')c.lineups=o.lineups;
       if(o.res&&typeof o.res==='object'){ids.forEach(function(id){if(Array.isArray(o.res[id]))c.res[id]=o.res[id].map(function(s){return /^[HM]*$/.test(s)?s:''})})}
@@ -348,8 +400,8 @@ function totR(id){return (id==null?cfg.rounds:rn(id))*cfg.periods}
 function catUsed(cat,r){return cfg.roster.some(function(p){return p.cat===cat&&((cfg.res[p.id]||[])[r]||'').length>0})}
 function lineOf(id,r){return cfg.lineups[id][r%cfg.rounds]}
 function mult(r){return (cfg.rmul&&cfg.rmul[r%cfg.rounds])||1}
-function shortL(r){return (cfg.periods>1?tt('perS')+(Math.floor(r/cfg.rounds)+1)+' ':'')+tt('rS')+(r%cfg.rounds+1)+(mult(r)>1?' ×'+mult(r):'')}
-function lblL(r,id){var p=Math.floor(r/cfg.rounds)+1;return (cfg.periods>1?tt('periodN',{p:p})+' · ':'')+tt('roundOf',{n:r%cfg.rounds+1,m:id==null?cfg.rounds:rn(id)})+(mult(r)>1?' (×'+mult(r)+')':'')}
+function shortL(r){return (cfg.periods>1?tt('perS')+(Math.floor(r/cfg.rounds)+1)+' ':'')+tt('rS')+(r%cfg.rounds+1)+(mult(r)>1?' ×'+mult(r):'')+(cfg.wsa&&cfg.wsa[r%cfg.rounds]?' · WSA':'')}
+function lblL(r,id){var p=Math.floor(r/cfg.rounds)+1;return (cfg.periods>1?tt('periodN',{p:p})+' · ':'')+tt('roundOf',{n:r%cfg.rounds+1,m:id==null?cfg.rounds:rn(id)})+(mult(r)>1?' (×'+mult(r)+')':'')+(cfg.wsa&&cfg.wsa[r%cfg.rounds]?' · WSA':'')}
 function hasRes(){return cfg.roster.some(function(p){return (cfg.res[p.id]||[]).some(function(s){return s&&s.length})})}
 function periodUsed(k){return cfg.roster.some(function(p){var rs=cfg.res[p.id]||[];for(var r=k*cfg.rounds;r<cfg.periods*cfg.rounds;r++)if(rs[r]&&rs[r].length)return true;return false})}
 function locked(id,r){var rs=cfg.res[id]||[];for(var k=0;k<cfg.periods;k++){var s=rs[r+k*cfg.rounds];if(s&&s.length)return true}return false}
@@ -357,6 +409,8 @@ function fixLineups(){
   syncR();
   if(!Array.isArray(cfg.rmul))cfg.rmul=[];
   while(cfg.rmul.length<cfg.rounds)cfg.rmul.push(1);cfg.rmul.length=cfg.rounds;
+  if(!Array.isArray(cfg.wsa))cfg.wsa=[];
+  while(cfg.wsa.length<cfg.rounds)cfg.wsa.push(false);cfg.wsa.length=cfg.rounds;cfg.wsa=cfg.wsa.map(function(v){return v===true});
   cfg.roster.forEach(function(p){
     var lu=cfg.lineups[p.id];if(!Array.isArray(lu))lu=[];
     if(lu.length&&lu.every(function(r){return JSON.stringify(r)==='[8,6,4,3]'})&&!(cfg.res[p.id]||[]).some(function(x){return x&&x.length}))lu=[];
@@ -409,7 +463,7 @@ function renderRoster(){
     var sub=document.createElement('div');sub.className='sub';
     var cs=document.createElement('select');cs.className='cat';cs.setAttribute('aria-label',tt('catAria',{n:pname(p)}));
     Object.keys(CATS).forEach(function(k){var o=document.createElement('option');o.value=k;o.textContent=CATS[k];if(k===p.cat)o.selected=true;cs.appendChild(o)});
-    cs.addEventListener('change',function(){var oc=p.cat;p.cat=cs.value;copyCatSetup(p,oc);save();renderAll()});
+    cs.addEventListener('change',function(){var oc=p.cat;p.cat=cs.value;copyCatSetup(p,oc);if(p.pid){var de=pdbGet(p.pid);if(de){de.cat=p.cat;pdbWrite()}}save();renderAll()});
     var pk=document.createElement('button');pk.type='button';pk.className='pick';pk.setAttribute('aria-pressed',slot>-1?'true':'false');pk.disabled=nr<0;
     pk.textContent=nr<0?tt('finished'):(slot>-1?tt('playingNow'):tt('pick'));
     pk.addEventListener('click',function(){
@@ -419,9 +473,12 @@ function renderRoster(){
     });
     var pg=document.createElement('span');pg.className='prg num';
     pg.textContent=nr<0?tt('allDone',{t:st.tot}):(st.shots?tt('prog',{a:st.rounds,b:totR(p.id),t:st.tot,n:nr+1}):tt('notPlayed'));
-    sub.appendChild(cs);sub.appendChild(pk);sub.appendChild(pg);row.appendChild(sub);box.appendChild(row);
+    sub.appendChild(cs);sub.appendChild(pk);sub.appendChild(pg);
+    if(p.pid){var bd=document.createElement('span');bd.className='badge';bd.textContent='id-'+p.pid;var de2=pdbGet(p.pid);bd.title=de2?de2.name:'';sub.appendChild(bd)}
+    else{var sv=document.createElement('button');sv.type='button';sv.className='mini';sv.textContent='💾';sv.title=tt('pdbSave');sv.setAttribute('aria-label',tt('pdbSave'));sv.addEventListener('click',function(){pdbSavePlayer(p)});sub.appendChild(sv)}
+    row.appendChild(sub);box.appendChild(row);
   });
-  $('#add-p').disabled=cfg.roster.length>=MAXP;
+  $('#add-p').disabled=cfg.roster.length>=MAXP;$('#add-db').disabled=cfg.roster.length>=MAXP;
   renderSelInfo();
 }
 function renderSelInfo(){
@@ -492,6 +549,8 @@ function renderEditor(){
     [1,2,3].forEach(function(m){var mb=document.createElement('button');mb.type='button';mb.className='pick';mb.style.padding='3px 10px';mb.setAttribute('aria-pressed',(cfg.rmul[r]||1)===m?'true':'false');mb.textContent='×'+m;mb.disabled=mlk;
       mb.addEventListener('click',function(){cfg.rmul[r]=m;redo()});mg.appendChild(mb)});
     h.appendChild(mg);
+    var wl=document.createElement('label');wl.className='wsa-chk';wl.title=tt('wsaChk');var wc=document.createElement('input');wc.type='checkbox';wc.checked=!!cfg.wsa[r];wc.setAttribute('aria-label',tt('wsaChk'));
+    wc.addEventListener('change',function(){cfg.wsa[r]=wc.checked;save()});wl.appendChild(wc);wl.appendChild(document.createTextNode(' WSA'));h.appendChild(wl);
     if(!lk){
       var ad=document.createElement('div');ad.className='adds';
       SIZES.forEach(function(s){var b=document.createElement('button');b.type='button';b.className='mini';b.style.background=SZC[s];b.textContent='+'+szs(s);b.setAttribute('aria-label',s>100?szl(s):tt('addAria',{s:s}));
@@ -532,14 +591,16 @@ $('#r-plus').addEventListener('click',function(){var c=P(cfg.edit).cat;if(cfg.rc
 
 /* ---------- Tournaments UI ---------- */
 function tName(){var m=curMeta();return m?m.name:''}
-function renderCurT(){var e=$('#cur-t');if(e)e.textContent=tt('tCurrent',{n:tName()})}
+function tMetaStr(t){var a=[];if(t&&t.date)a.push(fmtDate(t.date));if(t&&t.venue)a.push(t.venue);return a.join(' · ')}
+function fmtDate(d){if(!/^\d{4}-\d{2}-\d{2}$/.test(d))return d;try{return new Date(d+'T12:00:00').toLocaleDateString(LOC[lang])}catch(e){return d}}
+function renderCurT(){var e=$('#cur-t');if(e){var m=curMeta(),x=tMetaStr(m);e.textContent=tt('tCurrent',{n:tName()})+(x?' · '+x:'')}}
 function uniqueName(base){var n=base,i=2,names=TDB.list.map(function(t){return t.name});while(names.indexOf(n)>-1){n=base+' '+i++}return n}
 function switchTo(id){clearTimeout(finT);save();TDB.cur=id;tdbWrite(TDB);cfg=load();normalizeNames();sess=[];save();renderAll();show('setup')}
-function createT(name,copy){
-  save();var id=tid(),now=Date.now(),raw='{}';
+function createT(name,copy,meta){
+  save();var id=tid(),now=Date.now(),raw='{}';meta=meta||{};
   if(copy){var c=JSON.parse(JSON.stringify(cfg));c.res={};c.so=[];raw=JSON.stringify(c)}
   try{localStorage.setItem(TKEY+id,raw)}catch(e){}
-  TDB.list.push({id:id,name:name,created:now,updated:now});tdbWrite(TDB);switchTo(id);
+  TDB.list.push({id:id,name:name,date:meta.date||'',venue:meta.venue||'',created:now,updated:now});tdbWrite(TDB);switchTo(id);
 }
 function dlg(title,body,buttons,focusSel){
   var ov=$('#overlay'),c=$('#card');c.innerHTML='<h2>'+esc(title)+'</h2>'+body+'<div class="btns"></div>';
@@ -548,20 +609,26 @@ function dlg(title,body,buttons,focusSel){
     el.addEventListener('click',function(){Snd.init();Snd.click();var r=b.fn(c);if(r!==false)ov.hidden=true});box.appendChild(el)});
   ov.hidden=false;var f=focusSel&&$(focusSel,c);if(f)f.focus();
 }
-function promptName(title,val,label,withCopy,cb){
-  dlg(title,'<input id="tn-in" class="tn-input" type="text" maxlength="40" value="'+esc(val)+'" aria-label="'+esc(tt('tNameAria'))+'">'+(withCopy?'<label class="tn-cp"><input type="checkbox" id="tn-cp" checked> <span>'+esc(tt('tCopy'))+'</span></label>':''),
-    [{label:label,fn:function(c){var v=$('#tn-in',c).value.trim();if(!v){$('#tn-in',c).focus();return false}cb(v,!!withCopy&&$('#tn-cp',c).checked)}},{label:tt('cancel'),cls:'alt',fn:function(){}}],'#tn-in');
+function promptName(title,val,label,withCopy,cb,meta){
+  meta=meta||{};
+  dlg(title,'<input id="tn-in" class="tn-input" type="text" maxlength="40" value="'+esc(val)+'" aria-label="'+esc(tt('tNameAria'))+'">'
+    +'<div class="tn-row"><label><span>'+esc(tt('tDate'))+'</span><input id="tn-date" class="tn-input" type="date" value="'+esc(meta.date||'')+'"></label>'
+    +'<label><span>'+esc(tt('tVenue'))+'</span><input id="tn-venue" class="tn-input" type="text" maxlength="60" value="'+esc(meta.venue||'')+'" placeholder="'+esc(tt('tVenuePh'))+'"></label></div>'
+    +(withCopy?'<label class="tn-cp"><input type="checkbox" id="tn-cp" checked> <span>'+esc(tt('tCopy'))+'</span></label>':''),
+    [{label:label,fn:function(c){var v=$('#tn-in',c).value.trim();if(!v){$('#tn-in',c).focus();return false}
+      cb(v,!!withCopy&&$('#tn-cp',c).checked,{date:String($('#tn-date',c).value||''),venue:$('#tn-venue',c).value.trim().slice(0,60)})}},{label:tt('cancel'),cls:'alt',fn:function(){}}],'#tn-in');
   $('#tn-in').addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();$('#card .btns .btn').click()}});
 }
-function askNew(){promptName(tt('tNameTitle'),uniqueName(tt('tDefault')+' '+(TDB.list.length+1)),tt('tCreate'),true,function(n,cp){createT(n,cp)})}
+function todayISO(){var d=new Date();return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)}
+function askNew(){promptName(tt('tNameTitle'),uniqueName(tt('tDefault')+' '+(TDB.list.length+1)),tt('tCreate'),true,function(n,cp,m){createT(n,cp,m)},{date:todayISO(),venue:(curMeta()||{}).venue||''})}
 function renameT(id){
   var t=TDB.list.filter(function(x){return x.id===id})[0];if(!t)return;
-  promptName(tt('tRename'),t.name,tt('ok'),false,function(n){t.name=n;tdbWrite(TDB);renderCurT();if(curScr==='tour')renderTours()});
+  promptName(tt('tRename'),t.name,tt('ok'),false,function(n,cp,m){t.name=n;t.date=m.date;t.venue=m.venue;tdbWrite(TDB);renderCurT();if(curScr==='tour')renderTours()},{date:t.date||'',venue:t.venue||''});
 }
 function dupT(id){
   save();var t=TDB.list.filter(function(x){return x.id===id})[0],raw=tRaw(id);if(!t||raw==null)return;
   var nid=tid(),now=Date.now();try{localStorage.setItem(TKEY+nid,raw)}catch(e){}
-  TDB.list.push({id:nid,name:uniqueName(t.name+' ('+tt('tCopyW')+')'),created:now,updated:now});tdbWrite(TDB);renderTours();
+  TDB.list.push({id:nid,name:uniqueName(t.name+' ('+tt('tCopyW')+')'),date:t.date||'',venue:t.venue||'',created:now,updated:now});tdbWrite(TDB);renderTours();
 }
 function delT(id){
   var t=TDB.list.filter(function(x){return x.id===id})[0];if(!t)return;
@@ -576,11 +643,11 @@ function delT(id){
 }
 function exportT(id){
   save();var t=TDB.list.filter(function(x){return x.id===id})[0],raw=tRaw(id);if(!t||raw==null)return;
-  var text=JSON.stringify({app:'slinggame',v:1,name:t.name,cfg:JSON.parse(raw)},null,1);
+  var text=JSON.stringify({app:'slinggame',v:1,name:t.name,date:t.date||'',venue:t.venue||'',cfg:JSON.parse(raw)},null,1);
   dlg(tt('tExpTitle'),'<p>'+esc(tt('tExpHint'))+'</p><textarea readonly class="tn-ta" id="ex-ta">'+esc(text)+'</textarea>',[
     {label:tt('tCopyBtn'),fn:function(c){var ta=$('#ex-ta',c);ta.focus();ta.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}
       if(!ok&&navigator.clipboard){try{navigator.clipboard.writeText(text)}catch(e){}}return false}},
-    {label:tt('tDownload'),fn:function(){try{var b=new Blob([text],{type:'application/json'}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download=(t.name.replace(/[^\w\-]+/g,'_')||'tournament')+'.json';document.body.appendChild(a);a.click();setTimeout(function(){document.body.removeChild(a);URL.revokeObjectURL(u)},500)}catch(e){}return false}},
+    {label:tt('tDownload'),fn:function(){try{var b=new Blob([text],{type:'application/json'}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download=(t.date?t.date+'_':'')+(t.name.replace(/[^\w\-]+/g,'_')||'tournament')+'.json';document.body.appendChild(a);a.click();setTimeout(function(){document.body.removeChild(a);URL.revokeObjectURL(u)},500)}catch(e){}return false}},
     {label:tt('close'),cls:'alt',fn:function(){}}]);
 }
 function importT(){
@@ -590,24 +657,25 @@ function importT(){
       var d=o&&o.cfg?o.cfg:o;
       if(!d||!Array.isArray(d.roster)||!d.roster.length){$('#im-err',c).textContent=tt('tImpErr');return false}
       var id=tid(),now=Date.now();try{localStorage.setItem(TKEY+id,JSON.stringify(d))}catch(e){}
-      TDB.list.push({id:id,name:uniqueName(String((o&&o.name)||tt('tDefault')).slice(0,40)),created:now,updated:now});tdbWrite(TDB);renderTours();
+      TDB.list.push({id:id,name:uniqueName(String((o&&o.name)||tt('tDefault')).slice(0,40)),date:String((o&&o.date)||'').slice(0,10),venue:String((o&&o.venue)||'').slice(0,60),created:now,updated:now});tdbWrite(TDB);renderTours();
     }},{label:tt('cancel'),cls:'alt',fn:function(){}}]);
   $('#im-f').addEventListener('change',function(e){var f=e.target.files&&e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(){$('#im-ta').value=String(r.result||'')};r.readAsText(f)});
 }
 function renderTours(){
-  save();var box=$('#tlist');box.innerHTML='';
+  save();var box=$('#tlist');box.innerHTML='';renderArch();
   TDB.list.slice().sort(function(a,b){return b.updated-a.updated}).forEach(function(t){
     var o=null;try{o=JSON.parse(tRaw(t.id))}catch(e){}
     var pl=o&&Array.isArray(o.roster)?o.roster.length:0,sh=0;
     if(o&&o.res&&typeof o.res==='object')Object.keys(o.res).forEach(function(k){(Array.isArray(o.res[k])?o.res[k]:[]).forEach(function(x){sh+=String(x||'').length})});
     var cur=t.id===TDB.cur,row=document.createElement('div');row.className='trow'+(cur?' cur':'');
-    row.innerHTML='<div class="tinfo"><div class="tn">'+esc(t.name)+(cur?' <span class="badge">'+esc(tt('tCurBadge'))+'</span>':'')+'</div><div class="tm num">'+esc(tt('tMeta',{p:pl,s:sh,d:new Date(t.updated).toLocaleString(LOC[lang])}))+'</div></div>';
+    row.innerHTML='<div class="tinfo"><div class="tn">'+esc(t.name)+(cur?' <span class="badge">'+esc(tt('tCurBadge'))+'</span>':'')+'</div>'+(tMetaStr(t)?'<div class="tm">'+esc(tMetaStr(t))+'</div>':'')+'<div class="tm num">'+esc(tt('tMeta',{p:pl,s:sh,d:new Date(t.updated).toLocaleString(LOC[lang])}))+'</div></div>';
     var bar=document.createElement('div');bar.className='bar';
     function mk(label,cls,fn){var b=document.createElement('button');b.type='button';b.className='mini'+(cls?' '+cls:'');b.textContent=label;b.addEventListener('click',fn);bar.appendChild(b)}
     mk(tt('tOpen'),'sun',function(){if(cur){renderAll();show('setup')}else switchTo(t.id)});
     mk(tt('tRename'),'',function(){renameT(t.id)});
     mk(tt('tDup'),'',function(){dupT(t.id)});
     mk(tt('tExport'),'',function(){exportT(t.id)});
+    if(CLOUD_URL&&sh>0)mk(tt('cloudB'),'',function(){cloudUpload(t.id)});
     mk(tt('tDel'),'del',function(){delT(t.id)});
     row.appendChild(bar);box.appendChild(row);
   });
@@ -615,12 +683,114 @@ function renderTours(){
 $('#new-t').addEventListener('click',askNew);
 $('#t-new').addEventListener('click',askNew);
 $('#t-ren').addEventListener('click',function(){renameT(TDB.cur)});
-$('#to-tour').addEventListener('click',function(){renderTours();show('tour')});
+$('#to-tour').addEventListener('click',function(){renderTours();show('tour');loadArch()});
 $('#t-back').addEventListener('click',function(){renderAll();show('setup')});
+/* ---------- Cloud save: send the export to the Worker, which commits it into the repo ---------- */
+function cloudPw(){try{return localStorage.getItem(CLOUD_K)||''}catch(e){return ''}}
+function cloudUpload(id){
+  save();var t=TDB.list.filter(function(x){return x.id===id})[0],raw=tRaw(id);if(!t||raw==null)return;
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(t.date||'')){
+    promptName(tt('cloudNeedDate'),t.name,tt('ok'),false,function(n,cp,m){t.name=n;t.date=m.date;t.venue=m.venue;tdbWrite(TDB);renderCurT();renderTours();if(/^\d{4}-\d{2}-\d{2}$/.test(t.date||''))setTimeout(function(){cloudUpload(id)},0)},{date:'',venue:t.venue||''});
+    return;
+  }
+  var pw=cloudPw(),useFile=t.arch||'';
+  var listed=(archList||[]).filter(function(a){return a.file===useFile})[0];
+  if(useFile&&archList&&!listed){useFile='';delete t.arch;tdbWrite(TDB)} /* elavult hivatkozás (pl. átnevezett fájl) – újként megy */
+  if(listed&&listed.name&&listed.name!==t.name){
+    card({title:tt('cloudTitle'),text:tt('cloudNameDiff',{a:listed.name,b:t.name}),buttons:[
+      {label:tt('cloudUpdateOld',{a:listed.name}),fn:function(){setTimeout(function(){go()},0)}},
+      {label:tt('cloudAsNew'),fn:function(){useFile='';delete t.arch;tdbWrite(TDB);setTimeout(function(){go()},0)}},
+      {label:tt('cancel'),cls:'alt',fn:function(){}}]});
+    return;
+  }
+  go();
+  function go(){if(pw)send();else ask('')}
+  function ask(err){
+    dlg(tt('cloudTitle'),'<p>'+esc(tt('cloudHint'))+'</p><input id="cl-pw" class="tn-input" type="password" autocomplete="off" value="'+esc(pw)+'" aria-label="'+esc(tt('cloudPw'))+'" placeholder="'+esc(tt('cloudPw'))+'"><p id="cl-err" class="tn-err">'+esc(err||'')+'</p>',
+      [{label:tt('cloudSend'),fn:function(c){var v=$('#cl-pw',c).value.trim();if(!v){$('#cl-pw',c).focus();return false}pw=v;setTimeout(send,0);return true}},{label:tt('cancel'),cls:'alt',fn:function(){}}],'#cl-pw');
+    $('#cl-pw').addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();$('#card .btns .btn').click()}});
+  }
+  function send(){
+    card({title:tt('cloudTitle'),text:tt('cloudSending'),buttons:[]});
+    var exp={app:'slinggame',v:1,name:t.name,date:t.date||'',venue:t.venue||'',cfg:JSON.parse(raw)};
+    fetch(CLOUD_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:pw,export:exp,file:useFile})})
+      .then(function(r){return r.json().then(function(j){return {s:r.status,j:j}})})
+      .then(function(x){
+        if(x.s===401){ask(tt('cloudWrongPw'));return}
+        if(x.s!==200||!x.j.ok){card({title:tt('cloudTitle'),text:tt('cloudFail')+(x.j&&x.j.error?' ('+x.j.error+')':''),buttons:[{label:tt('ok'),fn:function(){}}]});return}
+        try{localStorage.setItem(CLOUD_K,pw)}catch(e){}
+        t.arch=x.j.file;var m=archRead();m[x.j.file]=t.id;archWrite(m);tdbWrite(TDB);
+        Snd.fanfare();burst(window.innerWidth/2,window.innerHeight*.4,70,{p:600,s:2});
+        card({title:'☁️ '+tt(x.j.updated?'cloudUpdated':'cloudDone'),text:tt('cloudDoneTxt'),buttons:[{label:tt('ok'),fn:function(){renderTours();loadArch()}}]});
+      })
+      .catch(function(){card({title:tt('cloudTitle'),text:tt('cloudOffline'),buttons:[{label:tt('ok'),fn:function(){}}]})});
+  }
+}
+/* ---------- Club archive (read-only list from the repo's eredmenyek/ folder) ---------- */
+var ARCH_URL='eredmenyek/index.json',ARCH_K='slinggame.arch',archList=null;
+/* Felhő-mentés: a Cloudflare Worker címe (cloud/worker.js). Üres = a gomb nem jelenik meg. */
+var CLOUD_URL='https://slingshotworld-archive.csongeto-csaba.workers.dev/',CLOUD_K='slinggame.cloudpw';
+function archRead(){try{var o=JSON.parse(localStorage.getItem(ARCH_K)||'{}');return o&&typeof o==='object'?o:{}}catch(e){return {}}}
+function archWrite(o){try{localStorage.setItem(ARCH_K,JSON.stringify(o))}catch(e){}}
+function archImported(file){var m=archRead(),id=m[file];return id&&TDB.list.some(function(t){return t.id===id})?id:null}
+function archImport(item,btn){
+  if(btn){btn.disabled=true}
+  fetch(ARCH_URL.replace('index.json','')+encodeURIComponent(item.file),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(o){
+    var d=o&&o.cfg?o.cfg:o;if(!d||!Array.isArray(d.roster)||!d.roster.length)throw 0;
+    var id=tid(),now=Date.now();try{localStorage.setItem(TKEY+id,JSON.stringify(d))}catch(e){}
+    TDB.list.push({id:id,name:uniqueName(String(item.name||(o&&o.name)||tt('tDefault')).slice(0,40)),date:String((o&&o.date)||item.date||'').slice(0,10),venue:String((o&&o.venue)||item.venue||'').slice(0,60),created:now,updated:now,arch:item.file});tdbWrite(TDB);
+    var m=archRead();m[item.file]=id;archWrite(m);renderTours();
+  }).catch(function(){if(btn)btn.disabled=false;card({title:tt('tImpErr'),buttons:[{label:tt('ok'),fn:function(){}}]})});
+}
+function archDelete(item){
+  var pw=cloudPw();
+  function ask(err){
+    dlg(tt('archDel'),'<p>'+esc(tt('archDelTxt',{n:item.name||item.file}))+'</p><input id="cl-pw" class="tn-input" type="password" autocomplete="off" value="'+esc(pw)+'" aria-label="'+esc(tt('cloudPw'))+'" placeholder="'+esc(tt('cloudPw'))+'"><p id="cl-err" class="tn-err">'+esc(err||'')+'</p>',
+      [{label:tt('archDelBtn'),cls:'red',fn:function(c){var v=$('#cl-pw',c).value.trim();if(!v){$('#cl-pw',c).focus();return false}pw=v;setTimeout(send,0);return true}},{label:tt('cancel'),cls:'alt',fn:function(){}}],'#cl-pw');
+  }
+  function send(){
+    card({title:tt('archDel'),text:tt('cloudSending'),buttons:[]});
+    fetch(CLOUD_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:pw,action:'delete',file:item.file})})
+      .then(function(r){return r.json().then(function(j){return {s:r.status,j:j}})})
+      .then(function(x){
+        if(x.s===401){ask(tt('cloudWrongPw'));return}
+        if(x.s!==200||!x.j.ok){card({title:tt('archDel'),text:tt('cloudFail')+(x.j&&x.j.error?' ('+x.j.error+')':''),buttons:[{label:tt('ok'),fn:function(){}}]});return}
+        try{localStorage.setItem(CLOUD_K,pw)}catch(e){}
+        var m=archRead();delete m[item.file];archWrite(m);
+        TDB.list.forEach(function(t){if(t.arch===item.file)delete t.arch});tdbWrite(TDB);
+        archList=(archList||[]).filter(function(a){return a.file!==item.file});renderArch();
+        card({title:tt('archDel'),text:tt('archDelDone'),buttons:[{label:tt('ok'),fn:function(){loadArch()}}]});
+      })
+      .catch(function(){card({title:tt('archDel'),text:tt('cloudOffline'),buttons:[{label:tt('ok'),fn:function(){}}]})});
+  }
+  ask('');
+}
+function renderArch(){
+  var box=$('#arch'),list=$('#alist');if(!box)return;
+  if(!archList){box.hidden=true;return}
+  box.hidden=false;list.innerHTML='';
+  if(!archList.length){list.innerHTML='<p style="font-weight:700;opacity:.8">'+esc(tt('archNone'))+'</p>';return}
+  archList.slice().sort(function(a,b){return String(b.date||'').localeCompare(String(a.date||''))}).forEach(function(it){
+    var have=archImported(it.file),row=document.createElement('div');row.className='trow arc';
+    var d=it.date?new Date(it.date+'T12:00:00').toLocaleDateString(LOC[lang]):'';
+    row.innerHTML='<div class="tinfo"><div class="tn">'+esc(it.name||it.file)+' <span class="badge arc">'+esc(tt('archBadge'))+'</span></div><div class="tm num">'+esc(it.players?tt('archMeta',{p:it.players,d:d}):d)+(it.venue?' · '+esc(it.venue):'')+(it.note?' · '+esc(it.note):'')+'</div></div>';
+    var bar=document.createElement('div');bar.className='bar';
+    var b=document.createElement('button');b.type='button';b.className='mini'+(have?'':' sun');
+    if(have){b.textContent=tt('tOpen');b.addEventListener('click',function(){switchTo(have)});var tag=document.createElement('span');tag.className='tm';tag.textContent='✓ '+tt('archImported');bar.appendChild(tag)}
+    else{b.textContent=tt('tImport');b.addEventListener('click',function(){archImport(it,b)})}
+    bar.appendChild(b);
+    if(CLOUD_URL){var del=document.createElement('button');del.type='button';del.className='mini del';del.textContent='×';del.setAttribute('aria-label',tt('archDel'));del.title=tt('archDel');del.addEventListener('click',function(){archDelete(it)});bar.appendChild(del)}
+    row.appendChild(bar);list.appendChild(row);
+  });
+}
+function loadArch(){
+  if(!window.fetch||location.protocol==='file:'){archList=null;renderArch();return}
+  fetch(ARCH_URL,{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(a){archList=Array.isArray(a)?a:[];renderArch()}).catch(function(){archList=null;renderArch()});
+}
 $('#t-imp').addEventListener('click',importT);
 
 /* ---------- Screens / dialogs ---------- */
-function show(n){stopFw();curScr=n;['setup','play','board','dip','edit','tour'].forEach(function(k){$('#s-'+k).hidden=k!==n});window.scrollTo(0,0)}
+function show(n){stopFw();curScr=n;['setup','play','board','dip','edit','tour','stat','pdb','wsa'].forEach(function(k){$('#s-'+k).hidden=k!==n});window.scrollTo(0,0)}
 function card(o){
   var ov=$('#overlay'),c=$('#card'),h='<h2>'+esc(o.title)+'</h2>';
   if(o.text)h+='<p>'+esc(o.text)+'</p>';
@@ -1113,6 +1283,336 @@ $('#b-dip').addEventListener('click',showDiplomas);
 $('#d-back').addEventListener('click',showBoard);
 $('#d-print').addEventListener('click',function(){doPrint('pd')});
 
+/* ---------- Statistics: round table + ranking progression (bump chart) ---------- */
+var stTab='rounds',stSel=[],stFrom='board';
+var STC=['#ffc233','#2ec4b6','#ff7a30','#4cc9f0','#ff6fae'];
+function stRows(){
+  /* every ranked player: per-round points/hits, cumulative rank after each round */
+  var a=ranked(cfg.roster),R=cfg.rounds,rows=a.map(function(x){
+    var id=x.p.id,pr=[];
+    for(var r=0;r<rn(id);r++){var lu=lineOf(id,r),str=resOf(id)[r]||'',pt=0,h=0;
+      lu.forEach(function(k,t){if(str[t]==='H'){h++;pt+=PT(id,k)*mult(r)}});pr.push({pt:pt,h:h,n:lu.length,played:str.length>0})}
+    return {id:id,name:pname(x.p),cat:x.p.cat,tot:x.s.tot,hits:x.s.hits,shots:x.s.shots,so:x.so,sop:x.sop,rank:x.rank,pr:pr};
+  });
+  /* best per round: overall and per category (only among played rounds, >0) */
+  var best=[],bestC=[];
+  for(var r=0;r<R;r++){best[r]=0;bestC[r]={};
+    rows.forEach(function(w){var c=w.pr[r];if(!c||!c.played)return;if(c.pt>best[r])best[r]=c.pt;if(c.pt>(bestC[r][w.cat]||0))bestC[r][w.cat]=c.pt})}
+  /* cumulative ranks */
+  for(var k=1;k<=R;k++){
+    var st=rows.map(function(w){var pt=0,h=0;w.pr.slice(0,k).forEach(function(c){pt+=c.pt;h+=c.h});return {w:w,pt:pt,h:h}});
+    st.sort(function(p,q){return q.pt-p.pt||q.h-p.h||p.w.name.localeCompare(q.w.name)});
+    st.forEach(function(e,i){(e.w.cum=e.w.cum||[]).push({rank:i+1,pt:e.pt})});
+  }
+  return {rows:rows,best:best,bestC:bestC,R:R};
+}
+function renderStatTable(D){
+  var h='<div class="tw"><table><thead><tr><th>#</th><th class="who">'+esc(tt('colPlayer'))+'</th>';
+  for(var r=0;r<D.R;r++)h+='<th>'+esc(shortL(r))+'</th>';
+  h+='<th>'+esc(tt('thHits'))+'</th><th>'+esc(tt('thPoints'))+'</th></tr></thead><tbody>';
+  D.rows.forEach(function(w){
+    h+='<tr><td class="num">'+w.rank+'</td><td class="who"><span class="cdot" style="background:'+CCOL[w.cat]+'"></span>'+esc(w.name)+'</td>';
+    for(var r=0;r<D.R;r++){var c=w.pr[r];
+      if(!c){h+='<td class="stc na">–</td>';continue}
+      if(!c.played){h+='<td class="stc na">'+esc(tt('notPlayedShort'))+'</td>';continue}
+      var cls='stc'+(c.pt>0&&c.pt===D.best[r]?' best':(c.pt>0&&c.pt===D.bestC[r][w.cat]&&w.cat!=='B'?' bestc':''))+(c.pt===0?' zero':'');
+      h+='<td class="'+cls+'"><b class="num">'+c.pt+'</b><small class="num">'+c.h+'/'+c.n+'</small></td>'}
+    h+='<td class="num">'+w.hits+'/'+w.shots+(w.sop?' <small class="sob">⚔️ +'+w.so+'</small>':'')+'</td><td class="tot num">'+w.tot+'</td></tr>';
+  });
+  h+='</tbody></table></div>';
+  var leg='<div class="stleg"><span><i class="best"></i>'+esc(tt('stBest'))+'</span><span><i class="bestc"></i>'+esc(tt('stBestC'))+'</span></div>';
+  return leg+h;
+}
+function renderStatBump(D){
+  var rows=D.rows,N=rows.length,R=D.R;if(!N)return '<p style="font-weight:700">'+esc(tt('nobody'))+'</p>';
+  if(!stSel.length)stSel=rows.slice(0,5).map(function(w){return w.id});
+  stSel=stSel.filter(function(id){return rows.some(function(w){return w.id===id})});
+  var lh=22,T=30,L=30,RGT=170,W=Math.max(620,L+RGT+R*70),H=T+N*lh+12,cw=(W-L-RGT)/Math.max(1,R-1);
+  function X(k){return L+k*cw}function Y(r){return T+(r-1)*lh}
+  var h='<div class="stbw"><svg class="stbump" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+esc(tt('stBumpAria'))+'">';
+  for(var r=1;r<=N;r++)h+='<line x1="'+L+'" y1="'+Y(r)+'" x2="'+(W-RGT+10)+'" y2="'+Y(r)+'" stroke="rgba(253,240,213,.18)" stroke-dasharray="2 4"/>';
+  for(var k=0;k<R;k++)h+='<text x="'+X(k)+'" y="16" font-size="12" font-weight="800" text-anchor="middle" fill="#fdf0d5">'+esc(shortL(k))+'</text>';
+  for(r=1;r<=N;r++)h+='<text x="'+(L-8)+'" y="'+(Y(r)+4)+'" font-size="11" text-anchor="end" fill="rgba(253,240,213,.7)">'+r+'.</text>';
+  function path(w){var p='';for(var k=0;k<R;k++){var c=w.cum[k];p+=(k?'L':'M')+X(k).toFixed(1)+' '+Y(c.rank).toFixed(1)}return p}
+  rows.forEach(function(w){if(stSel.indexOf(w.id)<0)h+='<path d="'+path(w)+'" fill="none" stroke="rgba(253,240,213,.28)" stroke-width="1.5"/>'});
+  rows.forEach(function(w){var si=stSel.indexOf(w.id);if(si<0)return;var c=STC[si%STC.length];
+    h+='<path d="'+path(w)+'" fill="none" stroke="'+c+'" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>';
+    for(var k=0;k<R;k++){var q=w.cum[k];h+='<circle cx="'+X(k)+'" cy="'+Y(q.rank)+'" r="4.5" fill="'+c+'" stroke="#1b1033" stroke-width="2"><title>'+esc(w.name)+' · '+esc(shortL(k))+': '+q.rank+'. · '+q.pt+' '+esc(tt('pointsW'))+'</title></circle>'}
+  });
+  rows.forEach(function(w){var si=stSel.indexOf(w.id),y=Y(w.cum[R-1].rank)+4;
+    h+='<text x="'+(W-RGT+18)+'" y="'+y+'" font-size="12" font-weight="'+(si<0?'600':'800')+'" fill="'+(si<0?'rgba(253,240,213,.75)':STC[si%STC.length])+'">'+esc(w.name)+'</text><text x="'+(W-4)+'" y="'+y+'" font-size="11" text-anchor="end" fill="rgba(253,240,213,.7)">'+w.tot+'</text>'});
+  rows.forEach(function(w){h+='<path class="sthit" d="'+path(w)+'" fill="none" stroke="transparent" stroke-width="14" data-id="'+w.id+'"><title>'+esc(w.name)+'</title></path>'});
+  h+='</svg></div>';
+  h+='<div class="stlist">'+rows.map(function(w){var si=stSel.indexOf(w.id);return '<button type="button" class="stn" data-id="'+w.id+'" aria-pressed="'+(si>=0)+'"><span class="num">'+w.rank+'.</span><i style="background:'+(si>=0?STC[si%STC.length]:'rgba(253,240,213,.3)')+'"></i><span>'+esc(w.name)+'</span><small class="num">'+w.tot+'</small></button>'}).join('')+'</div>';
+  return '<p class="sthint">'+esc(tt('stBumpHint'))+'</p>'+h;
+}
+function stToggle(id){
+  var i=stSel.indexOf(id);if(i>=0)stSel.splice(i,1);else{stSel.push(id);if(stSel.length>5)stSel.shift()}
+  renderStats();
+}
+function renderStats(){
+  var D=stRows(),box=$('#st-body');
+  $('#st-rounds').setAttribute('aria-selected',stTab==='rounds'?'true':'false');$('#st-bump').setAttribute('aria-selected',stTab==='bump'?'true':'false');
+  $('#s-stat h1').textContent=tt('stTitle')+' – '+tName();
+  box.innerHTML=D.rows.length?(stTab==='rounds'?renderStatTable(D):renderStatBump(D)):'<div class="tw"><p style="padding:12px;font-weight:700">'+esc(tt('nobody'))+'</p></div>';
+}
+function showStats(from){stFrom=from||'board';renderStats();show('stat')}
+$('#st-rounds').addEventListener('click',function(){stTab='rounds';renderStats()});
+$('#st-bump').addEventListener('click',function(){stTab='bump';renderStats()});
+$('#st-body').addEventListener('click',function(e){var b=e.target.closest('.stn,.sthit');if(!b)return;Snd.init();Snd.click();stToggle(+b.dataset.id)});
+$('#st-back').addEventListener('click',function(){if(stFrom==='board')showBoard();else{renderAll();show('setup')}});
+$('#b-stat').addEventListener('click',function(){Snd.init();Snd.click();showStats('board')});
+$('#to-stat').addEventListener('click',function(){showStats('setup')});
+
+/* ---------- Players database (permanent, with IDs) + WSA ranking ---------- */
+var PDB_K='slinggame.players',PDB_URL='jatekosok.json';
+function pdbSan(d){
+  var m={};(d&&Array.isArray(d.list)?d.list:[]).forEach(function(e){var id=Math.round(+(e&&e.id));if(id>0&&e&&e.name&&!m[id])m[id]={id:id,name:String(e.name).trim().slice(0,30),cat:CATS[e.cat]?e.cat:'B'}});
+  var list=Object.keys(m).map(function(k){return m[k]}).sort(function(a,b){return a.id-b.id}),mx=list.length?list[list.length-1].id:0;
+  return {next:Math.max(Math.round(+(d&&d.next))||1,mx+1),list:list};
+}
+function pdbRead(){try{return pdbSan(JSON.parse(localStorage.getItem(PDB_K)||'null'))}catch(e){return pdbSan(null)}}
+var PDB=pdbRead();
+function pdbWrite(){try{localStorage.setItem(PDB_K,JSON.stringify(PDB))}catch(e){}}
+function pdbGet(id){for(var i=0;i<PDB.list.length;i++)if(PDB.list[i].id===id)return PDB.list[i];return null}
+function nname(s){return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim().toLowerCase()}
+function pdbByName(n){var k=nname(n);if(!k)return null;for(var i=0;i<PDB.list.length;i++)if(nname(PDB.list[i].name)===k)return PDB.list[i];return null}
+function pdbParseId(s){var m=/^\s*(?:id|#)?\s*[-_ ]?\s*(\d{1,6})\s*$/i.exec(String(s||''));return m?+m[1]:null}
+function pdbAdd(name,cat){
+  name=String(name||'').trim().slice(0,30);if(!name)return null;
+  var ex=pdbByName(name);if(ex)return {e:ex,isNew:false};
+  var e={id:PDB.next++,name:name,cat:CATS[cat]?cat:'B'};PDB.list.push(e);pdbWrite();return {e:e,isNew:true};
+}
+function pdbLoadRemote(){
+  if(!window.fetch||location.protocol==='file:')return;
+  fetch(PDB_URL,{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(o){
+    var d=pdbSan({list:o&&Array.isArray(o.players)?o.players:(Array.isArray(o)?o:[]),next:o&&o.next}),ch=false;
+    d.list.forEach(function(re){var l=pdbGet(re.id);if(!l){PDB.list.push(re);ch=true}else if(l.name!==re.name){l.name=re.name;ch=true}});
+    if(ch){PDB=pdbSan({list:PDB.list,next:Math.max(PDB.next,d.next)});pdbWrite();if(curScr==='pdb')renderPdb();else if(curScr==='setup')renderRoster()}
+  }).catch(function(){});
+}
+function okCard(title,text){card({title:title,text:text,buttons:[{label:tt('ok'),fn:function(){}}]})}
+/* add a database player to the current tournament -> status text */
+function pdbAddToTour(e){
+  if(cfg.roster.some(function(p){return p.pid===e.id}))return tt('pdbAlready',{n:e.name});
+  if(cfg.roster.length>=MAXP)return tt('pdbFull',{n:MAXP});
+  var np={id:cfg.nid++,name:e.name,cat:e.cat||'B',pid:e.id};cfg.roster.push(np);copyCatSetup(np);save();renderAll();
+  return tt('pdbAdded',{n:e.name+' (id-'+e.id+')'});
+}
+function pdbPick(){
+  dlg(tt('pdbPickTitle'),'<p>'+esc(tt('pdbPickHint'))+'</p><input id="pk-q" class="tn-input" type="text" autocomplete="off" placeholder="id-1" aria-label="'+esc(tt('pdbSearch'))+'"><div id="pk-st" class="pk-st"></div><div id="pk-list" class="pk-list"></div>'
+    +'<div class="bar" style="margin-top:6px"><input id="pk-new" class="tn-input" type="text" maxlength="30" autocomplete="off" style="flex:1;min-width:150px;font-size:15px;padding:7px 10px" placeholder="'+esc(tt('pdbNewPh'))+'" aria-label="'+esc(tt('pdbNewPh'))+'"><button type="button" class="btn sm" id="pk-mk">'+esc(tt('pdbMkAdd'))+'</button></div>',
+    [{label:tt('close'),cls:'alt',fn:function(){}}],'#pk-q');
+  var q=$('#pk-q'),st=$('#pk-st'),lst=$('#pk-list');
+  function matches(){
+    var v=q.value.trim(),id=pdbParseId(v),k=nname(v);
+    return PDB.list.filter(function(e){return !v||(id!==null&&e.id===id)||nname(e.name).indexOf(k)>-1||('id-'+e.id).indexOf(v.toLowerCase())>-1});
+  }
+  function draw(){
+    lst.innerHTML='';var ms=matches();
+    if(!ms.length){lst.innerHTML='<p style="font-weight:700;opacity:.8;margin:6px 2px">'+esc(tt('pdbEmpty'))+'</p>';return}
+    ms.forEach(function(e){
+      var inT=cfg.roster.some(function(p){return p.pid===e.id}),b=document.createElement('button');b.type='button';b.className='pk-row';b.disabled=inT;
+      b.innerHTML='<span class="badge">id-'+e.id+'</span><span>'+esc(e.name)+'</span>'+(inT?'<small>'+esc(tt('pdbInTour'))+'</small>':'');
+      b.addEventListener('click',function(){st.textContent=pdbAddToTour(e);draw();q.focus()});lst.appendChild(b);
+    });
+  }
+  q.addEventListener('input',function(){st.textContent='';draw()});
+  q.addEventListener('keydown',function(ev){
+    if(ev.key!=='Enter')return;ev.preventDefault();
+    var v=q.value.trim();if(!v)return;var id=pdbParseId(v),e=null;
+    if(id!==null){e=pdbGet(id);if(!e){st.textContent=tt('pdbNotFound',{id:'id-'+id});return}}
+    else{var ms=matches();if(ms.length===1)e=ms[0]}
+    if(e){st.textContent=pdbAddToTour(e);q.value='';draw()}
+  });
+  function mk(){
+    var nm=$('#pk-new').value.trim();if(!nm){$('#pk-new').focus();return}
+    var r=pdbAdd(nm,'B');if(!r)return;
+    st.textContent=pdbAddToTour(r.e);$('#pk-new').value='';draw();
+  }
+  $('#pk-mk').addEventListener('click',function(ev){ev.stopPropagation();Snd.init();Snd.click();mk()});
+  $('#pk-new').addEventListener('keydown',function(ev){if(ev.key==='Enter'){ev.preventDefault();mk()}});
+  draw();
+}
+function pdbSavePlayer(p){
+  var nm=(p.name||'').trim();
+  if(!nm||/^(Player|Jucător|Játékos|Hráč) \d+$/.test(nm)){okCard(tt('pdbSave'),tt('pdbRenameFirst'));return}
+  var ex=pdbByName(nm);
+  if(ex&&cfg.roster.some(function(q){return q.id!==p.id&&q.pid===ex.id})){okCard(tt('pdbSave'),tt('pdbTaken'));return}
+  var r=pdbAdd(nm,p.cat);p.pid=r.e.id;save();renderAll();
+  okCard('id-'+r.e.id+' · '+r.e.name,tt(r.isNew?'pdbSaved':'pdbLinked',{n:r.e.name,id:'id-'+r.e.id}));
+}
+/* admin (club) password check: the Worker answers 401 to a wrong password, so we probe with the real and with a bogus one */
+function adminCheck(pw){
+  function probe(p){return fetch(CLOUD_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:p,action:'delete',file:'_pwcheck_.json'})}).then(function(r){return r.status})}
+  return Promise.all([probe(pw),probe('x'+Math.random().toString(36).slice(2)+'-wrong')]).then(function(s){
+    if(s[0]===401)return 'wrong';
+    if(s[1]===401)return 'ok';
+    return 'unknown';
+  }).catch(function(){return 'offline'});
+}
+function pdbDeleteAsk(e){
+  if(!CLOUD_URL){okCard(tt('pdbDelTitle'),tt('pdbNoCloud'));return}
+  var pw=cloudPw();
+  function ask(err){
+    dlg(tt('pdbDelTitle'),'<p>'+esc(tt('pdbDelTxt',{n:e.name,id:'id-'+e.id}))+'</p><input id="cl-pw" class="tn-input" type="password" autocomplete="off" value="'+esc(pw)+'" aria-label="'+esc(tt('cloudPw'))+'" placeholder="'+esc(tt('cloudPw'))+'"><p id="cl-err" class="tn-err">'+esc(err||'')+'</p>',
+      [{label:tt('pdbDelBtn'),cls:'red',fn:function(c){var v=$('#cl-pw',c).value.trim();if(!v){$('#cl-pw',c).focus();return false}pw=v;setTimeout(check,0);return true}},{label:tt('cancel'),cls:'alt',fn:function(){}}],'#cl-pw');
+    $('#cl-pw').addEventListener('keydown',function(ev){if(ev.key==='Enter'){ev.preventDefault();$('#card .btns .btn').click()}});
+  }
+  function check(){
+    card({title:tt('pdbDelTitle'),text:tt('cloudSending'),buttons:[]});
+    adminCheck(pw).then(function(r){
+      if(r==='wrong'){ask(tt('cloudWrongPw'));return}
+      if(r==='offline'){okCard(tt('pdbDelTitle'),tt('cloudOffline'));return}
+      if(r!=='ok'){okCard(tt('pdbDelTitle'),tt('pdbPwUnknown'));return}
+      try{localStorage.setItem(CLOUD_K,pw)}catch(x){}
+      PDB.list=PDB.list.filter(function(z){return z.id!==e.id});pdbWrite();renderPdb();
+      okCard(tt('pdbDelTitle'),tt('pdbDeleted'));
+    });
+  }
+  ask('');
+}
+function pdbRename(e){
+  dlg(tt('tRename'),'<input id="pr-in" class="tn-input" type="text" maxlength="30" value="'+esc(e.name)+'" aria-label="'+esc(tt('name'))+'"><p id="pr-err" class="tn-err"></p>',
+    [{label:tt('ok'),fn:function(c){
+      var v=$('#pr-in',c).value.trim();if(!v){$('#pr-in',c).focus();return false}
+      var o=pdbByName(v);if(o&&o.id!==e.id){$('#pr-err',c).textContent=tt('pdbDup');return false}
+      e.name=v.slice(0,30);pdbWrite();renderPdb();
+    }},{label:tt('cancel'),cls:'alt',fn:function(){}}],'#pr-in');
+  $('#pr-in').addEventListener('keydown',function(ev){if(ev.key==='Enter'){ev.preventDefault();$('#card .btns .btn').click()}});
+}
+var pdbQ='';
+function showPdb(){pdbQ='';$('#pdb-q').value='';renderPdb();show('pdb')}
+function renderPdb(){
+  $('#pdb-new').placeholder=tt('pdbNewPh');$('#pdb-q').placeholder=tt('pdbSearch');
+  var box=$('#pdb-list');box.innerHTML='';
+  var v=pdbQ.trim(),id=pdbParseId(v),k=nname(v);
+  var items=PDB.list.filter(function(e){return !v||(id!==null&&e.id===id)||nname(e.name).indexOf(k)>-1||('id-'+e.id).indexOf(v.toLowerCase())>-1});
+  if(!items.length){box.innerHTML='<p style="font-weight:700;opacity:.8">'+esc(tt('pdbEmpty'))+'</p>';return}
+  items.forEach(function(e){
+    var row=document.createElement('div');row.className='trow';
+    row.innerHTML='<div class="tinfo"><div class="tn"><span class="badge">id-'+e.id+'</span> '+esc(e.name)+'</div><div class="tm">'+esc(CATS[e.cat]||'')+'</div></div>';
+    var bar=document.createElement('div');bar.className='bar';
+    function mk(label,cls,fn){var b=document.createElement('button');b.type='button';b.className='mini'+(cls?' '+cls:'');b.textContent=label;b.addEventListener('click',function(){Snd.init();Snd.click();fn()});bar.appendChild(b)}
+    mk(tt('tRename'),'',function(){pdbRename(e)});
+    mk('×','del',function(){pdbDeleteAsk(e)});
+    row.appendChild(bar);box.appendChild(row);
+  });
+}
+function pdbCreateFromScreen(){
+  var inp=$('#pdb-new'),nm=inp.value.trim();if(!nm){inp.focus();return}
+  var r=pdbAdd(nm,'B');if(!r)return;inp.value='';renderPdb();
+  okCard('id-'+r.e.id+' · '+r.e.name,tt(r.isNew?'pdbSaved':'pdbLinked',{n:r.e.name,id:'id-'+r.e.id}));
+}
+function pdbExport(){
+  var text=JSON.stringify({app:'slinggame',kind:'players',v:1,next:PDB.next,players:PDB.list},null,1);
+  dlg(tt('pdbExp'),'<p>'+esc(tt('pdbExpHint'))+'</p><textarea readonly class="tn-ta" id="ex-ta">'+esc(text)+'</textarea>',[
+    {label:tt('tCopyBtn'),fn:function(c){var ta=$('#ex-ta',c);ta.focus();ta.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}if(!ok&&navigator.clipboard){try{navigator.clipboard.writeText(text)}catch(e){}}return false}},
+    {label:tt('tDownload'),fn:function(){try{var b=new Blob([text],{type:'application/json'}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download='jatekosok.json';document.body.appendChild(a);a.click();setTimeout(function(){document.body.removeChild(a);URL.revokeObjectURL(u)},500)}catch(e){}return false}},
+    {label:tt('close'),cls:'alt',fn:function(){}}]);
+}
+function pdbImport(){
+  dlg(tt('pdbImp'),'<p>'+esc(tt('pdbImpHint'))+'</p><input type="file" id="pi-f" accept=".json,application/json,text/plain"><textarea id="pi-ta" class="tn-ta" aria-label="JSON"></textarea><p id="pi-err" class="tn-err"></p>',[
+    {label:tt('tImport'),fn:function(c){
+      var o=null;try{o=JSON.parse($('#pi-ta',c).value.trim())}catch(e){}
+      var arr=o&&Array.isArray(o.players)?o.players:(Array.isArray(o)?o:null);
+      if(!arr){$('#pi-err',c).textContent=tt('pdbImpErr');return false}
+      var d=pdbSan({list:arr,next:o&&o.next}),a=0,u=0,cf=0;
+      d.list.forEach(function(e){var l=pdbGet(e.id);if(!l){PDB.list.push(e);a++}else if(nname(l.name)===nname(e.name)){if(l.cat!==e.cat){l.cat=e.cat;u++}}else cf++});
+      PDB=pdbSan({list:PDB.list,next:Math.max(PDB.next,d.next)});pdbWrite();renderPdb();
+      setTimeout(function(){okCard(tt('pdbImp'),tt('pdbImpDone',{a:a,u:u,c:cf}))},0);
+    }},{label:tt('cancel'),cls:'alt',fn:function(){}}]);
+  $('#pi-f').addEventListener('change',function(e){var f=e.target.files&&e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(){$('#pi-ta').value=String(r.result||'')};r.readAsText(f)});
+}
+$('#add-db').addEventListener('click',function(){Snd.init();Snd.click();pdbPick()});
+$('#to-pdb').addEventListener('click',function(){Snd.init();Snd.click();showPdb()});
+$('#pdb-back').addEventListener('click',function(){renderAll();show('setup')});
+$('#pdb-create').addEventListener('click',function(){Snd.init();Snd.click();pdbCreateFromScreen()});
+$('#pdb-new').addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();pdbCreateFromScreen()}});
+$('#pdb-q').addEventListener('input',function(){pdbQ=this.value;renderPdb()});
+$('#pdb-exp').addEventListener('click',function(){Snd.init();Snd.click();pdbExport()});
+$('#pdb-imp').addEventListener('click',function(){Snd.init();Snd.click();pdbImport()});
+$('#pdb-wsa').addEventListener('click',function(){Snd.init();Snd.click();showWsa()});
+
+/* ----- WSA ranking: success rate on WSA-marked rounds, averaged per tournament, filtered by date range ----- */
+var WSA_K='slinggame.wsarange',wsaCache={},wsaRun=0;
+function wsaRange(){try{var o=JSON.parse(localStorage.getItem(WSA_K)||'null');if(o&&typeof o==='object')return {from:String(o.from||''),to:String(o.to||'')}}catch(e){}var y=new Date().getFullYear();return {from:y+'-01-01',to:y+'-12-31'}}
+function wsaIn(date,f,t){if(!f&&!t)return true;if(!/^\d{4}-\d{2}-\d{2}$/.test(date||''))return false;return (!f||date>=f)&&(!t||date<=t)}
+function wsaOfCfg(d,stat){
+  var out={},wsa=Array.isArray(d.wsa)?d.wsa:[];
+  if(!wsa.some(function(v){return v===true})||!Array.isArray(d.roster))return out;
+  d.roster.forEach(function(p){
+    var pid=Math.round(+p.pid)||0;
+    if(!pid){var e=pdbByName(p.name);pid=e?e.id:0}
+    var rs=d.res&&Array.isArray(d.res[p.id])?d.res[p.id]:[],h=0,s=0;
+    wsa.forEach(function(on,r){if(on!==true)return;var str=String(rs[r]||'');for(var i=0;i<str.length;i++){if(str[i]==='H'){h++;s++}else if(str[i]==='M')s++}});
+    if(s<1)return;
+    if(!pid||!pdbGet(pid)){stat.ignored++;return}
+    var o=out[pid]||(out[pid]={hits:0,shots:0});o.hits+=h;o.shots+=s;
+  });
+  return out;
+}
+function archPromise(){
+  if(archList)return Promise.resolve(archList);
+  if(!window.fetch||location.protocol==='file:')return Promise.resolve(null);
+  return fetch(ARCH_URL,{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).catch(function(){return null}).then(function(a){if(Array.isArray(a))archList=a;return archList});
+}
+function showWsa(){var r=wsaRange();$('#wsa-from').value=r.from;$('#wsa-to').value=r.to;show('wsa');renderWsa()}
+function renderWsa(){
+  save();
+  var run=++wsaRun,f=$('#wsa-from').value,t=$('#wsa-to').value;
+  try{localStorage.setItem(WSA_K,JSON.stringify({from:f,to:t}))}catch(e){}
+  var body=$('#wsa-body'),st=$('#wsa-status');st.textContent=tt('wsaLoading');
+  var srcs=[],seen={};
+  TDB.list.forEach(function(m){
+    if(m.arch)seen[m.arch]=1;
+    if(!wsaIn(m.date,f,t))return;
+    var d=null;try{d=JSON.parse(tRaw(m.id))}catch(e){}
+    if(d&&typeof d==='object')srcs.push({name:m.name,date:m.date||'',d:d});
+  });
+  archPromise().then(function(list){
+    var items=(list||[]).filter(function(it){return it&&it.file&&!seen[it.file]&&wsaIn(it.date,f,t)});
+    return Promise.all(items.map(function(it){
+      if(wsaCache[it.file])return {it:it,d:wsaCache[it.file]};
+      return fetch(ARCH_URL.replace('index.json','')+encodeURIComponent(it.file),{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).catch(function(){return null}).then(function(o){
+        var d=o&&o.cfg?o.cfg:o;if(d&&typeof d==='object'&&Array.isArray(d.roster))wsaCache[it.file]=d;else d=null;return {it:it,d:d};
+      });
+    })).then(function(arr){return {arr:arr,offline:!list}});
+  }).then(function(res){
+    if(run!==wsaRun)return;
+    res.arr.forEach(function(x){if(x.d)srcs.push({name:x.it.name||x.it.file,date:x.it.date||'',d:x.d})});
+    var stat={ignored:0},agg={};
+    srcs.forEach(function(s){
+      var r=wsaOfCfg(s.d,stat);
+      Object.keys(r).forEach(function(k){
+        var a=agg[k]||(agg[k]={id:+k,list:[],hits:0,shots:0});
+        a.list.push({n:s.name,date:s.date,h:r[k].hits,s:r[k].shots,rate:r[k].hits/r[k].shots});a.hits+=r[k].hits;a.shots+=r[k].shots;
+      });
+    });
+    var rows=Object.keys(agg).map(function(k){var a=agg[k];a.avg=a.list.reduce(function(x,y){return x+y.rate},0)/a.list.length;a.name=pdbGet(a.id).name;return a});
+    rows.sort(function(a,b){return (b.avg-a.avg)||(b.list.length-a.list.length)||(b.shots-a.shots)||a.name.localeCompare(b.name)});
+    rows.forEach(function(a){a.rank=1+rows.filter(function(z){return z.avg>a.avg+1e-9}).length});
+    st.textContent=tt('wsaSrc',{n:srcs.length})+(res.offline?' · '+tt('wsaOffline'):'')+(stat.ignored?' · '+tt('wsaIgnored',{n:stat.ignored}):'');
+    if(!rows.length){body.innerHTML='<p style="font-weight:700;opacity:.85">'+esc(tt('wsaNone'))+'</p>';return}
+    var h='<div class="tw"><table class="wsat"><thead><tr><th>#</th><th>ID</th><th class="l">'+esc(tt('colPlayer'))+'</th><th>'+esc(tt('wsaCT'))+'</th><th>'+esc(tt('wsaCR'))+'</th><th>'+esc(tt('wsaCH'))+'</th></tr></thead><tbody>';
+    rows.forEach(function(a){
+      var med=a.rank===1?'🥇 ':a.rank===2?'🥈 ':a.rank===3?'🥉 ':'';
+      h+='<tr class="wsar"><td class="num">'+med+a.rank+'</td><td><span class="badge">id-'+a.id+'</span></td><td class="l"><b>'+esc(a.name)+'</b></td><td class="num">'+a.list.length+'</td><td class="num big">'+(a.avg*100).toFixed(1)+'%</td><td class="num">'+a.hits+'/'+a.shots+'</td></tr>';
+      h+='<tr class="wsad" hidden><td colspan="6">'+a.list.slice().sort(function(x,y){return String(x.date).localeCompare(String(y.date))}).map(function(x){return esc(x.n)+(x.date?' ('+esc(fmtDate(x.date))+')':'')+': <b>'+(x.rate*100).toFixed(1)+'%</b> ('+x.h+'/'+x.s+')'}).join('<br>')+'</td></tr>';
+    });
+    body.innerHTML=h+'</tbody></table></div>';
+  });
+}
+$('#wsa-body').addEventListener('click',function(e){var tr=e.target.closest('tr.wsar');if(!tr)return;var n=tr.nextElementSibling;if(n&&n.classList.contains('wsad'))n.hidden=!n.hidden});
+$('#to-wsa').addEventListener('click',function(){Snd.init();Snd.click();showWsa()});
+$('#wsa-back').addEventListener('click',function(){renderAll();show('setup')});
+$('#wsa-pdb').addEventListener('click',function(){Snd.init();Snd.click();showPdb()});
+$('#wsa-from').addEventListener('change',renderWsa);
+$('#wsa-to').addEventListener('change',renderWsa);
+$('#wsa-ty').addEventListener('click',function(){var y=new Date().getFullYear();$('#wsa-from').value=y+'-01-01';$('#wsa-to').value=y+'-12-31';renderWsa()});
+$('#wsa-ly').addEventListener('click',function(){var y=new Date().getFullYear()-1;$('#wsa-from').value=y+'-01-01';$('#wsa-to').value=y+'-12-31';renderWsa()});
+$('#wsa-all').addEventListener('click',function(){$('#wsa-from').value='';$('#wsa-to').value='';renderWsa()});
+
 /* ---------- Language switch ---------- */
 function applyStatic(){
   document.querySelectorAll('[data-i18n]').forEach(function(el){el.textContent=tt(el.getAttribute('data-i18n'))});
@@ -1130,6 +1630,9 @@ function setLang(l){
   else if(curScr==='dip')showDiplomas();
   else if(curScr==='edit')renderEdit();
   else if(curScr==='tour')renderTours();
+  else if(curScr==='stat')renderStats();
+  else if(curScr==='pdb')renderPdb();
+  else if(curScr==='wsa')renderWsa();
   window.scrollTo(0,y);
 }
 var FLAGS={
@@ -1163,7 +1666,8 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLangMen
 applyStatic();
 
 window.addEventListener('resize',sizeFx);
-renderAll();syncMute();sizeFx();requestAnimationFrame(frame);
+renderAll();syncMute();sizeFx();requestAnimationFrame(frame);loadArch();pdbLoadRemote();
 })();
 </script>
 </body></html>
+

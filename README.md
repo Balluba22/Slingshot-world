@@ -11,6 +11,8 @@ Egyetlen HTML-fájl, telepítés és háttérrendszer nélkül, telefonon és la
 - Pontértékek kategóriánként külön is állíthatók, pontszorzók körönként (×1/×2/×3)
 - Ranglista összesítve és kategóriánként, holtverseny esetén szétlövés
 - Részletes ranglista minden lövéssel és találati aránnyal, PDF- és JPG-exporttal
+- Játékos-adatbázis állandó azonosítókkal (`id-1`, `id-2`, …): versenyhez azonosító beírásával adható hozzá, törlés csak egyesületi jelszóval
+- WSA-rangsor: a WSA-val jelölt körök sikerességi arányából, versenyenkénti átlaggal, választható dátumtartományra (éves rangsor)
 - Statisztika: körönkénti pontok a körgyőztesek kiemelésével, és a helyezések alakulását mutató kattintható bump chart
 - Oklevelek (top 3 kategóriánként), nyomtatás, JPG-export
 - Több verseny kezelése dátummal és helyszínnel, JSON export/import eszközök között
@@ -25,6 +27,7 @@ Verseny után mindig készíts JSON-exportot (🗂 Versenyek → Exportálás �
 
 ## Mappák
 - `index.html` – maga az alkalmazás (ezt publikálja a GitHub Pages); a `SlingshotWorld.html` ugyanez a fájl az eredeti nevén
+- `jatekosok.json` – (opcionális) a játékos-adatbázis exportja; ha a gyökérben van, az app induláskor betölti és egyesíti a helyi adatbázissal
 - `eredmenyek/` – a versenyek JSON-exportjai és kiértékelései; az `index.json` jegyzéket GitHub Action tartja karban
 - `scripts/`, `.github/workflows/` – a jegyzéket építő szkript és az automatizálás
 - `cloud/` – a felhő-mentés Worker kódja és beállítási leírása

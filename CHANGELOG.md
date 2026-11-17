@@ -2,6 +2,15 @@
 
 Formátum: minden kiadásnál egy szakasz, dátummal. Új bejegyzés mindig legfelülre kerül.
 
+## v1.4 – 2026-11-16
+- **👥 Játékos-adatbázis** (állandó, azonosítóval): minden játékos kap egy egyedi azonosítót (`id-1`, `id-2`, …). Új verseny / „Játékos hozzáadása” mellett ott az **👥 Adatbázisból** gomb: beírod, hogy `id-1` (vagy `1`, vagy a név egy részét) és Enter, a játékos bekerül a versenybe. Új játékos az adatbázis-képernyőn, vagy a verseny játékossorán a 💾 gombbal menthető. A játékosok a versenyektől függetlenül megmaradnak.
+- **Törlés csak egyesületi jelszóval**: az adatbázisból törölni ugyanazzal a jelszóval lehet, amit az archívumból törléshez is használunk (a jelszót a Worker ellenőrzi). Ha a Worker nem tudja megerősíteni a jelszót, vagy nincs kapcsolat, nem töröl semmit.
+- **Adatbázis export/import** (`jatekosok.json`): ha az exportált fájlt a repó gyökerébe tesszük `jatekosok.json` néven, minden eszköz induláskor betölti és egyesíti a helyi adatbázissal (azonosító szerint, ütközésnél a repóbeli név az érvényes). Új játékosokat lehetőleg egy eszközön hozzunk létre, és az exportot töltsük fel.
+- **WSA jelölőnégyzet** minden körnél (3. szakasz, a körszorzó mellett); a WSA-körök a körfeliratokban („K1 · WSA”), a táblákban és a részletes ranglistában is megjelennek.
+- **🏅 WSA-rangsor** (új képernyő, külön az összesítéstől): csak a WSA-val jelölt körök számítanak; versenyenként a sikerességi arány = találatok ÷ lövések; a játékos rangsor-értéke a versenyenkénti arányok **átlaga** (pl. 80 % és 70 % → (80+70)÷2 = 75 %). Kezdő- és végdátum választható (alapból az idei év), így éves rangsor is készíthető; „Idén / Tavaly / Mind” gyorsgombok. Egy sorra kattintva látszik versenyenkénti bontás. A számításba a készüléken lévő versenyek és az internetről elérhető egyesületi archívum versenyei is beleszámítanak (dátum alapján, duplikáció nélkül).
+- A WSA-rangsorba az a játékos kerül, aki szerepel az adatbázisban: az új versenyekben az azonosító (`pid`) köti össze, a régi, azonosító nélküli exportoknál a név egyezése (kis/nagybetű és ékezet nélkül). Az export JSON formátuma kompatibilis maradt (v1); a `pid` és `wsa` mezők opcionálisak.
+- Négy nyelven (magyar, angol, román, cseh).
+
 ## v1.3c – 2026-11-14
 - **Másolat = új verseny**: a 📋 másolat már nem örökli az archív-hivatkozást, így a ☁️ feltöltése új fájlt készít, nem írja felül az eredetit.
 - **Felülírás-védelem**: ha a feltöltendő verseny neve eltér attól, ami az archívumban ugyanazon a fájlon szerepel, az app megkérdezi: „Frissítés »régi név«” vagy „Feltöltés újként”. Elavult hivatkozás (az archívumból közben törölt fájl) esetén automatikusan újként megy.
