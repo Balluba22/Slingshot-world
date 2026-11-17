@@ -7,6 +7,7 @@ Formátum: minden kiadásnál egy szakasz, dátummal. Új bejegyzés mindig legf
 - **Zászló a játékosoknál**: a játékos létrehozásakor (adatbázis-képernyő, „Adatbázisból” ablak, vagy a 💾 mentés a verseny játékossorán) listából választható az ország zászlaja, valamint a kategória. A zászló megjelenik a névnél a WSA-rangsorban, az adatbázis-listában, a kiválasztó ablakban és a verseny játékossorán. Az ország neve az aktuális nyelven jelenik meg; HU, RO, CZ, SK a lista elején. 85 ország, a zászlók a fájlba ágyazott képek (Windows alatt is helyesen látszanak, internet nélkül is).
 - **✏️ Szerkesztés** az adatbázisban: név, kategória és zászló módosítható (a törléshez továbbra is egyesületi jelszó kell).
 - A `jatekosok.json` export/import mostantól a zászlót is tartalmazza (`flag`, kétbetűs országkód); a régi fájlok zászló nélkül is betölthetők.
+- **Zászló a ranglistán**: a játékos zászlaja megjelenik az összesített és a kategória-ranglistán, valamint a JPG-exportban, a részletes ranglistában és az okleveleken is (az adatbázis-játékosnál az azonosító, a régi versenyeknél a név egyezése alapján).
 - A fájl mérete a beágyazott zászlók miatt ~110 kB-tal nőtt.
 
 ## v1.4 – 2026-11-16
