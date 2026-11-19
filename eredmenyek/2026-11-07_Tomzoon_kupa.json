@@ -9,157 +9,188 @@
    {
     "id": 1,
     "name": "Oscsa Attila",
-    "cat": "B"
+    "cat": "B",
+    "pid": 15
    },
    {
     "id": 2,
     "name": "Dumitrien Daniel",
-    "cat": "B"
+    "cat": "B",
+    "pid": 12
    },
    {
     "id": 4,
     "name": "Bálint Sándor",
-    "cat": "B"
+    "cat": "B",
+    "pid": 11
    },
    {
     "id": 5,
     "name": "Kovács Tamás",
-    "cat": "B"
+    "cat": "B",
+    "pid": 13
    },
    {
     "id": 6,
     "name": "Nagy Marianna",
-    "cat": "F"
+    "cat": "F",
+    "pid": 2
    },
    {
     "id": 7,
     "name": "Bánfarkas Imre",
-    "cat": "B"
+    "cat": "B",
+    "pid": 3
    },
    {
     "id": 8,
     "name": "Juhász Rajmund",
-    "cat": "B"
+    "cat": "B",
+    "pid": 4
    },
    {
     "id": 9,
     "name": "Juhász Richárd",
-    "cat": "C"
+    "cat": "C",
+    "pid": 1
    },
    {
     "id": 10,
     "name": "Telek Imre",
-    "cat": "B"
+    "cat": "B",
+    "pid": 5
    },
    {
     "id": 11,
     "name": "Telekné Erika",
-    "cat": "F"
+    "cat": "F",
+    "pid": 6
    },
    {
     "id": 12,
     "name": "Telek Vanessza",
-    "cat": "C"
+    "cat": "C",
+    "pid": 16
    },
    {
     "id": 13,
     "name": "Fehér István",
-    "cat": "B"
+    "cat": "B",
+    "pid": 17
    },
    {
     "id": 14,
     "name": "Kun József",
-    "cat": "B"
+    "cat": "B",
+    "pid": 8
    },
    {
     "id": 15,
     "name": "Vinz Riviera",
-    "cat": "B"
+    "cat": "B",
+    "pid": 9
    },
    {
     "id": 16,
     "name": "Viliam Kalincik",
-    "cat": "B"
+    "cat": "B",
+    "pid": 7
    },
    {
     "id": 17,
     "name": "Busa Sándor",
-    "cat": "B"
+    "cat": "B",
+    "pid": 10
    },
    {
     "id": 18,
     "name": "Kun Álmos",
-    "cat": "B"
+    "cat": "B",
+    "pid": 18
    },
    {
     "id": 19,
     "name": "Gulyás Alexandra",
-    "cat": "F"
+    "cat": "F",
+    "pid": 19
    },
    {
     "id": 20,
     "name": "Király Márk",
-    "cat": "B"
+    "cat": "B",
+    "pid": 20
    },
    {
     "id": 21,
     "name": "Pok Attila",
-    "cat": "B"
+    "cat": "B",
+    "pid": 21
    },
    {
     "id": 23,
     "name": "Dénes Zsolt",
-    "cat": "B"
+    "cat": "B",
+    "pid": 22
    },
    {
     "id": 24,
     "name": "Molnár László",
-    "cat": "B"
+    "cat": "B",
+    "pid": 23
    },
    {
     "id": 25,
     "name": "Molnár Tamás",
-    "cat": "B"
+    "cat": "B",
+    "pid": 33
    },
    {
     "id": 26,
     "name": "Turányi Imre",
-    "cat": "B"
+    "cat": "B",
+    "pid": 34
    },
    {
     "id": 27,
     "name": "Geszti Dominik",
-    "cat": "C"
+    "cat": "C",
+    "pid": 35
    },
    {
     "id": 28,
     "name": "Trungel Nagy Róbert",
-    "cat": "B"
+    "cat": "B",
+    "pid": 36
    },
    {
     "id": 29,
     "name": "Trungel Nagy Kolos",
-    "cat": "B"
+    "cat": "B",
+    "pid": 37
    },
    {
     "id": 30,
     "name": "Csöngető Csaba",
-    "cat": "B"
+    "cat": "B",
+    "pid": 38
    },
    {
     "id": 32,
     "name": "Gábos Barna",
-    "cat": "B"
+    "cat": "B",
+    "pid": 39
    },
    {
     "id": 33,
     "name": "Nyerges Norbert",
-    "cat": "B"
+    "cat": "B",
+    "pid": 40
    },
    {
     "id": 34,
     "name": "Pok Emma",
-    "cat": "C"
+    "cat": "C",
+    "pid": 41
    }
   ],
   "sel": [],
@@ -169,7 +200,13 @@
    "5": 8,
    "6": 6,
    "7": 4,
-   "8": 2
+   "8": 2,
+   "101": 10,
+   "102": 10,
+   "103": 10,
+   "104": 10,
+   "105": 10,
+   "106": 10
   },
   "rounds": 9,
   "rc": {
@@ -188,6 +225,17 @@
    3,
    3,
    3
+  ],
+  "wsa": [
+   false,
+   false,
+   false,
+   true,
+   true,
+   false,
+   false,
+   false,
+   false
   ],
   "skins": {
    "1": "white",
@@ -2559,7 +2607,52 @@
     "MHMMM"
    ]
   },
-  "nid": 35,
-  "edit": 6
+  "so": [],
+  "nid": 36,
+  "edit": 6,
+  "ptsC": {
+   "F": {
+    "3": 15,
+    "4": 10,
+    "5": 8,
+    "6": 6,
+    "7": 4,
+    "8": 2,
+    "101": 10,
+    "102": 10,
+    "103": 10,
+    "104": 10,
+    "105": 10,
+    "106": 10
+   },
+   "B": {
+    "3": 15,
+    "4": 10,
+    "5": 8,
+    "6": 6,
+    "7": 4,
+    "8": 2,
+    "101": 10,
+    "102": 10,
+    "103": 10,
+    "104": 10,
+    "105": 10,
+    "106": 10
+   },
+   "C": {
+    "3": 15,
+    "4": 10,
+    "5": 8,
+    "6": 6,
+    "7": 4,
+    "8": 2,
+    "101": 10,
+    "102": 10,
+    "103": 10,
+    "104": 10,
+    "105": 10,
+    "106": 10
+   }
+  }
  }
 }
