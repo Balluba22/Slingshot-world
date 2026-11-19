@@ -1,0 +1,194 @@
+{
+ "app": "slinggame",
+ "kind": "players",
+ "v": 1,
+ "next": 42,
+ "players": [
+  {
+   "id": 1,
+   "name": "Juhász Richárd",
+   "cat": "C",
+   "flag": "HU"
+  },
+  {
+   "id": 2,
+   "name": "Nagy Marianna",
+   "cat": "F",
+   "flag": "HU"
+  },
+  {
+   "id": 3,
+   "name": "Bánfarkas Imre",
+   "cat": "B",
+   "flag": "HU"
+  },
+  {
+   "id": 4,
+   "name": "Juhász Rajmund",
+   "cat": "B",
+   "flag": "HU"
+  },
+  {
+   "id": 5,
+   "name": "Telek Imre",
+   "cat": "B",
+   "flag": "HU"
+  },
+  {
+   "id": 6,
+   "name": "Telekné Erika",
+   "cat": "F",
+   "flag": "HU"
+  },
+  {
+   "id": 7,
+   "name": "Viliam Kalincik",
+   "cat": "B",
+   "flag": "CZ"
+  },
+  {
+   "id": 8,
+   "name": "Kun József",
+   "cat": "B",
+   "flag": "HU"
+  },
+  {
+   "id": 9,
+   "name": "Vinz Riviera",
+   "cat": "B",
+   "flag": "PH"
+  },
+  {
+   "id": 10,
+   "name": "Busa Sándor",
+   "cat": "B",
+   "flag": "HU"
+  },
+  {
+   "id": 11,
+   "name": "Bálint Sándor",
+   "cat": "B",
+   "flag": "HU"
+  },
+  {
+   "id": 12,
+   "name": "Dumitrien Daniel",
+   "cat": "B",
+   "flag": "RO"
+  },
+  {
+   "id": 13,
+   "name": "Kovács Tamás",
+   "cat": "B",
+   "flag": "HU"
+  },
+  {
+   "id": 15,
+   "name": "Oscsa Attila",
+   "cat": "B",
+   "flag": "RO"
+  },
+  {
+   "id": 16,
+   "name": "Telek Vanessza",
+   "cat": "C",
+   "flag": "HU"
+  },
+  {
+   "id": 17,
+   "name": "Fehér István",
+   "cat": "B",
+   "flag": "HU"
+  },
+  {
+   "id": 18,
+   "name": "Kun Álmos",
+   "cat": "B",
+   "flag": "HU"
+  },
+  {
+   "id": 19,
+   "name": "Gulyás Alexandra",
+   "cat": "F",
+   "flag": "HU"
+  },
+  {
+   "id": 20,
+   "name": "Király Márk",
+   "cat": "B",
+   "flag": "HU"
+  },
+  {
+   "id": 21,
+   "name": "Pok Attila",
+   "cat": "B",
+   "flag": "SK"
+  },
+  {
+   "id": 22,
+   "name": "Dénes Zsolt",
+   "cat": "B",
+   "flag": "HU"
+  },
+  {
+   "id": 23,
+   "name": "Molnár László",
+   "cat": "B",
+   "flag": "HU"
+  },
+  {
+   "id": 33,
+   "name": "Molnár Tamás",
+   "cat": "B",
+   "flag": "HU"
+  },
+  {
+   "id": 34,
+   "name": "Turányi Imre",
+   "cat": "B",
+   "flag": "HU"
+  },
+  {
+   "id": 35,
+   "name": "Geszti Dominik",
+   "cat": "C",
+   "flag": "HU"
+  },
+  {
+   "id": 36,
+   "name": "Trungel Nagy Róbert",
+   "cat": "B",
+   "flag": "HU"
+  },
+  {
+   "id": 37,
+   "name": "Trungel Nagy Kolos",
+   "cat": "B",
+   "flag": "HU"
+  },
+  {
+   "id": 38,
+   "name": "Csöngető Csaba",
+   "cat": "B",
+   "flag": "HU"
+  },
+  {
+   "id": 39,
+   "name": "Gábos Barna",
+   "cat": "B",
+   "flag": "HU"
+  },
+  {
+   "id": 40,
+   "name": "Nyerges Norbert",
+   "cat": "B",
+   "flag": "HU"
+  },
+  {
+   "id": 41,
+   "name": "Pok Emma",
+   "cat": "C",
+   "flag": "HU"
+  }
+ ]
+}
