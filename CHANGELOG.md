@@ -2,6 +2,9 @@
 
 Formátum: minden kiadásnál egy szakasz, dátummal. Új bejegyzés mindig legfelülre kerül.
 
+## v1.5.1 – 2026-11-19
+- **⬇ Import az oldalról**: a kezdőképernyőn és a Játékosok képernyőn egy gomb letölti az oldalon (`jatekosok.json`) közzétett játékosadatbázist, és egyesíti a helyivel (új játékosok hozzáadva, meglévők kategóriája/zászlaja frissítve, ütközések kihagyva). Telefonon, számítógépen és a fájlból megnyitott appban is működik.
+
 ## v1.5 – 2026-11-17
 - **🏅 WSA-rangsor kategóriánként**: az összesített táblázat mellett külön táblázat jelenik meg a nőknek, férfiaknak és gyerekeknek, ugyanúgy, mint a normál ranglistán (a játékos adatbázisbeli kategóriája szerint, saját helyezésekkel és érmekkel).
 - **Zászló a játékosoknál**: a játékos létrehozásakor (adatbázis-képernyő, „Adatbázisból” ablak, vagy a 💾 mentés a verseny játékossorán) listából választható az ország zászlaja, valamint a kategória. A zászló megjelenik a névnél a WSA-rangsorban, az adatbázis-listában, a kiválasztó ablakban és a verseny játékossorán. Az ország neve az aktuális nyelven jelenik meg; HU, RO, CZ, SK a lista elején. 85 ország, a zászlók a fájlba ágyazott képek (Windows alatt is helyesen látszanak, internet nélkül is).
